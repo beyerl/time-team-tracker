@@ -265,17 +265,77 @@ export function findTransclusions(wikitext) {
   return found;
 }
 
+const UA = 'time-team-tracker/1.0 (episode catalogue builder; +https://github.com/beyerl/time-team-tracker)';
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * One request to the MediaWiki API, backing off when it asks us to.
+ * Wikipedia answers 429 quickly if a script fires requests back to back.
+ */
+async function wikiRequest(url, { attempts = 4 } = {}) {
+  let wait = 600;
+  for (let attempt = 1; ; attempt += 1) {
+    const response = await fetch(url, { headers: { 'user-agent': UA } });
+    if (response.status === 429 && attempt < attempts) {
+      const retryAfter = Number(response.headers.get('retry-after'));
+      await sleep(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : wait);
+      wait *= 2;
+      continue;
+    }
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+    const data = await response.json();
+    if (data.error) throw new Error(`${data.error.code}: ${data.error.info}`);
+    return data;
+  }
+}
+
 /** Fetch raw wikitext for a page via the MediaWiki action API. */
 export async function fetchWikitext(page) {
   const url =
     `${API}?action=parse&page=${encodeURIComponent(page)}&prop=wikitext&formatversion=2&format=json&redirects=1`;
-  const response = await fetch(url, {
-    headers: { 'user-agent': 'time-team-tracker/1.0 (episode catalogue builder)' },
-  });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${page}`);
-  const data = await response.json();
-  if (data.error) throw new Error(`${data.error.code}: ${data.error.info}`);
-  return data?.parse?.wikitext ?? '';
+  try {
+    const data = await wikiRequest(url);
+    return data?.parse?.wikitext ?? '';
+  } catch (error) {
+    throw new Error(`${error.message} for ${page}`);
+  }
+}
+
+/**
+ * Fetch many pages in one request. Wikipedia allows up to 50 titles per query,
+ * which turns 23 series articles into a single call - far kinder than issuing
+ * them one at a time, and immune to the rate limiting that provoked.
+ *
+ * @returns {Promise<Map<string, string>>} requested title -> wikitext
+ */
+export async function fetchWikitextBatch(titles, { chunkSize = 40 } = {}) {
+  const results = new Map();
+
+  for (let index = 0; index < titles.length; index += chunkSize) {
+    const chunk = titles.slice(index, index + chunkSize);
+    const url =
+      `${API}?action=query&prop=revisions&rvprop=content&rvslots=main&formatversion=2` +
+      `&format=json&redirects=1&titles=${chunk.map((title) => encodeURIComponent(title)).join('|')}`;
+    const data = await wikiRequest(url);
+
+    // Map whatever title came back to the one we asked for.
+    const askedFor = new Map();
+    for (const item of data?.query?.normalized ?? []) askedFor.set(item.to, item.from);
+    for (const item of data?.query?.redirects ?? []) {
+      askedFor.set(item.to, askedFor.get(item.from) ?? item.from);
+    }
+
+    for (const page of data?.query?.pages ?? []) {
+      const content = page?.revisions?.[0]?.slots?.main?.content;
+      if (typeof content === 'string' && content) {
+        results.set(askedFor.get(page.title) ?? page.title, content);
+      }
+    }
+    if (index + chunkSize < titles.length) await sleep(400);
+  }
+
+  return results;
 }
 
 /**
@@ -299,21 +359,29 @@ export async function fetchEpisodeList({ log = () => {} } = {}) {
   const transclusions = findTransclusions(wikitext);
   log(`  following ${transclusions.length} transcluded series articles`);
 
+  let bodies = new Map();
+  try {
+    bodies = await fetchWikitextBatch(transclusions.map((item) => item.page));
+  } catch (error) {
+    problems.push(`batch fetch of series articles: ${error.message}`);
+    log(`  batch fetch FAILED - ${error.message}`);
+  }
+
   for (const { page, series, kind, year } of transclusions) {
-    try {
-      const sub = await fetchWikitext(page);
-      const parsed = parseEpisodeList(sub, {
-        defaultSeries: series,
-        defaultKind: kind,
-        defaultYear: year,
-        defaultLabel: page,
-      });
-      log(`    ${page}: ${parsed.length} episodes`);
-      episodes.push(...parsed);
-    } catch (error) {
-      problems.push(`${page}: ${error.message}`);
-      log(`    ${page}: FAILED - ${error.message}`);
+    const sub = bodies.get(page);
+    if (!sub) {
+      problems.push(`${page}: no content returned`);
+      log(`    ${page}: MISSING`);
+      continue;
     }
+    const parsed = parseEpisodeList(sub, {
+      defaultSeries: series,
+      defaultKind: kind,
+      defaultYear: year,
+      defaultLabel: page,
+    });
+    log(`    ${page}: ${parsed.length} episodes`);
+    episodes.push(...parsed);
   }
 
   return { episodes, problems };
