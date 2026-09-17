@@ -140,7 +140,24 @@ async function main() {
     );
   }
 
-  const withIds = episodes.map((episode) => ({ ...episode, id: episodeId(episode) }));
+  // Two rows that resolve to the same id would silently merge downstream (they
+  // share a watch-history key and a video match), so collisions are dropped
+  // rather than left to overwrite each other.
+  const seenIds = new Set();
+  const duplicates = [];
+  const withIds = [];
+  for (const episode of episodes) {
+    const id = episodeId(episode);
+    if (seenIds.has(id)) {
+      duplicates.push(`${id} (${episode.title})`);
+      continue;
+    }
+    seenIds.add(id);
+    withIds.push({ ...episode, id });
+  }
+  if (duplicates.length) {
+    problems.push(`dropped ${duplicates.length} duplicate episode ids: ${duplicates.slice(0, 8).join(', ')}`);
+  }
 
   log('Matching episodes to uploads...');
   const matches = videos.length

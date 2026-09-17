@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   cleanWikitext, parseAirDate, parseEpisodeList, splitSite, parseSectionHeading, findTransclusions,
+  isEpisodeTableHeader, parseHeaderCells,
 } from '../scripts/lib/wikipedia.mjs';
 import {
   extractInitialData, harvestVideos, parseDuration, readText, thumbnailFor,
@@ -263,4 +264,48 @@ test('template parameter rows are never mistaken for episodes', () => {
   ].join('\n');
   const parsed = parseEpisodeList(junk, { defaultSeries: 1 });
   assert.deepEqual(parsed.map((e) => e.title), [], 'infobox parameters produce no episodes');
+});
+
+// The series articles carry a cast table as well as an episode table. Its rows
+// were being read as episodes ("Tony Robinson" as S01E01), colliding with the
+// real ones on episode id.
+test('a cast table alongside an episode table is ignored', () => {
+  const article = [
+    '==Cast==',
+    '{| class="wikitable"',
+    '! Name !! Role',
+    '|-',
+    '| [[Tony Robinson]] || Presenter',
+    '|-',
+    '| [[Phil Harding (archaeologist)|Phil Harding]] || Field archaeologist',
+    '|}',
+    '',
+    '==Episodes==',
+    '{| class="wikitable"',
+    '! No. !! Title !! Original air date',
+    '|-',
+    '| 1 || The Guerrilla Base of the King || 16 January 1994',
+    '|-',
+    '| 2 || On the Edge of an Empire || 23 January 1994',
+    '|}',
+  ].join('\n');
+
+  const parsed = parseEpisodeList(article, { defaultSeries: 1, defaultYear: 1994 });
+  assert.deepEqual(
+    parsed.map((episode) => episode.title),
+    ['The Guerrilla Base of the King', 'On the Edge of an Empire'],
+    'only the episode table is read',
+  );
+  assert.deepEqual(parsed.map((episode) => episode.episode), [1, 2], 'numbering is not shifted by the cast rows');
+});
+
+test('isEpisodeTableHeader needs both an episode-ish and a date-ish column', () => {
+  assert.equal(isEpisodeTableHeader(['No.', 'Title', 'Original air date']), true);
+  assert.equal(isEpisodeTableHeader(['Name', 'Role']), false);
+  assert.equal(isEpisodeTableHeader(['Title', 'Synopsis']), false, 'no date column');
+  assert.equal(isEpisodeTableHeader([]), false);
+});
+
+test('parseHeaderCells splits a wikitable header row', () => {
+  assert.deepEqual(parseHeaderCells('! No. !! Title !! Original air date'), ['No.', 'Title', 'Original air date']);
 });

@@ -79,6 +79,27 @@ export function splitSite(title) {
   return { site: text.slice(0, comma).trim(), county: text.slice(comma + 1).trim() || null };
 }
 
+/**
+ * Does this table's header row describe episodes? The series articles also
+ * carry cast tables ("Tony Robinson", "Phil Harding"), which otherwise parse
+ * into episodes that collide with the real ones.
+ */
+export function isEpisodeTableHeader(headers) {
+  const text = headers.join(' ').toLowerCase();
+  const namesEpisodes = /title|episode|site|location|dig/.test(text);
+  const namesDates = /date|broadcast|aired|airing|transmission/.test(text);
+  return namesEpisodes && namesDates;
+}
+
+/** Split `! No. !! Title !! Original air date` into its header cells. */
+export function parseHeaderCells(line) {
+  return line
+    .replace(/^\s*!/, '')
+    .split(/!!/)
+    .map((cell) => cleanWikitext(cell.replace(/^\s*[a-z-]+\s*=\s*"[^"]*"\s*\|/i, '')))
+    .filter(Boolean);
+}
+
 /** `== Series 4 (1997) ==` -> {number: 4, year: 1997} */
 export function parseSectionHeading(line) {
   const heading = /^={2,4}\s*(.+?)\s*={2,4}$/.exec(line.trim());
@@ -135,6 +156,8 @@ export function parseEpisodeList(wikitext, options = {}) {
   const episodes = [];
   let context = { kind: defaultKind, number: defaultSeries, year: defaultYear, label: defaultLabel };
   let withinSeriesCounter = 0;
+  /** @type {{headers: string[], isEpisodes: boolean | null} | null} */
+  let table = null;
 
   const push = ({ title, numberInSeries, airDate, note }) => {
     const cleanTitle = cleanWikitext(title);
@@ -166,10 +189,25 @@ export function parseEpisodeList(wikitext, options = {}) {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
 
+    // Track the table we are inside, and what its header row says it holds.
+    if (/^\s*\{\|/.test(line)) {
+      table = { headers: [], isEpisodes: null };
+      continue;
+    }
+    if (/^\s*\|\}/.test(line)) {
+      table = null;
+      continue;
+    }
+    if (/^\s*!/.test(line)) {
+      if (table) table.headers.push(...parseHeaderCells(line));
+      continue;
+    }
+
     const heading = parseSectionHeading(line);
     if (heading && heading.kind !== 'other') {
       context = heading;
       withinSeriesCounter = 0;
+      table = null;
       continue;
     }
     if (heading && heading.kind === 'other' && /^(references|see also|external links|notes)$/i.test(heading.label)) {
@@ -206,6 +244,12 @@ export function parseEpisodeList(wikitext, options = {}) {
         i += 1;
         rowText += ` || ${lines[i].replace(/^\s*\|/, '')}`;
       }
+      // Decide once per table, on its first data row, whether to read it.
+      if (table && table.isEpisodes === null) {
+        table.isEpisodes = table.headers.length === 0 || isEpisodeTableHeader(table.headers);
+      }
+      if (table && table.isEpisodes === false) continue;
+
       const cells = rowText
         .replace(/^\s*\|/, '')
         .split(/\|\|/)
