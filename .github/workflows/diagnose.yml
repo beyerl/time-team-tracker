@@ -1,0 +1,18 @@
+name: Diagnose catalogue sources
+
+# Manual probe: prints what Wikipedia and YouTube actually return, so the
+# parsers can be corrected against the real payloads.
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/diagnose.mjs

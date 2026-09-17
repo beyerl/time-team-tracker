@@ -221,8 +221,12 @@ async function main() {
     extras: unmatched,
   };
 
+  // Episode count alone is not enough: a mis-parse can yield hundreds of junk
+  // rows all landing in a single group. Demand a plausible series structure too.
   const expected = config.minimumEpisodesExpected ?? 0;
-  const healthy = decorated.length >= expected;
+  const expectedSeries = config.minimumSeriesExpected ?? 0;
+  const seriesFound = series.filter((group) => group.kind === 'series').length;
+  const healthy = decorated.length >= expected && seriesFound >= expectedSeries;
 
   await mkdir(path.dirname(OUTPUT), { recursive: true });
   if (healthy || allowEmpty || !existing) {
@@ -244,7 +248,8 @@ async function main() {
 
   if (!healthy && !allowEmpty) {
     console.error(
-      `\nExpected at least ${expected} episodes but found ${decorated.length}. ` +
+      `\nExpected at least ${expected} episodes across ${expectedSeries} series, but found ` +
+        `${decorated.length} episodes across ${seriesFound} series. ` +
         'Re-run with --allow-empty to accept this result.',
     );
     process.exitCode = 1;
