@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T19:03:24.823Z",
+  "generatedAt": "2026-09-17T19:06:24.909Z",
   "source": {
     "episodes": "en.wikipedia.org",
     "videos": "@TimeTeamOfficial, @TimeTeamClassics"
@@ -21,7 +21,7 @@
       "kind": "series",
       "number": 1,
       "title": "Series 1",
-      "year": null,
+      "year": 1994,
       "episodes": [
         {
           "id": "s1e1",
@@ -43,7 +43,7 @@
             "thumbnail": "https://i.ytimg.com/vi/0Ypig2EyxHk/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Guerrilla%20Base%20of%20the%20King",
-          "seriesYear": null
+          "seriesYear": 1994
         },
         {
           "id": "s1e2",
@@ -65,7 +65,7 @@
             "thumbnail": "https://i.ytimg.com/vi/7uGM0aVQHTw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20On%20the%20Edge%20of%20an%20Empire",
-          "seriesYear": null
+          "seriesYear": 1994
         },
         {
           "id": "s1e3",
@@ -87,7 +87,7 @@
             "thumbnail": "https://i.ytimg.com/vi/zPmM0PRqegA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20New%20Town%20of%20a%20Norman%20Prince",
-          "seriesYear": null
+          "seriesYear": 1994
         },
         {
           "id": "s1e4",
@@ -109,7 +109,7 @@
             "thumbnail": "https://i.ytimg.com/vi/qpJHsC5cacY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Fortress%20in%20the%20Lake",
-          "seriesYear": null
+          "seriesYear": 1994
         }
       ]
     },
@@ -118,7 +118,7 @@
       "kind": "series",
       "number": 2,
       "title": "Series 2",
-      "year": null,
+      "year": 1995,
       "episodes": [
         {
           "id": "s2e1",
@@ -140,7 +140,7 @@
             "thumbnail": "https://i.ytimg.com/vi/X5_Bs7Mfj7Y/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Lord%20of%20the%20Isles",
-          "seriesYear": null
+          "seriesYear": 1995
         },
         {
           "id": "s2e2",
@@ -162,7 +162,7 @@
             "thumbnail": "https://i.ytimg.com/vi/dH9dHw_xsvM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Saxon%20Graves",
-          "seriesYear": null
+          "seriesYear": 1995
         },
         {
           "id": "s2e3",
@@ -184,7 +184,7 @@
             "thumbnail": "https://i.ytimg.com/vi/a5BOojQOJz4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Lost%20Villa",
-          "seriesYear": null
+          "seriesYear": 1995
         },
         {
           "id": "s2e4",
@@ -206,7 +206,7 @@
             "thumbnail": "https://i.ytimg.com/vi/48iYCIYgMCA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Archbishop's%20Back%20Garden",
-          "seriesYear": null
+          "seriesYear": 1995
         },
         {
           "id": "s2e5",
@@ -228,7 +228,7 @@
             "thumbnail": "https://i.ytimg.com/vi/34qeBgEfNDY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Medieval%20Dining%20Hall",
-          "seriesYear": null
+          "seriesYear": 1995
         }
       ]
     },
@@ -237,7 +237,7 @@
       "kind": "series",
       "number": 3,
       "title": "Series 3",
-      "year": null,
+      "year": 1996,
       "episodes": [
         {
           "id": "s3e1",
@@ -259,7 +259,7 @@
             "thumbnail": "https://i.ytimg.com/vi/s9wM1B0HLag/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Prehistoric%20Fogou",
-          "seriesYear": null
+          "seriesYear": 1996
         },
         {
           "id": "s3e2",
@@ -281,7 +281,7 @@
             "thumbnail": "https://i.ytimg.com/vi/vZuIbam4Rxg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hunting%20for%20Mammoth",
-          "seriesYear": null
+          "seriesYear": 1996
         },
         {
           "id": "s3e3",
@@ -303,7 +303,7 @@
             "thumbnail": "https://i.ytimg.com/vi/1qPhAC3IBZA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Village%20of%20the%20Templars",
-          "seriesYear": null
+          "seriesYear": 1996
         },
         {
           "id": "s3e4",
@@ -325,7 +325,7 @@
             "thumbnail": "https://i.ytimg.com/vi/2tMvBNWeuPg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Wreck%20of%20the%20Spanish%20Armada",
-          "seriesYear": null
+          "seriesYear": 1996
         },
         {
           "id": "s3e5",
@@ -347,7 +347,7 @@
             "thumbnail": "https://i.ytimg.com/vi/l_W1WowRw2E/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Palace%20of%20the%20Irish%20Kings",
-          "seriesYear": null
+          "seriesYear": 1996
         },
         {
           "id": "s3e6",
@@ -361,7 +361,7 @@
           "note": "Recorded between 28 and 30 August 1995. The team arrive in a large square field about 20 miles from Colchester. This is an area typically rich in Roman activity. Several remains have previously been dug up, including coins, an elaborate key, and Samian ware. Adrian Thorpe, the farmer, wants to know more. The indications are of a settlement with high status buildings, maybe timber-framed. With recycled fragments of genuine Roman glass, fired up in a homemade furnace, glassblower Ed Iglehart creates an authentic conical beaker. Among hundreds of finds is a metal owl brooch. They are joined by Jude Plouviez from Suffolk County Council, Roman specialist Lindsay Allason-Jones, environmental archaeologist Peter Murphy, and coin specialist Daphne Briggs.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Treasures%20of%20the%20Roman%20Field",
-          "seriesYear": null
+          "seriesYear": 1996
         }
       ]
     },
@@ -370,7 +370,7 @@
       "kind": "series",
       "number": 4,
       "title": "Series 4",
-      "year": null,
+      "year": 1997,
       "episodes": [
         {
           "id": "s4e1",
@@ -384,7 +384,7 @@
           "note": "Recorded between 17 and 19 May 1996, the team go to St. Mary's City in Maryland to work with American archaeologists to look for evidence of the city founded by English colonists in 1634. Different archaeological styles between American and British addressed, with the Time Team conducting geophys onsite for the first time. Finds: two buildings, including fort.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20One%20(Maryland%2C%20USA)",
-          "seriesYear": null
+          "seriesYear": 1997
         },
         {
           "id": "s4e2",
@@ -398,7 +398,7 @@
           "note": "Filmed between 22 and 24 March 1996. A local landowner has discovered human bones while installing water pipes. It is known to be the site of a former leper hospital, and a major crossing between Devon and Cornwall. How much more can Time Team discover about it? Phil uncovers a complete skeleton which has received a Christian burial, and which Osteoarchaeologist Margaret Cox identifies as a young adult female. She also examines the bone fragments for signs of leprosy. Juliet Griffin makes a herbal poultice to dress the lepers' wounds. Robin Bush looks at the 13th century charter granted to the hospital.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Two%20(Mystery%20of%20the%20Cornish%20Skeletons)",
-          "seriesYear": null
+          "seriesYear": 1997
         },
         {
           "id": "s4e3",
@@ -412,7 +412,7 @@
           "note": "Recorded between 5 and 7 April 1996, this episode sees the team try to discover what remains of Matthew Boulton's Soho Manufactory, an important factory and home to the world's first steam-powered mint, during the Industrial Revolution. They are joined by industrial archaeologist George Demidowicz.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Steam-Powered%20Mint",
-          "seriesYear": null
+          "seriesYear": 1997
         },
         {
           "id": "s4e4",
@@ -426,7 +426,7 @@
           "note": "Filmed from 14 to 16 June 1996, in this episode the team try to find out why the graveyard of a 19th century church features large tortoise-shaped gravestones dating back to the Dark Ages. The team are joined by Scottish prehistorian Anna Ritchie and archaeologist Steve Driscoll.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%208th%20Century%20Church",
-          "seriesYear": null
+          "seriesYear": 1997
         },
         {
           "id": "s4e5",
@@ -448,7 +448,7 @@
             "thumbnail": "https://i.ytimg.com/vi/kGhHtp2QpTo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Norman%20and%20Medieval%20Castles",
-          "seriesYear": null
+          "seriesYear": 1997
         },
         {
           "id": "s4e6",
@@ -470,7 +470,7 @@
             "thumbnail": "https://i.ytimg.com/vi/IIOavRBdM_E/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Roman%20Villa",
-          "seriesYear": null
+          "seriesYear": 1997
         }
       ]
     },
@@ -479,7 +479,7 @@
       "kind": "series",
       "number": 5,
       "title": "Series 5",
-      "year": null,
+      "year": 1998,
       "episodes": [
         {
           "id": "s5e1",
@@ -501,7 +501,7 @@
             "thumbnail": "https://i.ytimg.com/vi/HOnJH-3IAwE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20One%20(Search%20for%20Richmond%20Palace)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e2",
@@ -523,7 +523,7 @@
             "thumbnail": "https://i.ytimg.com/vi/JqYMoeL5YVM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Two%20(Somerset%20Levels)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e3",
@@ -545,7 +545,7 @@
             "thumbnail": "https://i.ytimg.com/vi/4NFiKwXTMdU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Three%20(Sanday%2C%20Orkney)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e4",
@@ -567,7 +567,7 @@
             "thumbnail": "https://i.ytimg.com/vi/mInuesqb6e4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Turkdean",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e5",
@@ -581,7 +581,7 @@
           "note": "Recorded between 9 and 11 May 1997, the team are in Mallorca where American archaeologist Bill Waldren is excavating the Copper Age Beaker settlement of Son Oleza. They are joined by site director Josep \"Pep\" Ensenyat. Phil and Pep try smelting some copper from the local ore. Astroarchaeologist Michael Hoskin looks at the celestial alignment of some stones at the site.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Five%20(Beaker%20Settlement%2C%20Mallorca%2C%20Spain)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e6",
@@ -603,7 +603,7 @@
             "thumbnail": "https://i.ytimg.com/vi/pj61NHPoYJ8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Six%20(Aston%20Eyre)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e7",
@@ -617,7 +617,7 @@
           "note": "Recorded between 19 and 21 February 1997, the team look for the early monastic buildings on Cathedral Hill, where according to legend St. Patrick built a monastery and was buried. They are also digging up medieval finds, including roof tiles and glass, which indicate a high status building. They soon identify the large double ditch which originally enclosed the monastery complex. Victor tries his hand at medieval calligraphy and helps create an illuminated manuscript with a portrait of a familiar face, complete with hat and feather. We also see some vellum making.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Seven%20(Cathedral%20Hill%2C%20Downpatrick%2C%20County%20Down)",
-          "seriesYear": null
+          "seriesYear": 1998
         },
         {
           "id": "s5e8",
@@ -639,7 +639,7 @@
             "thumbnail": "https://i.ytimg.com/vi/p0SVGPGxLJI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Eight%20(High%20Worsall)",
-          "seriesYear": null
+          "seriesYear": 1998
         }
       ]
     },
@@ -648,7 +648,7 @@
       "kind": "series",
       "number": 6,
       "title": "Series 6",
-      "year": null,
+      "year": 1999,
       "episodes": [
         {
           "id": "s6e1",
@@ -670,7 +670,7 @@
             "thumbnail": "https://i.ytimg.com/vi/zBg4_qb3Qmo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Wedgwood's%20First%20Factory",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e2",
@@ -684,7 +684,7 @@
           "note": "The team are in North West England, investigating Roman finds and a possible Roman building, unearthed in a family's back garden. The house is just 100 metres from a Roman fort, and south-west of the end of Hadrian's Wall. Geophysics are using state-of-the art Swedish radar equipment, to detect foundations beneath two metres of soil. A fragment of bronze mirror hints at a domestic settlement, a vicus, that would have sprung up next to the fort. But the diggers are finding plenty of archaeology, indicating much larger and more organised Roman building, possibly a city. Through the expertise of potter Gilbert Burroughes, the team are going to try to make a Samian ware bowl during the three days. The team are joined by Roman specialist Lindsay Allason-Jones.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Two%20(Roman%20Building%2C%20Papcastle%2C%20Cumbria)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e3",
@@ -698,7 +698,7 @@
           "note": "Time Team have been invited by pupils of Thetford Grammar School in Norfolk, to investigate the remains of a Dominican friary church and a 1,000-year-old Norman cathedral, in their playground. There is much interest from the pupils when the team excavate human bones. Ecclesiastical historian Janet Burton describes the origins of the Dominican Order. Stonemason Simon Williams gives a practical demonstration of medieval wall-building using knapped flint and lime mortar. Stained glass expert David King confirms medieval dates for fragments from the friary. The junior school makes a timeline frieze, complete with felt bishops and monks. It all ends in an open evening for parents.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Three%20(Dominican%20Friary%2C%20Thetford%2C%20Norfolk)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e4",
@@ -712,7 +712,7 @@
           "note": "Investigation, at the invitation of the cave's owner, the Marquess of Bath, to see if there is evidence of Palaeolithic human activity in the cave. This may be among the oldest homes in England. The ultimate aim is to get the site scheduled and thus protected from unofficial damage. However it soon becomes clear there is a lot of preparatory work involved. They are joined by palaeontologist Andy Currant, and cave archaeologists Larry Barham and Kate Robson Brown. Caver Malcolm Cotter directs them to a cache of bones; but the tunnel is blocked by sediment from flooding.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Cooper's%20Hole",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e5",
@@ -726,7 +726,7 @@
           "note": "In the 12th century many towns were designed and laid out on regular lines. The people of Plympton believe there is enough evidence to plot the layout of the medieval town which surrounds the ruins of their castle, and which was formerly owned by the immensely powerful and wealthy de Redvers family. As usual, Time Team have three days to find it. Back gardens and interiors will provide the clues, rather than frontages which have probably been altered many times in the last 800 years. So they will need plenty of help from local householders. They are joined by Plymouth city archaeologist Keith Ray and dendrochronologist Robert Howard. See also: 24 Fore Street, Plympton, Carlton House, Chapel House, The Old Rectory, The Pent House, Tan Cottage and The Lodge",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Five%20(Plympton%2C%20Devon)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e6",
@@ -740,7 +740,7 @@
           "note": "Looking for evidence of a 15th century dock, the team are in Small Hythe. The dock was once next to the mile-wide River Rother but its location is now an overgrown field, ten miles from the sea. And early excavations reveal nothing more recent than wood from a prehistoric forest. Medieval ship expert Ian Friel explains that the dockyard used to have high naval significance, and was visited by Henry V. Woodworker Damian Goodburn uses authentic tools to build a ship's clinker hull. Victor draws the biggest ship ever built here, the Jesus. Using geophysics, John Gater and Sue Ovenden pinpoint the course of the old river. And very soon the finds start to accumulate, revealing the true scale of activity here.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Six%20(Medieval%20Dockyard%2C%20Smallhythe%2C%20Kent)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e7",
@@ -754,7 +754,7 @@
           "note": "Historian Guy de la Bedoyere asks the team to investigate the isolated ruins of a bath-house, discovered by Gerald Brodribb in the midst of dense Sussex woodland. Gerald has made a scale model of the building, and Guy explains the connection to the Roman navy. After a demonstration of dowsing from Gerald, the team's first task is to clear the land before digging. With ancient technology expert Jake Keen and blacksmith Reg Miles, Phil attempts to smelt iron using a traditional furnace. The team are also joined by archaeometallurgist Gerry McDonnell.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Seven%20(Roman%20Bath-house%2C%20Beauport%20Park%2C%20Sussex)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e8",
@@ -768,7 +768,7 @@
           "note": "Time Team team up with air crash investigators to discover what happened to two B-17 bombers which crashed with loss of all lives on board on 21 February 1944 into marshes near Reedham, Norfolk. The airplanes were returning from a bombing raid on a German target as part of the Big Week offensive. Parts of one airplane are recovered, and the Team speak to surviving crew members of a third plane that was in the formation. Experimental archaeology: A piece of nose art painted as a memorial to the bomber crews, painted by a former Red Cross volunteer who had painted some during WWII.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Bombers%20in%20Reedham%20Marshes",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e9",
@@ -782,7 +782,7 @@
           "note": "Time Team revisit a live dig from 1997, where they found a large Roman complex in a Gloucestershire field. But at the same time, geophysics recorded evidence of more buildings. And so the team have returned to investigate a greatly expanded area. Almost immediately Phil uncovers some impressive looking archaeology. They decide to build a Roman altar with a special inscription. They are rejoined by Roman specialists David Neal and Lindsay Allason-Jones.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Turkdean%20II",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e10",
@@ -796,7 +796,7 @@
           "note": "An aerial survey of a Worcestershire field has revealed cropmarks leading to substantial Bronze Age finds. But Iron Age remains also exist. Time Team tries to sort it out. Local schoolchildren help with a bit of fieldwalking; and Mick shows how cropmarks and posthole marks become visible in fields. Francis Pryor explains the difference between Bronze Age and Iron Age and describes life in a roundhouse. Also joining the team are archaeologist Malcolm Atkin and environmentalist Liz Pearson; while wood specialist Guy Apter gets the kids to help make a Bronze Age ard (plough).",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Ten%20(Bronze%20Age%2C%20Kemerton%2C%20Worcestershire)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e11",
@@ -818,7 +818,7 @@
             "thumbnail": "https://i.ytimg.com/vi/aCm_P-h-sYI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20Eleven%20(Norman%20Church%2C%20Bawsey%2C%20Norfolk)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e12",
@@ -840,7 +840,7 @@
             "thumbnail": "https://i.ytimg.com/vi/7ay_ylAz1nE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Nevis%20(Part%201%20of%202)",
-          "seriesYear": null
+          "seriesYear": 1999
         },
         {
           "id": "s6e13",
@@ -862,7 +862,7 @@
             "thumbnail": "https://i.ytimg.com/vi/YoBTVy78O9M/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Nevis%20(Part%202%20of%202)",
-          "seriesYear": null
+          "seriesYear": 1999
         }
       ]
     },
@@ -871,7 +871,7 @@
       "kind": "series",
       "number": 7,
       "title": "Series 7",
-      "year": null,
+      "year": 2000,
       "episodes": [
         {
           "id": "s7e1",
@@ -893,7 +893,7 @@
             "thumbnail": "https://i.ytimg.com/vi/kxe3zXFPXo8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Muslim%20Port%20in%20Spain",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e2",
@@ -907,7 +907,7 @@
           "note": "In 300 A.D. Corinium Dobunnorum was England's wealthiest city next to Londinium. Now it's the pleasant Gloucestershire town of Cirencester, and Time Team are visiting the leafy suburban Chester Street, where they hope the back gardens will yield clues about the bustling Roman city and its main highway, Ermine Street. Could a Roman temple have occupied this site - or even rarer, an early Christian church? They need to knock on a few doors to ask about digging up their plots. There is a bottle of champagne for anybody who can find a tessellated pavement. They are joined by Roman architectural historian Tom Blagg, coin expert Richard Reece and mosaic expert David Neal. The Ermine Street Guard offer Tony venison stew, and use a wooden crane to erect a stone column, fashioned by mason Giles MacDonald. In the public presentation, Stewart outlines a picture of the whole city, ably assisted by Victor's drawing. Among many Roman finds are coins, a brooch, a spoon and a bone die.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Mosaic%20at%20the%20Bottom%20of%20the%20Garden",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e3",
@@ -921,7 +921,7 @@
           "note": "On 23 May 1940 a Spitfire (P9373) flown by RAF pilot Paul Klipsch crashed into a field in Wierre-Effroy, France. Time Team, in concert with WWII aircraft historians and air crash investigator Steve Moss, try to find out what happened. They are joined by Klipsch's stepbrother, who last visited France on D-Day. Several residents of the village remember seeing the air battle and the crash, and Group Captain Allan Wright, who was flying in the same formation as Klipsch, comes along to help the investigation. The Spitfire wreckage is recovered, and investigation shows that Gunther Specht, flying a Messerschmitt Bf 110, shot down P9373. Experimental archaeology: Phil learns to repair a Spitfire wing flap with rudimentary tools.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20One%20of%20the%20First%20Spitfires%20Lost%20in%20France",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e4",
@@ -935,7 +935,7 @@
           "note": "Time Team are doing a spot of gardening. Residents have presented them with evidence of historical activity, in the form of pottery shards and lumps and bumps in the landscape. While Victor sketches out possible buildings, Stewart tries to make sense of the trackways and earthworks in this spectacular landscape overlooking Portland Bill. Could there be a 4,000-year-old henge here? Back in Phil's trench in the garden, the first clear signs of a roundhouse emerge. Carenza helps potter Jim Newbolt to make and fire a collection of replica Iron Age and medieval pots.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Iron-Age%20Roundhouse%20and%20a%20Henge",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e5",
@@ -949,7 +949,7 @@
           "note": "The team carry out the first-ever excavation of a cemetery at a Roman fort. This one is a World Heritage Site on Hadrian's Wall, delineating Roman Britain's northern boundary. Dead soldiers would have been cremated, and Jackie makes an experimental funeral pyre with cuts of meat. Unfortunately a downpour extinguishes the flames; but a second attempt succeeds. Stewart is more interested in the erosion of the land, which may have been caused by flooding or an earthquake. After some frustrating dead ends, they eventually piece together a plausible description of the site, recovering some interesting finds before time runs out on the third day. They are joined by site director Tony Wilmott and Roman finds expert Lindsay Allason-Jones.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hadrian's%20Wall",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e6",
@@ -971,7 +971,7 @@
             "thumbnail": "https://i.ytimg.com/vi/OQSG2t4CTPQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20Search%20of%20the%20Earliest%20Traces%20of%20Mankind",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e7",
@@ -993,7 +993,7 @@
             "thumbnail": "https://i.ytimg.com/vi/38EZEilgADQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Missing%20Cathedral%20and%20the%20Diabetic%20Prior",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e8",
@@ -1007,7 +1007,7 @@
           "note": "Basing House in Hampshire, owned by the Paulet family was once one of the largest private homes in Britain until besieged and destroyed in the English Civil War. Most of the ruins are a Protected Ancient Monument, but Time Team is permitted to dig on the edge of where the Basingstoke Canal once cut through the ruins, and they find evidence of the final assault in 1645. Meanwhile, in a field across the road, it appears that Charles Paulet built a hunting lodge around 1690, but the field is the site of centuries of building and tearing down, and the archaeology is so confusing three days are not enough to work everything out. The English Civil War Society come to re-enact the siege of Basing House, setting up camp in the Great Barn where the original besiegers camped. They show how musket and pistol balls were cast.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Royalists'%20Last%20Stand",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e9",
@@ -1021,7 +1021,7 @@
           "note": "The team have their work cut out in the Cambridgeshire fenland, looking for remnants of an ancient culture in the flat landscape. The long wooden track would function as a barrier, defence and ritual passage where votive offerings were placed in the water. At the end of it they hope to find a barrow - a circular Bronze Age burial mound. Dave Chapman constructs a bronze axe in a primitive furnace; while wood expert Maisie Taylor looks for a suitable handle in nearby woodland.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Bronze-Age%20Barrow%20and%20Walkway",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e10",
@@ -1043,7 +1043,7 @@
             "thumbnail": "https://i.ytimg.com/vi/OI6F1qZ5zKU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20Search%20of%20the%20Palace%20of%20King%20Offa",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e11",
@@ -1065,7 +1065,7 @@
             "thumbnail": "https://i.ytimg.com/vi/g3XIfjA_XNc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Roman%20Temple%20in%20Sight%20of%20the%20Millennium%20Dome",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e12",
@@ -1087,7 +1087,7 @@
             "thumbnail": "https://i.ytimg.com/vi/yCokMXCER_g/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Nuns%20in%20Northumbria",
-          "seriesYear": null
+          "seriesYear": 2000
         },
         {
           "id": "s7e13",
@@ -1109,7 +1109,7 @@
             "thumbnail": "https://i.ytimg.com/vi/5enYi-MkB3Y/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20York",
-          "seriesYear": null
+          "seriesYear": 2000
         }
       ]
     },
@@ -1118,7 +1118,7 @@
       "kind": "series",
       "number": 8,
       "title": "Series 8",
-      "year": null,
+      "year": 2001,
       "episodes": [
         {
           "id": "s8e1",
@@ -1140,7 +1140,7 @@
             "thumbnail": "https://i.ytimg.com/vi/EG-j8TJDLwg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Anglo-Saxon%20Cemetery%20in%20Lincolnshire",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e2",
@@ -1154,7 +1154,7 @@
           "note": "Derek Batten bought a plot of land advertised as a castle and moat; but there is little sign of a castle other than a tree-covered mound surrounded by a huge ditch. So he has asked Time Team to sort it out. Because the site is a scheduled ancient monument, the team have to get permission from English Heritage for strictly limited excavations. To complicate matters further, Tony has to adjudicate on a long-running boundary dispute. The team is joined by castles expert Philip Dixon. Phil Harding gets kitted-out in chainmail as a Saxon footsoldier, facing a mounted Norman warrior on a Spanish stallion. The site is finally identified as a ringwork castle, built on a previous Saxon structure around the time of the Norman Conquest.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Man%20Who%20Bought%20a%20Castle",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e3",
@@ -1176,7 +1176,7 @@
             "thumbnail": "https://i.ytimg.com/vi/izr6SQX7-4U/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Celtic%20Spring",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e4",
@@ -1198,7 +1198,7 @@
             "thumbnail": "https://i.ytimg.com/vi/flv_9l4JCuo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Waltham%20Villa",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e5",
@@ -1220,7 +1220,7 @@
             "thumbnail": "https://i.ytimg.com/vi/qtW0DJDJrKw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20'Lost%20Viaduct'",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e6",
@@ -1242,7 +1242,7 @@
             "thumbnail": "https://i.ytimg.com/vi/9hs674DnvmM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Palace%20Sold%20for%20Scrap",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e7",
@@ -1256,7 +1256,7 @@
           "note": "The team are on Salisbury Plain, over 38,000 hectares of land in South West England owned by the MOD. Though the whole area is rich in ancient remains, they are concentrating on Beeches Barn, an unprepossessing field rumoured to conceal an Iron Age roundhouse. Alongside the dig, they are helping Ian Apter to build one of the team's most ambitious projects, a full-size thatched roundhouse. Early geophysics results indicate not one, but several banjo enclosures. Such features are always accompanied by Roman buildings. The aim is to get the site listed as an ancient monument, but time is running out. They are joined by army volunteers, and Iron Age expert Peter Reynolds. The many finds include a 2,000-year-old bone comb, a quern-stone and a Roman coin.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Iron-Age%20Roundhouse",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e8",
@@ -1278,7 +1278,7 @@
             "thumbnail": "https://i.ytimg.com/vi/XFdQOoe9ZEc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Bone%20Caves",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e9",
@@ -1292,7 +1292,7 @@
           "note": "While laying Brunel's Great Western Railway line 50 miles from London, navvies discovered mosaic floors indicating a Roman villa. The mosaics were broken up and the whole site ignored, until recent photographs of cropmarks showed the outline of the villa, among other features. Geophysics signals are also very strong. The trouble is, the diggers can find no structure beneath the surface. They are joined by Bernard Thomason from English Heritage, mosaics expert David Neal, Tim Allen of Oxford Archaeological Unit, and Jillian Greenaway from Reading Museum. Reconstructor Chris Owen supervises the recreation of a mosaic using thousands of tesserae.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Inter-City%20Villa",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e10",
@@ -1314,7 +1314,7 @@
             "thumbnail": "https://i.ytimg.com/vi/VK-2j_eGE3I/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Holy%20Island",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e11",
@@ -1336,7 +1336,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Q_HhqW9uyjI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Leaning%20Tower%20of%20Bridgnorth",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e12",
@@ -1350,7 +1350,7 @@
           "note": "In highlights from a previous live dig, the team visit the ancient city of Canterbury to investigate three separate sites, all connected by their religious functions. There is a Roman temple, a monastery, and a medieval site devoted to the construction of sacred buildings. Celebrity guests Liza Tarbuck and Sandi Toksvig are in attendance.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Three%20Tales%20of%20Canterbury",
-          "seriesYear": null
+          "seriesYear": 2001
         },
         {
           "id": "s8e13",
@@ -1372,7 +1372,7 @@
             "thumbnail": "https://i.ytimg.com/vi/KlOoahV3XcY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Leper%20Hospital",
-          "seriesYear": null
+          "seriesYear": 2001
         }
       ]
     },
@@ -1381,7 +1381,7 @@
       "kind": "series",
       "number": 9,
       "title": "Series 9",
-      "year": null,
+      "year": 2002,
       "episodes": [
         {
           "id": "s9e1",
@@ -1403,7 +1403,7 @@
             "thumbnail": "https://i.ytimg.com/vi/OhtdiyqvytI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20London's%20First%20Bridge",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e2",
@@ -1417,7 +1417,7 @@
           "note": "Time Team visits Ancaster, to which their resident Roman expert, Guy, recently moved. The town has yielded numerous Roman finds as well as a large cemetery with several sarcophagi from the period. In addition, the church of Ancaster is known in British archaeology for a Roman inscription dedicated to the deity Viridius. One question the team wants to tackle concerns why the Romans built a defensive system around the town in the late 3rd century CE. After some initial problems with the stratigraphy, Phil finds the cemetery level, while Carenza discovers a layer filled with jumbled up human remains mixed with other bones, probably representing disturbed burials. In the cemetery, Phil eventually uncovers the lid of a possible sarcophagus, and its excavation could thus require certain precautions due to the potential for lead poisoning and presence of biological hazards. However, the object proves to be a cist burial, as well as hazard-free. Incredibly, one of the cist slabs also turns out to contain yet another inscription to the god Viridius. In the end, the archaeologists suggest that the massive defences were ordered to be put up by the Roman central administration in Britain, and completely disrupted the original town layout. Archaeological or historical period(s): Roman Britain. Featuring from Time Team: Tony Robinson, Mick Aston, Phil Harding, Stewart Ainsworth, John Gater, Victor Ambrus, Carenza Lewis, Guy de la Bédoyère, Kerry Ely, Margaret Cox, Jeremy Taylor, Maggi Smith.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Roman's%20Panic",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e3",
@@ -1439,7 +1439,7 @@
             "thumbnail": "https://i.ytimg.com/vi/sf8Qdy2gWxg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Diving%20for%20the%20Armada",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e4",
@@ -1453,7 +1453,7 @@
           "note": "The team are invited to investigate the officers' mess of a military base in Bedfordshire, once home to monks and nuns of a 14th century Gilbertine Order. It was an experiment in unisex living. Jenni of Time Team volunteers to live like a nun during the dig, and is initiated by nunnery expert Roberta Gilchrist. John Ette from English Heritage monitors proceedings, and they are also joined by historian Richard K. Morris and osteoarchaeologist Margaret Cox. Robin Bush tells the miraculous tale of the Nun of Watton.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Naughty%20Monastery",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e5",
@@ -1475,7 +1475,7 @@
             "thumbnail": "https://i.ytimg.com/vi/27ZbSlRjgWw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Furnace%20in%20the%20Cellar",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e6",
@@ -1489,7 +1489,7 @@
           "note": "It is 40 years since amateur archaeologists dug up Roman remains near Ermine Street, now hidden beneath Cheshunt Park. Time Team tell the story of the original excavation, using the detailed plan to conduct their own investigation. They believe the site's proximity to the road is the key to this dig. With some brilliant work by Stewart and John, they soon locate part of the road. Though frustratingly they cannot find any trace of it beneath the surface, they do find a brewery and possibly a pub. The brewing process is described by ancient technology expert Peter J. Reynolds. They conduct a mini-experiment comparing Roman surveying techniques with Henry's modern equipment. They are also joined by Roman experts Rosalind Niblett and Harvey Sheldon.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Ermine%20Street%20Pub",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e7",
@@ -1511,7 +1511,7 @@
             "thumbnail": "https://i.ytimg.com/vi/GoH0q0EBDQQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Iron-Age%20Market",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e8",
@@ -1525,7 +1525,7 @@
           "note": "The owners of a Tudor house, High Ercall Hall, want Time Team to investigate a bloody confrontation between the Roundheads and Cavaliers during the English Civil War, 350 years ago. In front of the house are four mysterious arches. Could they be relics of an older, medieval building, which apparently stood here for centuries before the present building? They are joined by buildings expert Richard K. Morriss, and Civil War specialist Glenn Foard.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Siege%20House%20in%20Shropshire",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e9",
@@ -1539,7 +1539,7 @@
           "note": "Hoping to uncover Bronze Age burials, the team descend on a disused airfield. But initial finds suggest the Iron Age, while geophysics shows plenty of circles and some larger rectangular enclosures. Jacqui Wood makes prehistoric cheese, and cooks a fish stew. Bronze Age enthusiast Francis Pryor gets excited about some faint track marks. They are joined by Malcolm Atkin and Robin Jackson from Worcestershire County Council, Ian George from English Heritage, and Iron Age expert Jeremy Taylor.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Prehistoric%20Airfield",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e10",
@@ -1553,7 +1553,7 @@
           "note": "The people of Castleford believe there is a Roman city beneath them, and several past digs have borne this out. Past discoveries include leather shoes, samian ware bowls and jewelry. There is certainly a vicus, a domestic settlement next to a fort. The team are also expecting to unearth some major buildings, and even a Roman road, Dere Street. But there is a lot of Victorian rubble in the way – not to mention the local football pitch.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Lost%20Roman%20City",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e11",
@@ -1567,7 +1567,7 @@
           "note": "The medieval castle of Beaudesert in Henley-in-Arden suddenly vanished without trace, leaving a single stone on top of a mound. The people want to know what it looked like. \"The Mount\" as it's called by the locals, is a popular beauty spot and has suffered from erosion. Also, as it's a scheduled monument, there are limits to what digging can take place. The castle was built by the de Montforts in the early 12th century. Henry and Stewart create a simple 3D clay model of the building, which follows the natural contours of the hill. It looks as if the castle was demolished and the pieces sold off in the 15th century. Using authentic tools, bowyer Steve Ralphs makes a medieval longbow, which is tested against a crossbow of a similar period. Castles expert Sarah Speight describes daily life in the castle. Finds include a section of carved pestle and mortar.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Every%20Castle%20Needs%20a%20Lord",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e12",
@@ -1581,7 +1581,7 @@
           "note": "Two years ago, local archaeologist Kevin Trott discovered Roman remains in a trench being dug for a water pipe. Unfortunately the trench had to be closed, and now Time Team are having trouble finding it. While Phil and the diggers look for the original trench, a full-scale field-walking exercise reveals many finds, both Roman and Iron Age; including a lot of bronze jewellery, seeming to show industrial activity. There are hints that enamelling was carried out here, so they decide to make their own enamelled hare brooch. They start by smelting bronze from copper, tin and lead. Mick and Tony visit a nearby Roman villa with a detailed mosaic floor. On day three, Stewart spots some potential earthworks in a neighbouring field; so they decide to dig some exploratory trenches there. They end up with examples of activity from the Bronze Age, Iron Age, Roman occupation, and Anglo-Saxon period. To cap it all, at the end of day three they find a rare Iron Age burial. The team are joined for the first of many digs by Anglo-Saxon expert Helen Geake.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Steptoe%20Et%20Filius",
-          "seriesYear": null
+          "seriesYear": 2002
         },
         {
           "id": "s9e13",
@@ -1603,7 +1603,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Qi1ijJGJ9L8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Seven%20Buckets%20and%20a%20Buckle",
-          "seriesYear": null
+          "seriesYear": 2002
         }
       ]
     },
@@ -1612,7 +1612,7 @@
       "kind": "series",
       "number": 10,
       "title": "Series 10",
-      "year": null,
+      "year": 2003,
       "episodes": [
         {
           "id": "s10e1",
@@ -1634,7 +1634,7 @@
             "thumbnail": "https://i.ytimg.com/vi/FowVcKHtux0/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Garden%20Secrets",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e2",
@@ -1656,7 +1656,7 @@
             "thumbnail": "https://i.ytimg.com/vi/qdydn9H7PXA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Mosaics%2C%20Mosaics%2C%20Mosaics",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e3",
@@ -1678,7 +1678,7 @@
             "thumbnail": "https://i.ytimg.com/vi/-ATi5An380E/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Peak%20District%20Practices",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e4",
@@ -1692,7 +1692,7 @@
           "note": "Time Team investigates a Shetland back garden for remains of Viking occupation after the discovery of a number of soapstone objects there. They also open a mound feature nearby called \"The Giant's Grave\" to see whether or not in fact it may be a Scandinavian boat burial. In the garden they find more soapstone objects, slabs with crossmarks, small souterrains, and wall lines, indicating the presence of a Viking Age farmstead. Phil tries to carve a soapstone lamp as the experimental part of the program. The mound turns indeed out to be a looted Scandinavian boat burial, as the team finds patterns of iron rivets showing the imprint of the vessel and a small piece of its keel – and by excavating carefully, the archaeologists also locate a Viking tortoise brooch not taken by the looters. Archaeological or historical period(s): Viking Age. Featuring from Time Team: Tony Robinson, Mick Aston, Phil Harding, John Gater, Victor Ambrus, Henry Chapman, Alice Roberts, Sophie Jackson, David Thorpe, Jim Mower.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Giant's%20Grave",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e5",
@@ -1714,7 +1714,7 @@
             "thumbnail": "https://i.ytimg.com/vi/ewy921VSzD8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Joust%20Dig%20It",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e6",
@@ -1728,7 +1728,7 @@
           "note": "Tony Robinson and the team are hunting for Liberty's first factory in South London. 'Liberty silks' still evoke images of opulence and beauty, of floating dresses and more leisurely times. But their hunt proves far from leisurely. Day three of the search brings the vital breakthrough – as well as an extraordinary attempt to recreate the 19th-century techniques of dying and printing those wonderful silks. Archaeological or historical period(s): Arts and Crafts.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Digging%20Liberty",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e7",
@@ -1742,7 +1742,7 @@
           "note": "Time Team visit Bath to investigate parch marks seen in the park lawn of the Royal Crescent, indicating the presence of a large Roman road, possibly local remains of the Fosse Way. They also look behind the Crescent for Roman sarcophagi and wall lines found by builders of the now-gone St. Andrew's Church in the 1870s and noted by an antiquarian at the time. While the road ditches eventually yield Roman burials, the team does not locate any sarcophagi said to have been found there. Whether or not the large road, in fact, is the Fosse Way remains in the end uncertain, with arguments for both sides. Archaeological or historical period(s): Roman Britain. Featuring from Time Team: Tony Robinson, Mick Aston, Phil Harding, Stewart Ainsworth, John Gater, Guy de la Bédoyère, Henry Chapman, Alice Roberts, Ceinwen Paynton, Sophie Jackson, Catherine Edwards, Jim Mower.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Death%20in%20a%20Crescent",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e8",
@@ -1756,7 +1756,7 @@
           "note": "Time Team revisits Athelney Abbey, the hideaway of Alfred the Great, and also the very first site investigated by the team one hundred programs earlier. Ten years of technological advances in the meantime has significantly enhanced their geophysical survey methods and changes in heritage management attitudes have also given them the permission to dig at the site. Slag and magnetic readings suggest that iron and steel was smelted and worked at Athelney, the latter being a good indication of Anglo-Saxon presence. At the abbey site itself Phil and his diggers uncover several burials. Reenactors show Anglo-Saxon dress and weaponry and their Viking counterparts as the experimental part of the program, while Carenza and Tony make – and burn – traditional Saxon cakes. The archaeologists find a number of objects, a Medieval graveyard associated with Athelney abbey, a metalworking complex, and a substantial defensive ditch dug in the Iron Age, but reused in the time of king Alfred. Archaeological or historical period(s): Iron Age, Anglo-Saxon. Featuring from Time Team: Tony Robinson, Mick Aston, Phil Harding, Stewart Ainsworth, John Gater, Victor Ambrus, Carenza Lewis, Robin Bush, Chris Gaffney, Henry Chapman, Gerry McDonnell, Ceinwen Paynton, David Thorpe, Ian Powlesland, Stuart Prior.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Back%20to%20Our%20Roots",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e9",
@@ -1778,7 +1778,7 @@
             "thumbnail": "https://i.ytimg.com/vi/ayykqgn0nMU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Looking%20for%20the%20White%20House",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e10",
@@ -1800,7 +1800,7 @@
             "thumbnail": "https://i.ytimg.com/vi/CbbPTfUE6rY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Rescuing%20the%20Dead",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e11",
@@ -1814,7 +1814,7 @@
           "note": "Time Team travels to Castle Howard to look for the lost village of Henderskelf, which was demolished around 1700 to make way for the new castle constructed on the estate and its formal gardens. But the exact placement of the village proves difficult to pin down. As the geophysical survey is unable to help much, the team has to rely on a map from 1694 and visible lumps and bumps. However, geophysics comes up with better results regarding their search for the lost village church of Henderskelf. Stewart advances their investigation significantly when he discovers a more detailed sketch of the village on the back of another old map from c. 1700 in the archives of Castle Howard, but the process of scaling it onto a modern map proves challenging. When this is done, the team realizes that some of their trenches have missed target buildings altogether. Armed with all this evidence, the archaeologists finally get to grips with the elusive Henderskelf – which seems to have been utterly removed between 1700 and 1720 when the new castle was erected. Archaeological or historical period(s): Stuart period Featuring from Time Team: Tony Robinson, Mick Aston, Phil Harding, Stewart Ainsworth, John Gater, Victor Ambrus, Carenza Lewis, Henry Chapman, Kerry Ely, Raysan Al-Kubaisi, Ceinwen Paynton, David Thorpe, Catherine Edwards, Brigid Gallagher.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Not%20a%20Blot%20on%20the%20Landscape",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e12",
@@ -1836,7 +1836,7 @@
             "thumbnail": "https://i.ytimg.com/vi/g6mnleThc_M/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20View%20to%20a%20Kiln",
-          "seriesYear": null
+          "seriesYear": 2003
         },
         {
           "id": "s10e13",
@@ -1850,7 +1850,7 @@
           "note": "The constabulary in Appleby-in-Westmorland, Cumbria, know that their police station dates back to the first gaol ever on the site, built in the 1770s. They also know that two subsequent prisons, from the 1820s and the 1870s, also stood on the site. They've invited Time Team to see what remains of the former prisons underneath their car park. Trench 1 finds the remains of the room where the 1870s prison's treadwheel was, trench 2 finds the remains of the 1770s cell block, which has its own story to tell – in 1798 a prisoner tunneled out, leading trenches to be dug around the outside walls within the cells and these trenches filled with boulders, which remain under the car park. Trench 3 discovers the women's prison of the 1820s (previously prisoners were not segregated by sex), which had an underfloor heating system. One archaeologist volunteers to become a Victorian-era prisoner for 24 hours, put to hard labour breaking rocks, turning a crank handle to no purpose, and moving dirt from one pile to another. Finds include part of a warder's uniform and hobnail boots, and a bar from a prison window. Carenza acts as historian for this episode.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Jailhouse%20Rocks",
-          "seriesYear": null
+          "seriesYear": 2003
         }
       ]
     },
@@ -1859,7 +1859,7 @@
       "kind": "series",
       "number": 11,
       "title": "Series 11",
-      "year": null,
+      "year": 2004,
       "episodes": [
         {
           "id": "s11e1",
@@ -1873,7 +1873,7 @@
           "note": "The team are on the trail of a medieval mystery. Founded by Henry V and built by his son Henry VI, Syon Abbey was a large, wealthy monastery for nuns of an obscure Swedish order. During the reign of Henry VIII it vanished. Its remains lie beneath the lawns of modern Syon House, designed by Capability Brown. What they find is on a huge scale. But there is disagreement as to what kind of building it was. After investigating the foundations of the House, Stewart and Jonathan reach an agreement on the extent of the church. They are joined by buildings historian Jonathan Foyle and monastic expert Barney Sloane.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20Search%20of%20the%20Brigittine%20Abbey",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e2",
@@ -1887,7 +1887,7 @@
           "note": "Next to the beautifully manicured lawns of Whitestaunton Manor in the Blackdown Hills of Somerset lies a patch of muddy weeds. Coins and pottery have been found here, and it is supposedly the site of a Roman villa. But archaeology student Freya Bowles thinks differently. The team first have to remove weeds and tree roots without the use of mechanical diggers, as it's a scheduled monument. They are also extremely limited as to the size of the excavation. Clearly there are Roman remains, but mixed up with Victorian or Edwardian garden features. Gradually the plan of a Roman bath house emerges. The team are joined by mosaic specialist David Neal and buildings historian Jonathan Foyle. Directed by technological historian Robert Spain, they build a full-size replica hypocaust complete with under-floor heating.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Roman%20Bath%20House%20and%20Edwardian%20Folly",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e3",
@@ -1909,7 +1909,7 @@
             "thumbnail": "https://i.ytimg.com/vi/UxGQwqG82Ps/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Crannog%20in%20the%20Loch",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e4",
@@ -1923,7 +1923,7 @@
           "note": "The team investigate a possible fifth century cemetery in a ploughed field, where they find a metal shield boss. One male skeleton is holding a drinking vessel. There are hints of much earlier activity as well, including a Bronze Age barrow. Using authentic tools, they fashion a Saxon shield. Conservator Dana Goodburn-Brown examines the details in the x-rays of the shield boss; while Phil and members of Regia Anglorum demonstrate how the shields are used in battle. They are joined by bone specialists Alice Roberts and Margaret Cox, who unearth some coloured beads among the remains.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Saxon%20Burials%20on%20the%20Ridge",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e5",
@@ -1945,7 +1945,7 @@
             "thumbnail": "https://i.ytimg.com/vi/lFc7SpPINDU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Roman%20Fort%20That%20Wasn't%20There",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e6",
@@ -1967,7 +1967,7 @@
             "thumbnail": "https://i.ytimg.com/vi/vE_SFeRftCc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Iron-Age%20Trading%20Centre",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e7",
@@ -1989,7 +1989,7 @@
             "thumbnail": "https://i.ytimg.com/vi/4dI8r4JPM-s/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Medieval%20Blast%20Furnace",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e8",
@@ -2011,7 +2011,7 @@
             "thumbnail": "https://i.ytimg.com/vi/dSbG0XY4J0Q/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Rescuing%20a%20Mesolithic%20Foreshore",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e9",
@@ -2025,7 +2025,7 @@
           "note": "The British landscape is littered with Iron Age hill forts. A local archaeology unit is digging such a hill fort in Oxfordshire, but cannot afford to investigate a neighbouring larger hill, only 200 metres away. Both Roman and Iron Age remains have been found there in the past. But what is its relationship, if any, to the hill fort? The geophysics team identify a potential target, a square enclosure on the side of the hill. But before they can begin, they have to manually search the site for specimens of great crested newt, a rare protected species. At the beginning of day two, John's team find something which could be very special, a Roman church, apparently with a semicircular apse. They are joined by Tim Allen of Oxford Archaeology and osteoarchaeologist Angela Boyle.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Fertile%20Soils%2C%20Rich%20Archaeology",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e10",
@@ -2047,7 +2047,7 @@
             "thumbnail": "https://i.ytimg.com/vi/0fYODmj8B3w/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20King%20Cnut's%20Manor",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e11",
@@ -2061,7 +2061,7 @@
           "note": "As renowned Suffolk archaeologist Basil Brown discovered, Castle Hill near Ipswich is named, not after a castle, but a substantial Roman villa. Brown was unable to complete his excavation, and Time Team have been called in by local schoolchildren to find out more. However, they will need to dig up a few back gardens to do so. Very soon it becomes clear that Brown's measurements were out of kilter. Halfway through day two, Phil makes a breakthrough. But not until 11 trenches are dug in 8 gardens does a full picture emerge. The team are joined by Roman specialist David Neale and site director Miles Russell.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Back-Garden%20Archaeology%20Revisiting%20a%20Roman%20villa",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e12",
@@ -2083,7 +2083,7 @@
             "thumbnail": "https://i.ytimg.com/vi/6bG2UUgWoRI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Lost%20City%20of%20Roxburgh",
-          "seriesYear": null
+          "seriesYear": 2004
         },
         {
           "id": "s11e13",
@@ -2097,7 +2097,7 @@
           "note": "Pigs rooting in a windswept field in Dorset unearthed fragments including Roman mosaic floor tiles. In addition, a Bournemouth University excavation team located some burials nearby. The farmer, Simon Meaden, has asked Time Team to investigate further. John's geophysics survey reveals a lot of activity. Very soon multiple finds start appearing, and to Tony's delight he is allowed to dig up a little beaker. Archaeologist Mike Parker Pearson produces a timeline of prehistoric and historic burial practices. Phil's trench is invaded by chickens. Gradually a complex picture emerges of human activity here over thousands of years, including a heated Roman villa with bath-house.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Brimming%20with%20Remains",
-          "seriesYear": null
+          "seriesYear": 2004
         }
       ]
     },
@@ -2106,7 +2106,7 @@
       "kind": "series",
       "number": 12,
       "title": "Series 12",
-      "year": null,
+      "year": 2005,
       "episodes": [
         {
           "id": "s12e1",
@@ -2128,7 +2128,7 @@
             "thumbnail": "https://i.ytimg.com/vi/ShxNFMj0rtg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Manor%20That's%20Back%20to%20Front",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e2",
@@ -2150,7 +2150,7 @@
             "thumbnail": "https://i.ytimg.com/vi/RVC_5V_3qRs/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Monastery%20and%20the%20Mansion",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e3",
@@ -2172,7 +2172,7 @@
             "thumbnail": "https://i.ytimg.com/vi/8C_Sa4xe1_s/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Bombers%20in%20the%20Marsh",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e4",
@@ -2194,7 +2194,7 @@
             "thumbnail": "https://i.ytimg.com/vi/XkCTgytOB28/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Fighting%20on%20the%20Frontier",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e5",
@@ -2216,7 +2216,7 @@
             "thumbnail": "https://i.ytimg.com/vi/rCDAWSzGk8E/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Neolithic%20Cathedral%3F",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e6",
@@ -2238,7 +2238,7 @@
             "thumbnail": "https://i.ytimg.com/vi/aXWbM6Vk9CA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20Search%20of%20Henry%20V's%20Flagship%2C%20Grace%20Dieu",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e7",
@@ -2260,7 +2260,7 @@
             "thumbnail": "https://i.ytimg.com/vi/3Yx8T-EDInI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Going%20Upmarket%20with%20the%20Romans",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e8",
@@ -2282,7 +2282,7 @@
             "thumbnail": "https://i.ytimg.com/vi/nTB2LzchBRg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Picts%20and%20Hermits%3A%20Cave%20Dwellers%20of%20Fife",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e9",
@@ -2304,7 +2304,7 @@
             "thumbnail": "https://i.ytimg.com/vi/ESyt5zkSvUw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Lost%20Centuries%20of%20St%20Osyth",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e10",
@@ -2326,7 +2326,7 @@
             "thumbnail": "https://i.ytimg.com/vi/kPIfLeX2oQA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Puzzle%20of%20Picket's%20Farm",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e11",
@@ -2348,7 +2348,7 @@
             "thumbnail": "https://i.ytimg.com/vi/1kOAbh1mLmg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Norman%20Neighbours",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e12",
@@ -2370,7 +2370,7 @@
             "thumbnail": "https://i.ytimg.com/vi/NvQ_gpDxZXs/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hunting%20the%20Romans%20in%20South%20Shields%20-%20Tower%20Blocks%20and%20Togas",
-          "seriesYear": null
+          "seriesYear": 2005
         },
         {
           "id": "s12e13",
@@ -2392,7 +2392,7 @@
             "thumbnail": "https://i.ytimg.com/vi/jolWORzPzt8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Animal%20Farm",
-          "seriesYear": null
+          "seriesYear": 2005
         }
       ]
     },
@@ -2401,7 +2401,7 @@
       "kind": "series",
       "number": 13,
       "title": "Series 13",
-      "year": null,
+      "year": 2006,
       "episodes": [
         {
           "id": "s13e1",
@@ -2423,7 +2423,7 @@
             "thumbnail": "https://i.ytimg.com/vi/lIsZthIwUZI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Bodies%20in%20the%20Shed%20-%20Glendon's%20Lost%20Graveyard",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e2",
@@ -2445,7 +2445,7 @@
             "thumbnail": "https://i.ytimg.com/vi/rKgKszlA8Ao/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Villas%20out%20of%20Molehills",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e3",
@@ -2467,7 +2467,7 @@
             "thumbnail": "https://i.ytimg.com/vi/QJVLBz5uC88/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Rubble%20at%20the%20Mill",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e4",
@@ -2489,7 +2489,7 @@
             "thumbnail": "https://i.ytimg.com/vi/uaHer2jvPWQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20First%20Tudor%20Palace%3F",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e5",
@@ -2511,7 +2511,7 @@
             "thumbnail": "https://i.ytimg.com/vi/nkOVPVA9wWA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Boat%20on%20the%20Rhine%20-%20A%20Roman%20Boat%20in%20Utrecht",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e6",
@@ -2533,7 +2533,7 @@
             "thumbnail": "https://i.ytimg.com/vi/T0qWG7sQI38/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Court%20of%20the%20Kentish%20King",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e7",
@@ -2555,7 +2555,7 @@
             "thumbnail": "https://i.ytimg.com/vi/g5EINZgpyfY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Monks'%20Manor",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e8",
@@ -2577,7 +2577,7 @@
             "thumbnail": "https://i.ytimg.com/vi/V_lcuElmPx8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Castle%20in%20the%20Round",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e9",
@@ -2599,7 +2599,7 @@
             "thumbnail": "https://i.ytimg.com/vi/6xj45sIVPEk/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Sussex%20Ups%20and%20Downs",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e10",
@@ -2621,7 +2621,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Z2VwZDhWuq8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Birthplace%20of%20the%20Confessor",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e11",
@@ -2643,7 +2643,7 @@
             "thumbnail": "https://i.ytimg.com/vi/t49z2useldU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Early%20Bath",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e12",
@@ -2665,7 +2665,7 @@
             "thumbnail": "https://i.ytimg.com/vi/OubmpRSxV1g/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Taxman's%20Tavern%20-%20A%20Roman%20Mansio",
-          "seriesYear": null
+          "seriesYear": 2006
         },
         {
           "id": "s13e13",
@@ -2687,7 +2687,7 @@
             "thumbnail": "https://i.ytimg.com/vi/mcfTT-dOuAg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Scotch%20Broch",
-          "seriesYear": null
+          "seriesYear": 2006
         }
       ]
     },
@@ -2696,7 +2696,7 @@
       "kind": "series",
       "number": 14,
       "title": "Series 14",
-      "year": null,
+      "year": 2007,
       "episodes": [
         {
           "id": "s14e1",
@@ -2718,7 +2718,7 @@
             "thumbnail": "https://i.ytimg.com/vi/S_LVoZqwOoM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Finds%20on%20the%20Fairway",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e2",
@@ -2740,7 +2740,7 @@
             "thumbnail": "https://i.ytimg.com/vi/9bSjmweijCU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20There's%20No%20Place%20Like%20Rome",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e3",
@@ -2762,7 +2762,7 @@
             "thumbnail": "https://i.ytimg.com/vi/ngGt-JGhgR4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20School%20Diggers%20Medieval",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e4",
@@ -2784,7 +2784,7 @@
             "thumbnail": "https://i.ytimg.com/vi/wC9o6MwQ5W0/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Druids'%20Last%20Stand",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e5",
@@ -2806,7 +2806,7 @@
             "thumbnail": "https://i.ytimg.com/vi/4zM7kZiz6HY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Sharpe's%20Redoubt",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e6",
@@ -2828,7 +2828,7 @@
             "thumbnail": "https://i.ytimg.com/vi/qIE1vYi38AQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Port%20and%20Stilton",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e7",
@@ -2850,7 +2850,7 @@
             "thumbnail": "https://i.ytimg.com/vi/CdYHJ8EKnKE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Tale%20of%20Two%20Villages",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e8",
@@ -2872,7 +2872,7 @@
             "thumbnail": "https://i.ytimg.com/vi/LVd_jAT_3XM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20No%20Stone%20Unturned",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e9",
@@ -2894,7 +2894,7 @@
             "thumbnail": "https://i.ytimg.com/vi/QiZ4Si_cZIA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Domesday%20Mill",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e10",
@@ -2916,7 +2916,7 @@
             "thumbnail": "https://i.ytimg.com/vi/v7szfz-4I3E/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Cheyne%20Gang",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e11",
@@ -2938,7 +2938,7 @@
             "thumbnail": "https://i.ytimg.com/vi/jzawKzd5fLY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Road%20to%20the%20Relics",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e12",
@@ -2960,7 +2960,7 @@
             "thumbnail": "https://i.ytimg.com/vi/AFK6xKE95ww/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Abbey%20Habit",
-          "seriesYear": null
+          "seriesYear": 2007
         },
         {
           "id": "s14e13",
@@ -2982,7 +2982,7 @@
             "thumbnail": "https://i.ytimg.com/vi/p6PfChCJf5c/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20the%20Shadow%20of%20the%20Tor",
-          "seriesYear": null
+          "seriesYear": 2007
         }
       ]
     },
@@ -2991,7 +2991,7 @@
       "kind": "series",
       "number": 15,
       "title": "Series 15",
-      "year": null,
+      "year": 2008,
       "episodes": [
         {
           "id": "s15e1",
@@ -3013,7 +3013,7 @@
             "thumbnail": "https://i.ytimg.com/vi/KlopDgW_zgg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Gold%20in%20the%20Moat",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e2",
@@ -3035,7 +3035,7 @@
             "thumbnail": "https://i.ytimg.com/vi/xSOmEhmeJ7o/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Street%20of%20the%20Dead",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e3",
@@ -3057,7 +3057,7 @@
             "thumbnail": "https://i.ytimg.com/vi/iEC6zEFiJEo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Bodies%20in%20the%20Dunes",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e4",
@@ -3071,7 +3071,7 @@
           "note": "When a family buried their cat \"Paintpot\" in their garden, they uncovered a massive stone wall. Time Team is called in to investigate. Sources suggest a 12th-century Cistercian nunnery once stood in the vicinity. They are joined by Glyn Coppack (monastic specialist), Iain Sowden (medieval specialist)",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Naughty%20Nuns%20of%20Northampton",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e5",
@@ -3093,7 +3093,7 @@
             "thumbnail": "https://i.ytimg.com/vi/W3ApuTvL-BQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Mysteries%20of%20the%20Mosaic",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e6",
@@ -3115,7 +3115,7 @@
             "thumbnail": "https://i.ytimg.com/vi/WWXQ-G6BUyY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Blitzkrieg%20on%20Shooter's%20Hill",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e7",
@@ -3137,7 +3137,7 @@
             "thumbnail": "https://i.ytimg.com/vi/82beB_MRYzQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Keeping%20up%20with%20the%20Georgians",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e8",
@@ -3159,7 +3159,7 @@
             "thumbnail": "https://i.ytimg.com/vi/irK1Xmvk8cg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Saxons%20on%20the%20Edge",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e9",
@@ -3181,7 +3181,7 @@
             "thumbnail": "https://i.ytimg.com/vi/AC3KP8E0BEY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Fort%20of%20the%20Earls",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e10",
@@ -3203,7 +3203,7 @@
             "thumbnail": "https://i.ytimg.com/vi/h5gyxDkSmpo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20From%20Constantinople%20to%20Cornwall",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e11",
@@ -3225,7 +3225,7 @@
             "thumbnail": "https://i.ytimg.com/vi/uA1M55OKxSc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Five%20Thousand%20Tons%20of%20Stone",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e12",
@@ -3247,7 +3247,7 @@
             "thumbnail": "https://i.ytimg.com/vi/5sCYIARCew4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Romans%20Recycle",
-          "seriesYear": null
+          "seriesYear": 2008
         },
         {
           "id": "s15e13",
@@ -3269,7 +3269,7 @@
             "thumbnail": "https://i.ytimg.com/vi/p1xE-8n0qx8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hunting%20King%20Harold",
-          "seriesYear": null
+          "seriesYear": 2008
         }
       ]
     },
@@ -3278,7 +3278,7 @@
       "kind": "series",
       "number": 16,
       "title": "Series 16",
-      "year": null,
+      "year": 2009,
       "episodes": [
         {
           "id": "s16e1",
@@ -3300,7 +3300,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Q54xuvCQL6g/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Trouble%20with%20Temples",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e2",
@@ -3322,7 +3322,7 @@
             "thumbnail": "https://i.ytimg.com/vi/TVg2SJTzOko/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Wedding%20Present",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e3",
@@ -3344,7 +3344,7 @@
             "thumbnail": "https://i.ytimg.com/vi/eqAhqMUDR7c/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Heroes'%20Hill",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e4",
@@ -3366,7 +3366,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Q5wbyvYDdrU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Toga%20Town",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e5",
@@ -3388,7 +3388,7 @@
             "thumbnail": "https://i.ytimg.com/vi/wSl1UGTFuXg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Blood%2C%20Sweat%20and%20Beers",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e6",
@@ -3410,7 +3410,7 @@
             "thumbnail": "https://i.ytimg.com/vi/AHAVcf1kyV0/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Buried%20Bishops%20and%20Belfries",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e7",
@@ -3432,7 +3432,7 @@
             "thumbnail": "https://i.ytimg.com/vi/8c74r2Mv1ws/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Anarchy%20in%20the%20UK",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e8",
@@ -3454,7 +3454,7 @@
             "thumbnail": "https://i.ytimg.com/vi/HP5wNzSxVZY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Mystery%20of%20the%20Ice%20Cream%20Villa",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e9",
@@ -3476,7 +3476,7 @@
             "thumbnail": "https://i.ytimg.com/vi/aHjCODnYHyo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hermit%20Harbour",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e10",
@@ -3498,7 +3498,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Bkbob3qcNw8/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Called%20to%20the%20Bar",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e11",
@@ -3520,7 +3520,7 @@
             "thumbnail": "https://i.ytimg.com/vi/PUfW6BWBIjU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Beacon%20on%20the%20Fens",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e12",
@@ -3542,7 +3542,7 @@
             "thumbnail": "https://i.ytimg.com/vi/dBg79tFmpO0/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Hollow%20Way",
-          "seriesYear": null
+          "seriesYear": 2009
         },
         {
           "id": "s16e13",
@@ -3564,7 +3564,7 @@
             "thumbnail": "https://i.ytimg.com/vi/TzmNJvRrKlw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Skeletons%20in%20the%20Shed",
-          "seriesYear": null
+          "seriesYear": 2009
         }
       ]
     },
@@ -3573,7 +3573,7 @@
       "kind": "series",
       "number": 17,
       "title": "Series 17",
-      "year": null,
+      "year": 2010,
       "episodes": [
         {
           "id": "s17e1",
@@ -3595,7 +3595,7 @@
             "thumbnail": "https://i.ytimg.com/vi/gwZ4NU0wLYY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Corridors%20of%20Power",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e2",
@@ -3617,7 +3617,7 @@
             "thumbnail": "https://i.ytimg.com/vi/51kClNdpmCc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Saintly%20Site",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e3",
@@ -3639,7 +3639,7 @@
             "thumbnail": "https://i.ytimg.com/vi/acEsAeMXtig/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Bridge%20Over%20the%20River%20Tees",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e4",
@@ -3661,7 +3661,7 @@
             "thumbnail": "https://i.ytimg.com/vi/SttjCzjJ8VA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20In%20the%20Halls%20of%20a%20Saxon%20King",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e5",
@@ -3683,7 +3683,7 @@
             "thumbnail": "https://i.ytimg.com/vi/KrxrwxPro2o/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Massacre%20in%20the%20Cellar",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e6",
@@ -3705,7 +3705,7 @@
             "thumbnail": "https://i.ytimg.com/vi/zf6NFWMLpDE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Potted%20History",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e7",
@@ -3719,7 +3719,7 @@
           "note": "Tony, joined by English Heritage's Ben Robinson and others, explores the world's first purpose built prisoner of war camp.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Death%20and%20Dominoes%3A%20The%20First%20POW%20Camp",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e8",
@@ -3741,7 +3741,7 @@
             "thumbnail": "https://i.ytimg.com/vi/9FiJljAhdpo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Something%20for%20the%20Weekend",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e9",
@@ -3763,7 +3763,7 @@
             "thumbnail": "https://i.ytimg.com/vi/U1ucR5PUEwE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Governor's%20Green",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e10",
@@ -3785,7 +3785,7 @@
             "thumbnail": "https://i.ytimg.com/vi/vWwTFVI8uAQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Priory%20Engagement",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e11",
@@ -3807,7 +3807,7 @@
             "thumbnail": "https://i.ytimg.com/vi/qConIWslb64/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20There%20Is%20a%20Villa%20Here%20Somewhere",
-          "seriesYear": null
+          "seriesYear": 2010
         },
         {
           "id": "s17e12",
@@ -3829,7 +3829,7 @@
             "thumbnail": "https://i.ytimg.com/vi/lo__tNh-Dik/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Commanding%20Heights",
-          "seriesYear": null
+          "seriesYear": 2010
         }
       ]
     },
@@ -3838,7 +3838,7 @@
       "kind": "series",
       "number": 18,
       "title": "Series 18",
-      "year": null,
+      "year": 2011,
       "episodes": [
         {
           "id": "s18e1",
@@ -3860,7 +3860,7 @@
             "thumbnail": "https://i.ytimg.com/vi/sodkykQ5-Lc/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Reservoir%20Rituals",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e2",
@@ -3882,7 +3882,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Olmq4KOXaMA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Saxon%20Death%2C%20Saxon%20Gold",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e3",
@@ -3904,7 +3904,7 @@
             "thumbnail": "https://i.ytimg.com/vi/sn0zrbDsKfk/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Romans%20on%20the%20Range",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e4",
@@ -3926,7 +3926,7 @@
             "thumbnail": "https://i.ytimg.com/vi/5DV-k7BiC_U/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Hitler's%20Island%20Fortress",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e5",
@@ -3948,7 +3948,7 @@
             "thumbnail": "https://i.ytimg.com/vi/gbKGaH2Sjkg/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Furnace%20in%20the%20Forest",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e6",
@@ -3970,7 +3970,7 @@
             "thumbnail": "https://i.ytimg.com/vi/lEgEc6OCncs/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Under%20the%20Gravestones",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e7",
@@ -3992,7 +3992,7 @@
             "thumbnail": "https://i.ytimg.com/vi/Etfc-Um0Re0/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20House%20of%20the%20White%20Queen",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e8",
@@ -4014,7 +4014,7 @@
             "thumbnail": "https://i.ytimg.com/vi/_-sD-A2_d7s/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Cannons%20and%20Castles",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e9",
@@ -4036,7 +4036,7 @@
             "thumbnail": "https://i.ytimg.com/vi/t91oD1wELIA/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Mystery%20of%20the%20Manor%20Moat",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e10",
@@ -4058,7 +4058,7 @@
             "thumbnail": "https://i.ytimg.com/vi/P3Phc0r441Q/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Search%20for%20the%20Domesday%20Mill",
-          "seriesYear": null
+          "seriesYear": 2011
         },
         {
           "id": "s18e11",
@@ -4080,7 +4080,7 @@
             "thumbnail": "https://i.ytimg.com/vi/R8jTWqC-5SI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Rooting%20for%20the%20Romans",
-          "seriesYear": null
+          "seriesYear": 2011
         }
       ]
     },
@@ -4089,7 +4089,7 @@
       "kind": "series",
       "number": 19,
       "title": "Series 19",
-      "year": null,
+      "year": 2012,
       "episodes": [
         {
           "id": "s19e1",
@@ -4111,7 +4111,7 @@
             "thumbnail": "https://i.ytimg.com/vi/jOkeiwPRKUE/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Dig%20by%20Wire",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e2",
@@ -4133,7 +4133,7 @@
             "thumbnail": "https://i.ytimg.com/vi/2vdL4rdIObw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Village%20Affair",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e3",
@@ -4155,7 +4155,7 @@
             "thumbnail": "https://i.ytimg.com/vi/WN52fqz8TUw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Drowned%20Town",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e4",
@@ -4177,7 +4177,7 @@
             "thumbnail": "https://i.ytimg.com/vi/U7_LwpGbL-4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20First%20King%20of%20Racing",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e5",
@@ -4199,7 +4199,7 @@
             "thumbnail": "https://i.ytimg.com/vi/PKndTj9yhCQ/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Chapel%20of%20Secrets",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e6",
@@ -4221,7 +4221,7 @@
             "thumbnail": "https://i.ytimg.com/vi/dLHMuzUzzDk/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Copper%20Bottomed%20Dig",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e7",
@@ -4243,7 +4243,7 @@
             "thumbnail": "https://i.ytimg.com/vi/kMxLojFJXuI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Only%20Earl%20Is%20Essex",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e8",
@@ -4265,7 +4265,7 @@
             "thumbnail": "https://i.ytimg.com/vi/tpsAVC_XQwY/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Secrets%20of%20the%20Dunes",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e9",
@@ -4287,7 +4287,7 @@
             "thumbnail": "https://i.ytimg.com/vi/eJkoE8ijIW4/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Rome's%20Wild%20West",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e10",
@@ -4309,7 +4309,7 @@
             "thumbnail": "https://i.ytimg.com/vi/goJlGIOIDeo/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20How%20to%20Lose%20a%20Castle",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e11",
@@ -4331,7 +4331,7 @@
             "thumbnail": "https://i.ytimg.com/vi/sQHb2mVzCpw/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20King%20John's%20Lost%20Palace",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e12",
@@ -4345,7 +4345,7 @@
           "note": "Tony Robinson investigates how burial customs have changed and evolved over thousands of years of British history.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Time%20Team's%20Guide%20to%20Burial%20-%20Compilation",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s19e13",
@@ -4359,7 +4359,7 @@
           "note": "Revisiting digs that produced rare and fine jewellery, gold coins, huge and intricate mosaics - and some extraordinary archaeological fakery - Mick Aston, Phil Harding and Helen Geake defend and debate their choices for Time Team's greatest discoveries.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Time%20Team's%20Greatest%20Discoveries%20-%20Compilation.",
-          "seriesYear": null
+          "seriesYear": 2012
         }
       ]
     },
@@ -4368,7 +4368,7 @@
       "kind": "series",
       "number": 20,
       "title": "Series 20",
-      "year": null,
+      "year": 2012,
       "episodes": [
         {
           "id": "s20e1",
@@ -4382,7 +4382,7 @@
           "note": "The 20th series begins with an examination of what life was like for the First World War Machine Gun Corps, revealing the lost secrets of Belton House, the stately home where they were trained.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Forgotten%20Gunners%20of%20WWI",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e2",
@@ -4404,7 +4404,7 @@
             "thumbnail": "https://i.ytimg.com/vi/uWzGPs9wmuU/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Brancaster",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e3",
@@ -4418,7 +4418,7 @@
           "note": "Time Team investigate Caerau Hillfort, a huge hill near Cardiff that may be immensely significant; is it the long-lost Iron Age capital of South Wales? Geophysics shows multiple circular marks, indicating several roundhouses. However Francis is initially having trouble locating these structures in the ground. But there are finds a-plenty including a rare early Iron Age cup. They are joined by Iron Age specialist Niall Sharples, who explains that a hill fort's function is primarily domestic and social, rather than military. Kids from Ely are drafted in to help with the dig, and historian Ray Howell shows two of the kids some iron age artefacts in the National Museum Wales. Meanwhile metalworker David Chapman makes a bronze handle for a drinking cup.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20A%20Capital%20Hill",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e4",
@@ -4432,7 +4432,7 @@
           "note": "Tony and the Team help Hektor Rous, the son of 'Aussie Earl' Keith Rous, piece together the mysterious history of the family's Tudor country home in Suffolk. They are joined by Tudor historian Suzie Lipscomb and buildings expert Richard K. Morriss.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Henham's%20Lost%20Mansions",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e5",
@@ -4446,7 +4446,7 @@
           "note": "Tony and the team work with volunteers from Operation Nightingale, an initiative to help injured veterans of the war in Afghanistan. They are investigating the ancient Barrow Clump on Salisbury Plain, where they discover burials from 2000BC and rare Saxon finds. The team are joined by Richard Osgood, an archaeologist from the Ministry of Defence.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Warriors",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e6",
@@ -4460,7 +4460,7 @@
           "note": "Tony and the team make their way to the Lake District on an expedition that takes them both higher and deeper than they've ever been before. They are looking for a forgotten piece of the nation's industrial heritage - the Lake District used to be a major source of valuable copper.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Lost%20Mines%20of%20Lakeland",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e7",
@@ -4474,7 +4474,7 @@
           "note": "Time Team investigate Oakham Castle in the tiny county of Rutland. It's Britain's best preserved 12th-century building but its grounds are full of mysterious lumps and bumps crying out to be investigated. The team are joined by site director Neil Holbrook, historian Marc Morris, architectural historian Richard K. Morriss, Tim Allen from English Heritage, and ceramicist Jane Young. Danni Wootton looks at some small finds.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Horseshoe%20Hall",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e8",
@@ -4488,7 +4488,7 @@
           "note": "Roman remains have been turning up in an Oxfordshire field for decades, where a student in the 1960s believed he had uncovered a Roman mosaic. Is this the site of a lost grand Roman villa? Neil Holbrook takes charge, with contributions from Louise Revell (Roman archaeologist) and Mark Corney (Roman finds expert). Finds include a rare piece of Roman glass, a cheese press and a huge rustic pot from the 4th century. Stewart believes the River Thames used to run much closer to this site during Roman times.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Mystery%20of%20the%20Thames-side%20Villa",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e9",
@@ -4502,7 +4502,7 @@
           "note": "The team are working with Colm Donnelly, Finbar McCormick and others from Queen's University, Belfast. Their brief is to investigate an impressive ruin in County Down, Northern Ireland. It is associated with John de Courcy and his renegade Norman knights. But when was it built, and what did it look like? As it's a protected monument, their dig is strictly limited. Francis takes charge. Colm thinks the site shows remains of a much earlier structure, a cashel or defended stone enclosure from the Dark Ages. He shows Tony the nearby Drumena Cashel. Matt demonstrates the inferiority of primitive Irish armour against the full might of a mail-clad Norman knight with his huge charger, sword and bow.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Lost%20Castle%20of%20Dundrum",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e10",
@@ -4516,7 +4516,7 @@
           "note": "Tony and the team try to piece together the complete picture of the Manor of the More, a once impressive palace masterminded by Henry VIII's right-hand man, Cardinal Wolsey. In its heyday it was supposedly even more opulent than Wolsey's other masterpiece, Hampton Court. Built in 1520, it's now the site of Northwood Prep School; and Time Team are proposing to dig up their playing fields. Jackie McKinley takes charge. To survey the site from the air, instead of a helicopter they use a drone - a first for the programme. Danni Wootton enthuses over some gorgeous stained glass fragments. Phil's trench reveals signs of a grand gatehouse and a great turret. They are joined by archaeologist Martin Biddle, Tudor historian Suzannah Lipscomb and historic buildings expert Kent Rawlinson.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Wolsey's%20Lost%20Palace",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e11",
@@ -4530,7 +4530,7 @@
           "note": "On the invitation of the owners, Steve and Pru Barlow, Time Team try to discover if Upton Castle in Pembrokeshire was one of the Anglo-Norman castles built to defend 'Little England beyond Wales' from the locals. Unfortunately the castle was subject to much cosmetic alteration down the years. So some of the efforts centre around the chapel, which appears to be the earliest building on site, and may actually pre-date the castle. It contains a 14th century stone effigy, apparently of Sir William Malefant. Also the churchyard may yield some clues. Neil Holbrook supervises. The team are joined by historians Suzannah Lipscomb and Richard K. Morriss.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20An%20Englishman's%20Castle",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e12",
@@ -4544,7 +4544,7 @@
           "note": "Tony Robinson reports on the more than 150 practical experiments and re-creations that he and the Team have conducted over 20 years in order to unlock the mysteries exposed by their digs. including 24 hours of solitary confinement, building a thatched roundhouse, potting, a Roman water wheel, a wicker man, smelting, forging weapons, building a wood henge.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20The%20Time%20Team%20Guide%20to%20Experimental%20Archaeology",
-          "seriesYear": null
+          "seriesYear": 2012
         },
         {
           "id": "s20e13",
@@ -4558,7 +4558,7 @@
           "note": "In this special celebration of the show, Tony Robinson relives the best bits from two decades and 230 episodes.",
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Twenty%20Years%20of%20Time%20Team",
-          "seriesYear": null
+          "seriesYear": 2012
         }
       ]
     },
@@ -4567,7 +4567,7 @@
       "kind": "series",
       "number": 21,
       "title": "Series 21",
-      "year": null,
+      "year": 2022,
       "episodes": [
         {
           "id": "s21e1",
@@ -4581,7 +4581,7 @@
           "note": null,
           "video": null,
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Boden%20Iron%20Age%20Fogou%20(Cornwall)",
-          "seriesYear": null
+          "seriesYear": 2022
         },
         {
           "id": "s21e2",
@@ -4603,7 +4603,7 @@
             "thumbnail": "https://i.ytimg.com/vi/sOLbTsyIe9s/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Broughton%20Roman%20Villa",
-          "seriesYear": null
+          "seriesYear": 2022
         },
         {
           "id": "s21e3",
@@ -4625,7 +4625,7 @@
             "thumbnail": "https://i.ytimg.com/vi/eA5J290qNWM/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Knights%20Hospitaller%20Preceptory",
-          "seriesYear": null
+          "seriesYear": 2022
         },
         {
           "id": "s21e4",
@@ -4647,7 +4647,7 @@
             "thumbnail": "https://i.ytimg.com/vi/TiKS8wiXX9Y/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Anglo-Saxon%20Cemetery",
-          "seriesYear": null
+          "seriesYear": 2022
         }
       ]
     },
