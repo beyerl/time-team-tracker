@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Time Team Tracker">
+  <rect width="512" height="512" rx="96" fill="#1c2a21"/>
+  <path d="M96 352h320v24H96z" fill="#c9a227"/>
+  <path d="M120 352c0-70 40-120 136-120s136 50 136 120z" fill="#3f5c46"/>
+  <circle cx="256" cy="196" r="52" fill="#c9a227"/>
+  <path d="M256 144v104M204 196h104" stroke="#1c2a21" stroke-width="14" stroke-linecap="round"/>
+  <path d="M148 400h216l-24 48H172z" fill="#8a6a3b"/>
+</svg>

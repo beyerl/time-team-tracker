@@ -1,0 +1,102 @@
+name: Build Android app
+
+# Wraps the same web build in a Capacitor shell and publishes an installable
+# APK as a workflow artifact (and as a release asset when a tag is pushed).
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'index.html'
+      - 'capacitor.config.json'
+      - 'package.json'
+      - '.github/workflows/android.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      HAS_SIGNING_KEY: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v3
+
+      - run: npm ci
+
+      - name: Look up episodes and YouTube videos
+        continue-on-error: true
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run catalogue
+
+      - name: Build the web app
+        run: npm run build
+
+      # The android/ directory is generated rather than committed, so the
+      # native project always matches the installed Capacitor version.
+      - name: Generate the Android project
+        run: |
+          if [ ! -d android ]; then
+            npx cap add android
+          fi
+          npx cap sync android
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --no-daemon
+        working-directory: android
+
+      - name: Name the artifact
+        id: naming
+        run: echo "version=$(node -p "require('./package.json').version")-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: time-team-tracker-debug-${{ steps.naming.outputs.version }}
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+
+      # A release build is only possible once a signing key is configured.
+      # Without the secrets the workflow still produces the debug APK above.
+      - name: Build signed release APK
+        if: startsWith(github.ref, 'refs/tags/v') && env.HAS_SIGNING_KEY == 'true'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+          cd android
+          ./gradlew assembleRelease --no-daemon \
+            -Pandroid.injected.signing.store.file="$GITHUB_WORKSPACE/android/app/release.keystore" \
+            -Pandroid.injected.signing.store.password="$KEYSTORE_PASSWORD" \
+            -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
+            -Pandroid.injected.signing.key.password="$KEY_PASSWORD"
+
+      - name: Attach APKs to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            android/app/build/outputs/apk/debug/app-debug.apk
+            android/app/build/outputs/apk/release/app-release.apk
+          fail_on_unmatched_files: false

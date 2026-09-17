@@ -1,0 +1,12 @@
+{
+  "appId": "io.github.beyerl.timeteamtracker",
+  "appName": "Time Team Tracker",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#141c17"
+  }
+}

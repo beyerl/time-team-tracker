@@ -1,0 +1,10 @@
+{
+  "channels": [
+    "@TimeTeamOfficial",
+    "@TimeTeamClassics",
+    "@TimeTeamDigital"
+  ],
+  "matchThreshold": 0.62,
+  "minimumEpisodesExpected": 120,
+  "minimumFullEpisodeSeconds": 1200
+}

@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Look up episodes and YouTube videos
+        id: catalogue
+        # Best effort: a lookup failure must not stop the site going out. The
+        # catalogue committed in the repo is used instead, and the app says so.
+        continue-on-error: true
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run catalogue
+
+      - name: Report catalogue status
+        run: |
+          if [ "${{ steps.catalogue.outcome }}" != "success" ]; then
+            echo "::warning::Catalogue lookup failed; deploying with the committed catalogue."
+          fi
+          node -e "const c=require('./public/catalogue.json');console.log('Episodes:',c.stats.episodes,'| with video:',c.stats.withVideo)"
+
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

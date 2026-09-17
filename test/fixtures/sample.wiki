@@ -1,0 +1,32 @@
+Some intro prose about the programme.
+
+== Series 1 (1994) ==
+{| class="wikitable"
+! No. !! Title !! Original air date
+|-
+| 1 || [[Athelney]], Somerset || 16 January 1994
+|-
+| 2 || [[Dorchester-on-Thames|Dorchester]], Oxfordshire || 23 January 1994
+|-
+| 3 || Llanbedrgoch, Anglesey<ref name="a">cite</ref> || 30 January 1994
+|}
+
+== Series 2 (1995) ==
+{{Episode list
+ |EpisodeNumber = 5
+ |EpisodeNumber2 = 1
+ |Title = Beauport Park, East Sussex
+ |OriginalAirDate = {{Start date|1995|01|08}}
+ |ShortSummary = The team investigate a Roman bath house.
+}}
+{{Episode list |EpisodeNumber2 = 2 |Title = Llangian, Gwynedd |OriginalAirDate = 15 January 1995 }}
+
+== Specials ==
+{| class="wikitable"
+! No. !! Title !! Original air date
+|-
+| 1 || The Big Roman Dig, Various || 4 July 2005
+|}
+
+== References ==
+| this line must be ignored || totally

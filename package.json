@@ -1,0 +1,26 @@
+{
+  "name": "time-team-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Track which Time Team episodes you have watched, with automatically resolved YouTube videos and thumbnails.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "catalogue": "node scripts/fetch-catalogue.mjs",
+    "catalogue:offline": "node scripts/fetch-catalogue.mjs --offline",
+    "build:full": "npm run catalogue && npm run build",
+    "cap:sync": "cap sync android",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "dev:fixture": "node scripts/dev-fixture.mjs"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.0.0"
+  }
+}

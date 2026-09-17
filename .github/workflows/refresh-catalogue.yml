@@ -1,0 +1,47 @@
+name: Refresh catalogue
+
+# Keeps public/catalogue.json current as new episodes are uploaded to the
+# official Time Team channels. Nobody has to paste a link.
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      allow_empty:
+        description: 'Accept the result even if it looks thin'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Look up episodes and YouTube videos
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run catalogue ${{ inputs.allow_empty && '-- --allow-empty' || '' }}
+
+      - name: Commit any changes
+        run: |
+          if git diff --quiet -- public/catalogue.json; then
+            echo "Catalogue unchanged."
+            exit 0
+          fi
+          summary=$(node -e "const c=require('./public/catalogue.json');console.log(c.stats.episodes+' episodes, '+c.stats.withVideo+' with a video')")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/catalogue.json
+          git commit -m "Refresh episode catalogue ($summary)"
+          git push

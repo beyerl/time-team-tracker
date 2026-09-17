@@ -1,0 +1,188 @@
+{
+  "generatedAt": null,
+  "bootstrap": true,
+  "source": {
+    "episodes": "not built yet",
+    "videos": "not built yet"
+  },
+  "stats": {
+    "episodes": 0,
+    "seriesCount": 20,
+    "withVideo": 0,
+    "newlyMatched": 0,
+    "carriedOver": 0,
+    "unmatchedUploads": 0
+  },
+  "problems": [],
+  "series": [
+    {
+      "id": "series-1",
+      "kind": "series",
+      "number": 1,
+      "title": "Series 1",
+      "year": 1994,
+      "episodes": []
+    },
+    {
+      "id": "series-2",
+      "kind": "series",
+      "number": 2,
+      "title": "Series 2",
+      "year": 1995,
+      "episodes": []
+    },
+    {
+      "id": "series-3",
+      "kind": "series",
+      "number": 3,
+      "title": "Series 3",
+      "year": 1996,
+      "episodes": []
+    },
+    {
+      "id": "series-4",
+      "kind": "series",
+      "number": 4,
+      "title": "Series 4",
+      "year": 1997,
+      "episodes": []
+    },
+    {
+      "id": "series-5",
+      "kind": "series",
+      "number": 5,
+      "title": "Series 5",
+      "year": 1998,
+      "episodes": []
+    },
+    {
+      "id": "series-6",
+      "kind": "series",
+      "number": 6,
+      "title": "Series 6",
+      "year": 1999,
+      "episodes": []
+    },
+    {
+      "id": "series-7",
+      "kind": "series",
+      "number": 7,
+      "title": "Series 7",
+      "year": 2000,
+      "episodes": []
+    },
+    {
+      "id": "series-8",
+      "kind": "series",
+      "number": 8,
+      "title": "Series 8",
+      "year": 2001,
+      "episodes": []
+    },
+    {
+      "id": "series-9",
+      "kind": "series",
+      "number": 9,
+      "title": "Series 9",
+      "year": 2002,
+      "episodes": []
+    },
+    {
+      "id": "series-10",
+      "kind": "series",
+      "number": 10,
+      "title": "Series 10",
+      "year": 2003,
+      "episodes": []
+    },
+    {
+      "id": "series-11",
+      "kind": "series",
+      "number": 11,
+      "title": "Series 11",
+      "year": 2004,
+      "episodes": []
+    },
+    {
+      "id": "series-12",
+      "kind": "series",
+      "number": 12,
+      "title": "Series 12",
+      "year": 2005,
+      "episodes": []
+    },
+    {
+      "id": "series-13",
+      "kind": "series",
+      "number": 13,
+      "title": "Series 13",
+      "year": 2006,
+      "episodes": []
+    },
+    {
+      "id": "series-14",
+      "kind": "series",
+      "number": 14,
+      "title": "Series 14",
+      "year": 2007,
+      "episodes": []
+    },
+    {
+      "id": "series-15",
+      "kind": "series",
+      "number": 15,
+      "title": "Series 15",
+      "year": 2008,
+      "episodes": []
+    },
+    {
+      "id": "series-16",
+      "kind": "series",
+      "number": 16,
+      "title": "Series 16",
+      "year": 2009,
+      "episodes": []
+    },
+    {
+      "id": "series-17",
+      "kind": "series",
+      "number": 17,
+      "title": "Series 17",
+      "year": 2010,
+      "episodes": []
+    },
+    {
+      "id": "series-18",
+      "kind": "series",
+      "number": 18,
+      "title": "Series 18",
+      "year": 2011,
+      "episodes": []
+    },
+    {
+      "id": "series-19",
+      "kind": "series",
+      "number": 19,
+      "title": "Series 19",
+      "year": 2012,
+      "episodes": []
+    },
+    {
+      "id": "series-20",
+      "kind": "series",
+      "number": 20,
+      "title": "Series 20",
+      "year": 2013,
+      "episodes": []
+    },
+    {
+      "id": "specials",
+      "kind": "specials",
+      "number": null,
+      "title": "Specials",
+      "year": null,
+      "episodes": []
+    }
+  ],
+  "extras": []
+}
