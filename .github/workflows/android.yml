@@ -37,7 +37,13 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - uses: android-actions/setup-android@v3
+      # No setup-android step: the ubuntu runner image already ships the SDK at
+      # $ANDROID_HOME with its licences accepted, and the action's sdkmanager
+      # call fails against it.
+      - name: Show the Android SDK the runner provides
+        run: |
+          echo "ANDROID_HOME=${ANDROID_HOME:-unset}"
+          ls "${ANDROID_HOME:-/usr/local/lib/android/sdk}/platforms" || true
 
       - run: npm ci
 
