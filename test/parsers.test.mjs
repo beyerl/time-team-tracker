@@ -309,3 +309,21 @@ test('isEpisodeTableHeader needs both an episode-ish and a date-ish column', () 
 test('parseHeaderCells splits a wikitable header row', () => {
   assert.deepEqual(parseHeaderCells('! No. !! Title !! Original air date'), ['No.', 'Title', 'Original air date']);
 });
+
+test('a header-less table is not assumed to hold episodes', () => {
+  const article = [
+    '{| class="wikitable"',
+    '|-',
+    '| [[Tony Robinson]] || Presenter',
+    '|}',
+    '{| class="wikitable"',
+    '! No. !! Title !! Original air date',
+    '|-',
+    '| 1 || The Guerrilla Base of the King || 16 January 1994',
+    '|}',
+  ].join('\n');
+  assert.deepEqual(
+    parseEpisodeList(article, { defaultSeries: 1 }).map((e) => e.title),
+    ['The Guerrilla Base of the King'],
+  );
+});

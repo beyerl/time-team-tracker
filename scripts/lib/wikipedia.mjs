@@ -245,8 +245,10 @@ export function parseEpisodeList(wikitext, options = {}) {
         rowText += ` || ${lines[i].replace(/^\s*\|/, '')}`;
       }
       // Decide once per table, on its first data row, whether to read it.
+      // A table must declare itself: the cast tables carry no episode/date
+      // header, so treating a header-less table as episodes let them through.
       if (table && table.isEpisodes === null) {
-        table.isEpisodes = table.headers.length === 0 || isEpisodeTableHeader(table.headers);
+        table.isEpisodes = isEpisodeTableHeader(table.headers);
       }
       if (table && table.isEpisodes === false) continue;
 

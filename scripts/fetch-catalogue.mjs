@@ -143,18 +143,22 @@ async function main() {
   // Two rows that resolve to the same id would silently merge downstream (they
   // share a watch-history key and a video match), so collisions are dropped
   // rather than left to overwrite each other.
-  const seenIds = new Set();
+  const byId = new Map();
   const duplicates = [];
-  const withIds = [];
   for (const episode of episodes) {
     const id = episodeId(episode);
-    if (seenIds.has(id)) {
-      duplicates.push(`${id} (${episode.title})`);
+    const existing = byId.get(id);
+    if (!existing) {
+      byId.set(id, { ...episode, id });
       continue;
     }
-    seenIds.add(id);
-    withIds.push({ ...episode, id });
+    // An entry with a broadcast date is the real episode; anything without one
+    // that collides with it came from some other table on the page.
+    const replace = !existing.airDate && Boolean(episode.airDate);
+    duplicates.push(`${id} (kept "${(replace ? episode : existing).title}", dropped "${(replace ? existing : episode).title}")`);
+    if (replace) byId.set(id, { ...episode, id });
   }
+  const withIds = [...byId.values()];
   if (duplicates.length) {
     problems.push(`dropped ${duplicates.length} duplicate episode ids: ${duplicates.slice(0, 8).join(', ')}`);
   }
