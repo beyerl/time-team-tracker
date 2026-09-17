@@ -327,3 +327,18 @@ test('a header-less table is not assumed to hold episodes', () => {
     ['The Guerrilla Base of the King'],
   );
 });
+
+test('a sub-article heading without a year keeps the year it was given', () => {
+  const sub = [
+    '==Series 1==',
+    '{| class="wikitable"',
+    '! No. !! Title !! Original air date',
+    '|-',
+    '| 1 || The Guerrilla Base of the King || 16 January 1994',
+    '|}',
+  ].join('\n');
+  const parsed = parseEpisodeList(sub, { defaultSeries: 1, defaultYear: 1994 });
+  assert.equal(parsed.length, 1);
+  assert.equal(parsed[0].seriesYear, 1994, 'year survives the repeated heading');
+  assert.equal(parsed[0].series, 1);
+});

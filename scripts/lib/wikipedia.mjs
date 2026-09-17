@@ -205,7 +205,13 @@ export function parseEpisodeList(wikitext, options = {}) {
 
     const heading = parseSectionHeading(line);
     if (heading && heading.kind !== 'other') {
-      context = heading;
+      // A transcluded series article repeats its own heading, usually without
+      // the year the index page gave it - so keep what we were handed.
+      context = {
+        ...heading,
+        number: heading.number ?? defaultSeries,
+        year: heading.year ?? defaultYear,
+      };
       withinSeriesCounter = 0;
       table = null;
       continue;
