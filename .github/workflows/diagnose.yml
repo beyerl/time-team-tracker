@@ -1,9 +1,13 @@
 name: Diagnose catalogue sources
 
-# Manual probe: prints what Wikipedia and YouTube actually return, so the
-# parsers can be corrected against the real payloads.
+# Manual probe: prints what the sources actually return, then runs the real
+# lookup end to end so its live results can be compared against them.
 on:
   workflow_dispatch:
+    inputs:
+      page:
+        description: 'Wikipedia page to inspect'
+        default: 'List of Time Team episodes'
 
 jobs:
   diagnose:
@@ -15,4 +19,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: node scripts/diagnose.mjs
+      - name: Inspect the Wikipedia page
+        run: node scripts/diagnose.mjs "${{ inputs.page }}"
+      - name: Run the real lookup
+        run: npm run catalogue -- --allow-empty

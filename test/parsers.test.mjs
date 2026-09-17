@@ -61,12 +61,102 @@ test('parseEpisodeList reads wikitable rows and Episode list templates', () => {
 });
 
 test('youtube initial data extraction survives braces inside strings', () => {
-  const html = 'x var ytInitialData = {"v":{"videoId":"abcdefghijk","title":{"runs":[{"text":"A }{ B"}]},"lengthText":{"simpleText":"48:12"}},"c":{"continuationCommand":{"token":"T1"}}};y';
+  const html = 'x var ytInitialData = {"v":{"videoRenderer":{"videoId":"abcdefghijk","title":{"runs":[{"text":"A }{ B"}]},"lengthText":{"simpleText":"48:12"}}},"c":{"continuationCommand":{"token":"T1"}}};y';
   const { videos, continuations } = harvestVideos(extractInitialData(html));
   assert.equal(videos.length, 1);
   assert.equal(videos[0].title, 'A }{ B');
   assert.equal(videos[0].durationSeconds, 2892);
   assert.deepEqual(continuations, ['T1']);
+});
+
+// Shape captured from a live channel page: YouTube dropped videoRenderer in
+// favour of lockupViewModel, which carries no plain `videoId` field at all.
+test('harvestVideos reads the lockupViewModel shape channels now serve', () => {
+  const payload = {
+    contents: {
+      richGridRenderer: {
+        contents: [
+          {
+            richItemRenderer: {
+              content: {
+                lockupViewModel: {
+                  contentImage: {
+                    thumbnailViewModel: {
+                      image: {
+                        sources: [
+                          { url: 'https://i.ytimg.com/vi/k038y-J5kfY/hq720.jpg?sqp=-oaymwEc', width: 360 },
+                        ],
+                      },
+                      overlays: [
+                        {
+                          thumbnailBottomOverlayViewModel: {
+                            badges: [
+                              {
+                                thumbnailBadgeViewModel: {
+                                  text: '35:45',
+                                  animationActivationTargetId: 'k038y-J5kfY',
+                                  animatedText: 'Now playing',
+                                },
+                              },
+                            ],
+                          },
+                        },
+                        {
+                          thumbnailHoverOverlayToggleActionsViewModel: {
+                            buttons: [
+                              {
+                                toggleButtonViewModel: {
+                                  defaultButtonViewModel: {
+                                    buttonViewModel: {
+                                      accessibilityText: 'Watch later',
+                                      onTap: {
+                                        innertubeCommand: {
+                                          playlistEditEndpoint: {
+                                            actions: [{ addedVideoId: 'k038y-J5kfY', action: 'ACTION_ADD_VIDEO' }],
+                                          },
+                                        },
+                                      },
+                                    },
+                                  },
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  metadata: {
+                    lockupMetadataViewModel: {
+                      title: { content: 'Athelney, Somerset | Time Team' },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          { continuationItemRenderer: { continuationEndpoint: { continuationCommand: { token: 'NEXT' } } } },
+        ],
+      },
+    },
+  };
+
+  const { videos, continuations } = harvestVideos(payload);
+  assert.equal(videos.length, 1, 'one video found');
+  assert.equal(videos[0].id, 'k038y-J5kfY');
+  assert.equal(videos[0].title, 'Athelney, Somerset | Time Team', 'title, not "Watch later"');
+  assert.equal(videos[0].durationSeconds, 2145, '35:45 read from the badge');
+  assert.deepEqual(continuations, ['NEXT']);
+});
+
+test('harvestVideos ignores an item with no resolvable title', () => {
+  const payload = {
+    lockupViewModel: {
+      contentImage: { sources: [{ url: 'https://i.ytimg.com/vi/k038y-J5kfY/hq720.jpg' }] },
+      button: { accessibilityText: 'Watch later' },
+    },
+  };
+  assert.equal(harvestVideos(payload).videos.length, 0);
 });
 
 test('youtube helpers', () => {

@@ -81,11 +81,12 @@ export function sliceBalancedJson(text, start) {
   return null;
 }
 
-/** Flatten YouTube's `{runs:[{text}]}` / `{simpleText}` text nodes. */
+/** Flatten YouTube's `{runs:[{text}]}` / `{simpleText}` / `{content}` text nodes. */
 export function readText(node) {
   if (!node) return '';
   if (typeof node === 'string') return node;
   if (typeof node.simpleText === 'string') return node.simpleText;
+  if (typeof node.content === 'string') return node.content;
   if (Array.isArray(node.runs)) return node.runs.map((run) => run?.text ?? '').join('');
   return '';
 }
@@ -101,8 +102,110 @@ export function parseDuration(label) {
 }
 
 /**
- * Recursively collect every video-shaped object in an InnerTube payload, plus
- * any continuation tokens needed to ask for the next page.
+ * YouTube no longer ships `videoRenderer` on channel pages - the grid is built
+ * from `lockupViewModel`, which scatters the video id across several fields and
+ * nests the title differently. Rather than chase exact paths (which move), each
+ * item subtree is searched for the first thing that looks like an id, a title
+ * and a duration. Older renderer shapes still parse, so continuations that
+ * return them keep working.
+ */
+
+/** Keys whose values are a single video's subtree. */
+const ITEM_KEYS = new Set([
+  'lockupViewModel',
+  'videoRenderer',
+  'gridVideoRenderer',
+  'playlistVideoRenderer',
+  'compactVideoRenderer',
+  'reelItemRenderer',
+]);
+
+/** Fields that have been observed to carry the 11-character video id. */
+const ID_KEYS = ['contentId', 'videoId', 'addedVideoId', 'animationActivationTargetId'];
+
+const VIDEO_ID = /^[A-Za-z0-9_-]{11}$/;
+const THUMB_URL = /i\.ytimg\.com\/(?:vi|vi_webp|an_webp)\/([A-Za-z0-9_-]{11})\//;
+const CLOCK = /^\d{1,3}(?::\d{2}){1,2}$/;
+
+/** Button labels and overlay text that must never be mistaken for a title. */
+const NOT_A_TITLE = /^(watch later|now playing|add to queue|share|download|save|shorts|live)$/i;
+
+const isVideoId = (value) => typeof value === 'string' && VIDEO_ID.test(value);
+
+/** Depth-first search of an item subtree for the first video id it mentions. */
+export function findVideoId(node, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 14) return null;
+  if (Array.isArray(node)) {
+    for (const item of node) {
+      const found = findVideoId(item, depth + 1);
+      if (found) return found;
+    }
+    return null;
+  }
+  for (const key of ID_KEYS) {
+    if (isVideoId(node[key])) return node[key];
+  }
+  if (typeof node.url === 'string') {
+    const match = THUMB_URL.exec(node.url);
+    if (match) return match[1];
+  }
+  for (const value of Object.values(node)) {
+    const found = findVideoId(value, depth + 1);
+    if (found) return found;
+  }
+  return null;
+}
+
+/** The first `title`-keyed text in the subtree that is not button furniture. */
+export function findTitle(node, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 14) return null;
+  if (Array.isArray(node)) {
+    for (const item of node) {
+      const found = findTitle(item, depth + 1);
+      if (found) return found;
+    }
+    return null;
+  }
+  for (const key of ['title', 'headline']) {
+    const text = readText(node[key]).trim();
+    if (text && !NOT_A_TITLE.test(text)) return text;
+  }
+  for (const value of Object.values(node)) {
+    const found = findTitle(value, depth + 1);
+    if (found) return found;
+  }
+  return null;
+}
+
+/** The first clock-shaped string in the subtree, as seconds. */
+export function findDurationSeconds(node, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 14) return null;
+  if (Array.isArray(node)) {
+    for (const item of node) {
+      const found = findDurationSeconds(item, depth + 1);
+      if (found) return found;
+    }
+    return null;
+  }
+  if (typeof node.lengthSeconds === 'string' && Number(node.lengthSeconds) > 0) {
+    return Number(node.lengthSeconds);
+  }
+  for (const [key, value] of Object.entries(node)) {
+    const text = readText(value).trim();
+    if (text && CLOCK.test(text) && /text|length|duration|badge/i.test(key)) {
+      return parseDuration(text);
+    }
+  }
+  for (const value of Object.values(node)) {
+    const found = findDurationSeconds(value, depth + 1);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * Collect every video in an InnerTube payload, plus the continuation tokens
+ * needed to ask for the next page.
  */
 export function harvestVideos(payload) {
   const videos = new Map();
@@ -110,8 +213,7 @@ export function harvestVideos(payload) {
   const seen = new Set();
 
   const visit = (node) => {
-    if (!node || typeof node !== 'object') return;
-    if (seen.has(node)) return;
+    if (!node || typeof node !== 'object' || seen.has(node)) return;
     seen.add(node);
 
     if (Array.isArray(node)) {
@@ -122,22 +224,21 @@ export function harvestVideos(payload) {
     const token = node.continuationCommand?.token ?? node.continuationEndpoint?.continuationCommand?.token;
     if (typeof token === 'string') continuations.push(token);
 
-    const id = node.videoId;
-    if (typeof id === 'string' && id.length === 11 && (node.title || node.headline)) {
-      const title = readText(node.title) || readText(node.headline);
-      if (title && !videos.has(id)) {
-        videos.set(id, {
-          id,
-          title: title.trim(),
-          durationSeconds:
-            parseDuration(readText(node.lengthText)) ??
-            (node.lengthSeconds ? Number(node.lengthSeconds) : null),
-          publishedLabel: readText(node.publishedTimeText) || null,
-        });
+    for (const [key, value] of Object.entries(node)) {
+      if (ITEM_KEYS.has(key) && value && typeof value === 'object') {
+        const id = findVideoId(value);
+        const title = findTitle(value);
+        if (id && title && !videos.has(id)) {
+          videos.set(id, {
+            id,
+            title,
+            durationSeconds: findDurationSeconds(value),
+            publishedLabel: readText(value.publishedTimeText) || null,
+          });
+        }
       }
+      visit(value);
     }
-
-    for (const value of Object.values(node)) visit(value);
   };
 
   visit(payload);
