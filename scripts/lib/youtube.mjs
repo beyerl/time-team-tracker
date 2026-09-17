@@ -257,7 +257,10 @@ async function fetchChannelPage(handle, tab = 'videos') {
  * Page through a channel's uploads using the same InnerTube endpoint the
  * website uses. No API key needed.
  */
-export async function fetchChannelVideosViaInnerTube(handle, { maxPages = 40, log = () => {} } = {}) {
+export async function fetchChannelVideosViaInnerTube(
+  handle,
+  { maxPages = 120, maxBarrenPages = 6, log = () => {} } = {},
+) {
   const html = await fetchChannelPage(handle);
   const apiKey = /"INNERTUBE_API_KEY":"([^"]+)"/.exec(html)?.[1];
   const clientVersion = /"INNERTUBE_CLIENT_VERSION":"([^"]+)"/.exec(html)?.[1] ?? '2.20240101.00.00';
@@ -272,6 +275,7 @@ export async function fetchChannelVideosViaInnerTube(handle, { maxPages = 40, lo
   const endpoint = `https://www.youtube.com/youtubei/v1/browse${apiKey ? `?key=${apiKey}` : ''}`;
   const visitedTokens = new Set();
   let queue = continuations;
+  let unproductive = 0;
 
   for (let page = 0; page < maxPages && queue.length; page += 1) {
     const token = queue.shift();
@@ -297,7 +301,16 @@ export async function fetchChannelVideosViaInnerTube(handle, { maxPages = 40, lo
     const before = collected.size;
     for (const video of next.videos) collected.set(video.id, video);
     queue = queue.concat(next.continuations.filter((item) => !visitedTokens.has(item)));
-    if (collected.size === before) break; // nothing new - stop paging
+
+    // A channel page ships several continuation tokens and only one of them
+    // feeds the video grid; the rest drive engagement panels and yield nothing.
+    // An unproductive token means "try the next token", not "stop paging".
+    if (collected.size === before) {
+      unproductive += 1;
+      if (unproductive >= maxBarrenPages && queue.length === 0) break;
+      continue;
+    }
+    unproductive = 0;
     log(`  ${handle}: ${collected.size} videos after page ${page + 2}`);
   }
 

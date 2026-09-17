@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  cleanWikitext, parseAirDate, parseEpisodeList, splitSite, parseSectionHeading,
+  cleanWikitext, parseAirDate, parseEpisodeList, splitSite, parseSectionHeading, findTransclusions,
 } from '../scripts/lib/wikipedia.mjs';
 import {
   extractInitialData, harvestVideos, parseDuration, readText, thumbnailFor,
@@ -208,4 +208,59 @@ test('matcher never assigns one video to two episodes', () => {
   ];
   const videos = [{ id: 'v1', title: 'Athelney, Somerset | Time Team' }];
   assert.equal(matchEpisodesToVideos(episodes, videos).size, 1);
+});
+
+// The index page holds no tables: each series section transcludes its own
+// article, so the fetch has to follow them.
+test('findTransclusions tags each transcluded article with its series', () => {
+  const wikitext = [
+    '==Episodes==',
+    '===Series 1 (1994)===',
+    "{{Main|Time Team (series 1){{!}}''Time Team'' (series 1)}}",
+    '{{:Time Team (series 1)}}',
+    '===Series 2 (1995)===',
+    '{{:Time Team (series 2)}}',
+    '==References==',
+    '{{:Should Not Be Followed}}',
+  ].join('\n');
+
+  const found = findTransclusions(wikitext);
+  assert.deepEqual(
+    found.map((item) => [item.page, item.series, item.year]),
+    [['Time Team (series 1)', 1, 1994], ['Time Team (series 2)', 2, 1995]],
+  );
+});
+
+test('parseEpisodeList can be given a forced series for a sub-article', () => {
+  const sub = [
+    '{| class="wikitable"',
+    '! No. !! Title !! Original air date',
+    '|-',
+    '| 1 || [[Athelney]], Somerset || 16 January 1994',
+    '|-',
+    '| 2 || Dorchester, Oxfordshire || 23 January 1994',
+    '|}',
+  ].join('\n');
+
+  // With no context the rows cannot be placed, so nothing is emitted.
+  assert.equal(parseEpisodeList(sub).length, 0);
+
+  const placed = parseEpisodeList(sub, { defaultSeries: 4, defaultYear: 1997 });
+  assert.equal(placed.length, 2);
+  assert.equal(placed[0].series, 4);
+  assert.equal(placed[0].seriesYear, 1997);
+  assert.equal(placed[0].title, 'Athelney, Somerset');
+  assert.equal(placed[1].episode, 2);
+});
+
+test('template parameter rows are never mistaken for episodes', () => {
+  const junk = [
+    '{{Series overview',
+    '| link1 = List of Time Team episodes #Series 1 (1994)',
+    '| start1 = 16 January 1994',
+    '| network1 = Channel 4',
+    '}}',
+  ].join('\n');
+  const parsed = parseEpisodeList(junk, { defaultSeries: 1 });
+  assert.deepEqual(parsed.map((e) => e.title), [], 'infobox parameters produce no episodes');
 });

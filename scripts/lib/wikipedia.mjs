@@ -11,11 +11,17 @@
 const API = 'https://en.wikipedia.org/w/api.php';
 
 /** Candidate page titles, tried in order until one yields episodes. */
-export const CANDIDATE_PAGES = [
-  'List of Time Team episodes',
-  'List of Time Team specials',
-  'Time Team',
-];
+export const INDEX_PAGE = 'List of Time Team episodes';
+
+/**
+ * The index page holds no tables of its own: each series section transcludes a
+ * separate article ({{:Time Team (series 4)}}). Those sub-articles are where
+ * the episodes actually live, so the fetch follows them.
+ *
+ * Deliberately NOT included: the show's main "Time Team" article. It parses
+ * into hundreds of infobox parameter rows that look like episodes but are not.
+ */
+export const CANDIDATE_PAGES = [INDEX_PAGE];
 
 /** Remove refs, comments, templates, wiki links and markup from a cell. */
 export function cleanWikitext(value) {
@@ -118,16 +124,28 @@ export function parseEpisodeListTemplate(body) {
  * Parse a full wikitext page into a flat list of episodes.
  * Every episode carries the series context of the heading it appeared under.
  */
-export function parseEpisodeList(wikitext) {
+export function parseEpisodeList(wikitext, options = {}) {
+  const {
+    defaultSeries = null,
+    defaultKind = 'series',
+    defaultYear = null,
+    defaultLabel = 'Episodes',
+  } = options;
   const lines = String(wikitext ?? '').split('\n');
   const episodes = [];
-  let context = { kind: 'series', number: null, year: null, label: 'Episodes' };
+  let context = { kind: defaultKind, number: defaultSeries, year: defaultYear, label: defaultLabel };
   let withinSeriesCounter = 0;
 
   const push = ({ title, numberInSeries, airDate, note }) => {
     const cleanTitle = cleanWikitext(title);
     if (!cleanTitle || cleanTitle.length < 2) return;
     if (/^(title|episode|site|no\.?|#|series)$/i.test(cleanTitle)) return; // header row
+    // "link1 = List of Time Team episodes" and friends: template parameters
+    // from an infobox or series-overview box, not episodes.
+    if (cleanTitle.includes('=')) return;
+    // Outside a known series (or the specials section) a row cannot be placed,
+    // so it is boilerplate rather than an episode.
+    if (context.kind !== 'specials' && context.number == null) return;
     withinSeriesCounter += 1;
     const episodeNumber = Number.isFinite(numberInSeries) && numberInSeries > 0 ? numberInSeries : withinSeriesCounter;
     const { site, county } = splitSite(cleanTitle);
@@ -213,6 +231,40 @@ export function parseEpisodeList(wikitext) {
 const countBraces = (line) =>
   (line.match(/\{\{/g)?.length ?? 0) - (line.match(/\}\}/g)?.length ?? 0);
 
+/** Split wikitext into sections, each carrying the heading that opened it. */
+export function splitSections(wikitext) {
+  const sections = [];
+  let current = { heading: null, lines: [] };
+  for (const line of String(wikitext ?? '').split('\n')) {
+    const heading = parseSectionHeading(line);
+    if (heading) {
+      sections.push(current);
+      current = { heading, lines: [] };
+    } else {
+      current.lines.push(line);
+    }
+  }
+  sections.push(current);
+  return sections.map(({ heading, lines }) => ({ heading, body: lines.join('\n') }));
+}
+
+/**
+ * Find `{{:Time Team (series 4)}}` style transclusions, tagged with the series
+ * of the section they appeared in.
+ */
+export function findTransclusions(wikitext) {
+  const found = [];
+  for (const { heading, body } of splitSections(wikitext)) {
+    if (!heading || heading.kind === 'other') continue;
+    const pattern = /\{\{:\s*([^}|]+?)\s*\}\}/g;
+    let match;
+    while ((match = pattern.exec(body)) !== null) {
+      found.push({ page: match[1], series: heading.number, kind: heading.kind, year: heading.year });
+    }
+  }
+  return found;
+}
+
 /** Fetch raw wikitext for a page via the MediaWiki action API. */
 export async function fetchWikitext(page) {
   const url =
@@ -226,21 +278,43 @@ export async function fetchWikitext(page) {
   return data?.parse?.wikitext ?? '';
 }
 
-/** Try each candidate page and keep the first that yields a usable list. */
+/**
+ * Build the episode list: parse whatever the index page holds inline, then
+ * follow each transcluded series article and parse that too.
+ */
 export async function fetchEpisodeList({ log = () => {} } = {}) {
   const problems = [];
-  let best = [];
-  for (const page of CANDIDATE_PAGES) {
+  let wikitext;
+  try {
+    wikitext = await fetchWikitext(INDEX_PAGE);
+  } catch (error) {
+    problems.push(`${INDEX_PAGE}: ${error.message}`);
+    log(`  ${INDEX_PAGE}: FAILED - ${error.message}`);
+    return { episodes: [], problems };
+  }
+
+  const episodes = parseEpisodeList(wikitext);
+  log(`  ${INDEX_PAGE}: ${episodes.length} episodes inline`);
+
+  const transclusions = findTransclusions(wikitext);
+  log(`  following ${transclusions.length} transcluded series articles`);
+
+  for (const { page, series, kind, year } of transclusions) {
     try {
-      const wikitext = await fetchWikitext(page);
-      const episodes = parseEpisodeList(wikitext);
-      log(`  ${page}: parsed ${episodes.length} episodes`);
-      if (episodes.length > best.length) best = episodes;
-      if (best.length >= 150) break; // full programme run found
+      const sub = await fetchWikitext(page);
+      const parsed = parseEpisodeList(sub, {
+        defaultSeries: series,
+        defaultKind: kind,
+        defaultYear: year,
+        defaultLabel: page,
+      });
+      log(`    ${page}: ${parsed.length} episodes`);
+      episodes.push(...parsed);
     } catch (error) {
       problems.push(`${page}: ${error.message}`);
-      log(`  ${page}: FAILED - ${error.message}`);
+      log(`    ${page}: FAILED - ${error.message}`);
     }
   }
-  return { episodes: best, problems };
+
+  return { episodes, problems };
 }
