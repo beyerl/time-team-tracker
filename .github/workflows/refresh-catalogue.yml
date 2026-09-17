@@ -6,11 +6,6 @@ on:
   schedule:
     - cron: '17 4 * * 1'
   workflow_dispatch:
-    inputs:
-      allow_empty:
-        description: 'Accept the result even if it looks thin'
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -31,7 +26,7 @@ jobs:
       - name: Look up episodes and YouTube videos
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: npm run catalogue ${{ inputs.allow_empty && '-- --allow-empty' || '' }}
+        run: npm run catalogue
 
       - name: Commit any changes
         run: |
@@ -40,6 +35,7 @@ jobs:
             exit 0
           fi
           summary=$(node -e "const c=require('./public/catalogue.json');console.log(c.stats.episodes+' episodes, '+c.stats.withVideo+' with a video')")
+          echo "$summary"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/catalogue.json
