@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T19:06:24.909Z",
+  "generatedAt": "2026-09-21T09:59:51.493Z",
   "source": {
     "episodes": "en.wikipedia.org",
     "videos": "@TimeTeamOfficial, @TimeTeamClassics"
@@ -10,7 +10,7 @@
     "withVideo": 169,
     "newlyMatched": 167,
     "carriedOver": 2,
-    "unmatchedUploads": 505
+    "unmatchedUploads": 507
   },
   "problems": [
     "dropped 6 duplicate episode ids: s1e1 (kept \"The Guerrilla Base of the King\", dropped \"Tony Robinson\"), s1e2 (kept \"On the Edge of an Empire\", dropped \"Phil Harding\"), s1e3 (kept \"The New Town of a Norman Prince\", dropped \"Victor Ambrus\"), s2e1 (kept \"Lord of the Isles\", dropped \"Tony Robinson\"), s2e2 (kept \"The Saxon Graves\", dropped \"Phil Harding\"), s2e3 (kept \"The Lost Villa\", dropped \"Victor Ambrus\")"
@@ -3172,13 +3172,13 @@
           "airDate": "2008-03-02",
           "note": "The team visit Northern Ireland to locate one of the most important sites in Anglo-Irish history - a hilltop castle above the city of Dungannon, home of the powerful O'Neill dynasty, whose story culminates in the hugely significant flight of the Earls. The team are joined by Colm Donnelly, Hiram Morgan, Paul Logue and Jim O'Neill.",
           "video": {
-            "id": "AC3KP8E0BEY",
-            "title": "Fort Of The Earls (Full Episode) | S15 EP9 | Time Team (Dungannon, Northern Ireland)",
+            "id": "BFm5r_WHNBI",
+            "title": "Fort of the Earls (Full Episode) | S15 EP9 | Time Team (Dungannon, Northern Ireland)",
             "channel": "@TimeTeamClassics",
-            "durationSeconds": 2921,
+            "durationSeconds": 2906,
             "confidence": 1,
-            "url": "https://www.youtube.com/watch?v=AC3KP8E0BEY",
-            "thumbnail": "https://i.ytimg.com/vi/AC3KP8E0BEY/hqdefault.jpg"
+            "url": "https://www.youtube.com/watch?v=BFm5r_WHNBI",
+            "thumbnail": "https://i.ytimg.com/vi/BFm5r_WHNBI/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Fort%20of%20the%20Earls",
           "seriesYear": 2008
@@ -4849,6 +4849,14 @@
   ],
   "extras": [
     {
+      "id": "L_CH95HR3qY",
+      "title": "Journey To Stonehenge | Time Team Classic Special",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 2949,
+      "url": "https://www.youtube.com/watch?v=L_CH95HR3qY",
+      "thumbnail": "https://i.ytimg.com/vi/L_CH95HR3qY/hqdefault.jpg"
+    },
+    {
       "id": "k038y-J5kfY",
       "title": "Bayeux Tapestry arrives in London | Time Team podcast",
       "channel": "@TimeTeamOfficial",
@@ -5161,14 +5169,6 @@
       "thumbnail": "https://i.ytimg.com/vi/g9Ny-LpspO0/hqdefault.jpg"
     },
     {
-      "id": "w7o3fVYTafs",
-      "title": "NEW! | Bringing Home Little Boy Blue | TIME TEAM SPECIAL",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 4758,
-      "url": "https://www.youtube.com/watch?v=w7o3fVYTafs",
-      "thumbnail": "https://i.ytimg.com/vi/w7o3fVYTafs/hqdefault.jpg"
-    },
-    {
       "id": "f_RRt6B-dxY",
       "title": "NEW | Digging Band of Brothers: Time Team Special with Tony Robinson (2023) - FULL EPISODE",
       "channel": "@TimeTeamOfficial",
@@ -5263,6 +5263,14 @@
       "durationSeconds": 5695,
       "url": "https://www.youtube.com/watch?v=KlaaGGcd6Mc",
       "thumbnail": "https://i.ytimg.com/vi/KlaaGGcd6Mc/hqdefault.jpg"
+    },
+    {
+      "id": "w7o3fVYTafs",
+      "title": "NEW! | Bringing Home Little Boy Blue | TIME TEAM SPECIAL",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 4758,
+      "url": "https://www.youtube.com/watch?v=w7o3fVYTafs",
+      "thumbnail": "https://i.ytimg.com/vi/w7o3fVYTafs/hqdefault.jpg"
     },
     {
       "id": "CjSt4jZQaHg",
@@ -5449,14 +5457,6 @@
       "thumbnail": "https://i.ytimg.com/vi/Jb0ugYx8M9k/hqdefault.jpg"
     },
     {
-      "id": "VpRcuA2HIDE",
-      "title": "DAZZLING DISCOVERIES | Best of Time Team News 2024 | Volume II (Feature Length Compilation)",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 4438,
-      "url": "https://www.youtube.com/watch?v=VpRcuA2HIDE",
-      "thumbnail": "https://i.ytimg.com/vi/VpRcuA2HIDE/hqdefault.jpg"
-    },
-    {
       "id": "mp7O9R-oV98",
       "title": "New Episode | Day 1: Secrets of Wytch Farm | Time Team (Dorset) 2024",
       "channel": "@TimeTeamOfficial",
@@ -5551,6 +5551,14 @@
       "durationSeconds": 3050,
       "url": "https://www.youtube.com/watch?v=Z2V496kzVRg",
       "thumbnail": "https://i.ytimg.com/vi/Z2V496kzVRg/hqdefault.jpg"
+    },
+    {
+      "id": "VpRcuA2HIDE",
+      "title": "DAZZLING DISCOVERIES | Best of Time Team News 2024 | Volume II (Feature Length Compilation)",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 4438,
+      "url": "https://www.youtube.com/watch?v=VpRcuA2HIDE",
+      "thumbnail": "https://i.ytimg.com/vi/VpRcuA2HIDE/hqdefault.jpg"
     },
     {
       "id": "8NaEw-HpwyE",
@@ -5673,14 +5681,6 @@
       "thumbnail": "https://i.ytimg.com/vi/xrtqZWC5m20/hqdefault.jpg"
     },
     {
-      "id": "XVU-vE-88JY",
-      "title": "Time Team Podcast | Shakespeare's hidden stage",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 2286,
-      "url": "https://www.youtube.com/watch?v=XVU-vE-88JY",
-      "thumbnail": "https://i.ytimg.com/vi/XVU-vE-88JY/hqdefault.jpg"
-    },
-    {
       "id": "yi_d6q5TOTI",
       "title": "Time Team Special: Nelson's Hospital | Classic Special (Full Episode) - 2010 Haslar, Gosport",
       "channel": "@TimeTeamOfficial",
@@ -5767,6 +5767,14 @@
       "durationSeconds": 5083,
       "url": "https://www.youtube.com/watch?v=CLtAvXsWN18",
       "thumbnail": "https://i.ytimg.com/vi/CLtAvXsWN18/hqdefault.jpg"
+    },
+    {
+      "id": "XVU-vE-88JY",
+      "title": "Time Team Podcast | Shakespeare's hidden stage",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 2286,
+      "url": "https://www.youtube.com/watch?v=XVU-vE-88JY",
+      "thumbnail": "https://i.ytimg.com/vi/XVU-vE-88JY/hqdefault.jpg"
     },
     {
       "id": "y-GVfhWDddg",
@@ -6041,14 +6049,6 @@
       "thumbnail": "https://i.ytimg.com/vi/305se-3xmXo/hqdefault.jpg"
     },
     {
-      "id": "XriKiBg2sIk",
-      "title": "Time Team Teatime 30: Ken Follett – Building the Past",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 2900,
-      "url": "https://www.youtube.com/watch?v=XriKiBg2sIk",
-      "thumbnail": "https://i.ytimg.com/vi/XriKiBg2sIk/hqdefault.jpg"
-    },
-    {
       "id": "RlaIXSpLLW8",
       "title": "VIKINGS: Exploding the Myth – Dr Cat Jarman",
       "channel": "@TimeTeamOfficial",
@@ -6063,6 +6063,14 @@
       "durationSeconds": 1395,
       "url": "https://www.youtube.com/watch?v=_XtYRZ7sXBQ",
       "thumbnail": "https://i.ytimg.com/vi/_XtYRZ7sXBQ/hqdefault.jpg"
+    },
+    {
+      "id": "XriKiBg2sIk",
+      "title": "Time Team Teatime 30: Ken Follett – Building the Past",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 2900,
+      "url": "https://www.youtube.com/watch?v=XriKiBg2sIk",
+      "thumbnail": "https://i.ytimg.com/vi/XriKiBg2sIk/hqdefault.jpg"
     },
     {
       "id": "6cnZ2Ohqa6g",
@@ -7497,6 +7505,14 @@
       "thumbnail": "https://i.ytimg.com/vi/jNRr9WILcLQ/hqdefault.jpg"
     },
     {
+      "id": "AC3KP8E0BEY",
+      "title": "Fort Of The Earls (Full Episode) | S15 EP9 | Time Team (Dungannon, Northern Ireland)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2921,
+      "url": "https://www.youtube.com/watch?v=AC3KP8E0BEY",
+      "thumbnail": "https://i.ytimg.com/vi/AC3KP8E0BEY/hqdefault.jpg"
+    },
+    {
       "id": "yWr_URYYE_E",
       "title": "House Of The White Queen (Full Episode) | S18 EP7 | Time Team (Groby, Leicestershire)",
       "channel": "@TimeTeamClassics",
@@ -7575,14 +7591,6 @@
       "durationSeconds": 2916,
       "url": "https://www.youtube.com/watch?v=DqPA6MC-Jm8",
       "thumbnail": "https://i.ytimg.com/vi/DqPA6MC-Jm8/hqdefault.jpg"
-    },
-    {
-      "id": "vhF-74dMBJU",
-      "title": "Bronze Age Cropmarks (Full Episode) | S6 EP10 | Time Team (Kemerton, Worcestershire)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 3021,
-      "url": "https://www.youtube.com/watch?v=vhF-74dMBJU",
-      "thumbnail": "https://i.ytimg.com/vi/vhF-74dMBJU/hqdefault.jpg"
     },
     {
       "id": "ek_PKCDx-pM",
@@ -7711,6 +7719,14 @@
       "durationSeconds": 2939,
       "url": "https://www.youtube.com/watch?v=eScx284tr3o",
       "thumbnail": "https://i.ytimg.com/vi/eScx284tr3o/hqdefault.jpg"
+    },
+    {
+      "id": "vhF-74dMBJU",
+      "title": "Bronze Age Cropmarks (Full Episode) | S6 EP10 | Time Team (Kemerton, Worcestershire)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 3021,
+      "url": "https://www.youtube.com/watch?v=vhF-74dMBJU",
+      "thumbnail": "https://i.ytimg.com/vi/vhF-74dMBJU/hqdefault.jpg"
     },
     {
       "id": "0Z-QPsnwlVM",
@@ -7905,14 +7921,6 @@
       "thumbnail": "https://i.ytimg.com/vi/z-1v_xUEySE/hqdefault.jpg"
     },
     {
-      "id": "jP6eMJgaaec",
-      "title": "Finds In The Fairway (Full Episode) | S14 EP1 | Time Team (Isle Of Man)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2926,
-      "url": "https://www.youtube.com/watch?v=jP6eMJgaaec",
-      "thumbnail": "https://i.ytimg.com/vi/jP6eMJgaaec/hqdefault.jpg"
-    },
-    {
       "id": "I_b5H4TaM7Q",
       "title": "Furnace in the Forest (Full Episode) | S18 EP5 | Time Team (Derwentcote, County Durham)",
       "channel": "@TimeTeamClassics",
@@ -8015,6 +8023,14 @@
       "durationSeconds": 3262,
       "url": "https://www.youtube.com/watch?v=pTEPWb-vfLQ",
       "thumbnail": "https://i.ytimg.com/vi/pTEPWb-vfLQ/hqdefault.jpg"
+    },
+    {
+      "id": "jP6eMJgaaec",
+      "title": "Finds In The Fairway (Full Episode) | S14 EP1 | Time Team (Isle Of Man)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2926,
+      "url": "https://www.youtube.com/watch?v=jP6eMJgaaec",
+      "thumbnail": "https://i.ytimg.com/vi/jP6eMJgaaec/hqdefault.jpg"
     },
     {
       "id": "VHKti81YDcI",
@@ -8177,14 +8193,6 @@
       "thumbnail": "https://i.ytimg.com/vi/CssZKq0wU1k/hqdefault.jpg"
     },
     {
-      "id": "6Sir2qH-AnQ",
-      "title": "Secrets of the Dunes (Full Episode) | S19 EP8 | Time Team (Kenfig, South Wales)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2862,
-      "url": "https://www.youtube.com/watch?v=6Sir2qH-AnQ",
-      "thumbnail": "https://i.ytimg.com/vi/6Sir2qH-AnQ/hqdefault.jpg"
-    },
-    {
       "id": "9_QOrEzJ7Hw",
       "title": "The Only Earl Is Essex (Full Episode) | S19 EP7 | Time Team (Colne Priory, Essex)",
       "channel": "@TimeTeamClassics",
@@ -8239,6 +8247,14 @@
       "durationSeconds": 2835,
       "url": "https://www.youtube.com/watch?v=CfzgsXBn5Cw",
       "thumbnail": "https://i.ytimg.com/vi/CfzgsXBn5Cw/hqdefault.jpg"
+    },
+    {
+      "id": "6Sir2qH-AnQ",
+      "title": "Secrets of the Dunes (Full Episode) | S19 EP8 | Time Team (Kenfig, South Wales)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2862,
+      "url": "https://www.youtube.com/watch?v=6Sir2qH-AnQ",
+      "thumbnail": "https://i.ytimg.com/vi/6Sir2qH-AnQ/hqdefault.jpg"
     },
     {
       "id": "-rSEj_fB7-0",
@@ -8481,14 +8497,6 @@
       "thumbnail": "https://i.ytimg.com/vi/48OThhh3y84/hqdefault.jpg"
     },
     {
-      "id": "UXAtbYGPP0w",
-      "title": "➤Time Team's Top 3 DANGEROUS Digs",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 3531,
-      "url": "https://www.youtube.com/watch?v=UXAtbYGPP0w",
-      "thumbnail": "https://i.ytimg.com/vi/UXAtbYGPP0w/hqdefault.jpg"
-    },
-    {
       "id": "U2rhoUaUmog",
       "title": "➤The BANE of Archaeologists | Time Team's Top 3 Antiquarian Digs",
       "channel": "@TimeTeamClassics",
@@ -8591,6 +8599,14 @@
       "durationSeconds": 2835,
       "url": "https://www.youtube.com/watch?v=nuRsOGJ-_is",
       "thumbnail": "https://i.ytimg.com/vi/nuRsOGJ-_is/hqdefault.jpg"
+    },
+    {
+      "id": "UXAtbYGPP0w",
+      "title": "➤Time Team's Top 3 DANGEROUS Digs",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 3531,
+      "url": "https://www.youtube.com/watch?v=UXAtbYGPP0w",
+      "thumbnail": "https://i.ytimg.com/vi/UXAtbYGPP0w/hqdefault.jpg"
     },
     {
       "id": "NxnrQNVlkSk",
@@ -8769,20 +8785,20 @@
       "thumbnail": "https://i.ytimg.com/vi/8HfMU8OOpUI/hqdefault.jpg"
     },
     {
-      "id": "PRKY7r0LgSw",
-      "title": "Time Team: The Best of the Cambridgeshire Digs",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2921,
-      "url": "https://www.youtube.com/watch?v=PRKY7r0LgSw",
-      "thumbnail": "https://i.ytimg.com/vi/PRKY7r0LgSw/hqdefault.jpg"
-    },
-    {
       "id": "hX3MhJ19GpQ",
       "title": "Time Team: The Best of The DURHAM Digs",
       "channel": "@TimeTeamClassics",
       "durationSeconds": 2973,
       "url": "https://www.youtube.com/watch?v=hX3MhJ19GpQ",
       "thumbnail": "https://i.ytimg.com/vi/hX3MhJ19GpQ/hqdefault.jpg"
+    },
+    {
+      "id": "MLTRFDaHUBs",
+      "title": "➤ Time Team's Top 3 MEDIEVAL Digs",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2570,
+      "url": "https://www.youtube.com/watch?v=MLTRFDaHUBs",
+      "thumbnail": "https://i.ytimg.com/vi/MLTRFDaHUBs/hqdefault.jpg"
     },
     {
       "id": "WZZoqZO2B7U",
@@ -8799,14 +8815,6 @@
       "durationSeconds": 3405,
       "url": "https://www.youtube.com/watch?v=wFnzk5zYl-k",
       "thumbnail": "https://i.ytimg.com/vi/wFnzk5zYl-k/hqdefault.jpg"
-    },
-    {
-      "id": "MLTRFDaHUBs",
-      "title": "➤ Time Team's Top 3 MEDIEVAL Digs",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2570,
-      "url": "https://www.youtube.com/watch?v=MLTRFDaHUBs",
-      "thumbnail": "https://i.ytimg.com/vi/MLTRFDaHUBs/hqdefault.jpg"
     },
     {
       "id": "zPAfOeqip28",
@@ -8839,6 +8847,14 @@
       "durationSeconds": 3112,
       "url": "https://www.youtube.com/watch?v=J_eHTGAL_oE",
       "thumbnail": "https://i.ytimg.com/vi/J_eHTGAL_oE/hqdefault.jpg"
+    },
+    {
+      "id": "PRKY7r0LgSw",
+      "title": "Time Team: The Best of the Cambridgeshire Digs",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2921,
+      "url": "https://www.youtube.com/watch?v=PRKY7r0LgSw",
+      "thumbnail": "https://i.ytimg.com/vi/PRKY7r0LgSw/hqdefault.jpg"
     },
     {
       "id": "R_-nnjL4Gc0",
