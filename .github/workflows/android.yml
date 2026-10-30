@@ -64,6 +64,9 @@ jobs:
             npx cap add android
           fi
           npx cap sync android
+          # Swap Capacitor's placeholder launcher icons for the app's own,
+          # built by scripts/make-icons.py.
+          cp -r resources/android/res/. android/app/src/main/res/
 
       # Gradle signs debug builds with ~/.android/debug.keystore, which a fresh
       # runner generates anew each time. Android refuses to install an update

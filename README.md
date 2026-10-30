@@ -81,6 +81,20 @@ Setting a `YOUTUBE_API_KEY` repository secret is optional but makes the lookup
 more reliable. Adjust the channels or the match threshold in
 `scripts/catalogue.config.json`.
 
+## App icon
+
+Every icon - favicon, PWA icons (including a maskable one), Apple touch icon
+and the Android launcher icons - is generated from
+[`resources/icon-source.jpg`](resources/icon-source.jpg):
+
+```bash
+python3 scripts/make-icons.py   # needs Pillow
+```
+
+The output is committed. The Android workflow copies
+`resources/android/res/` into the generated project, replacing Capacitor's
+placeholder icons.
+
 ## Deployment
 
 ### Web (GitHub Pages)
