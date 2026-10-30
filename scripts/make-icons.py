@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Builds every app icon from resources/icon-source.jpg (the round Time Team
-logo on a white square).
+Builds every app icon from resources/icon-source.png, the round emblem drawn
+by scripts/draw-emblem.py.
 
     python3 scripts/make-icons.py      # needs Pillow
 
@@ -13,14 +13,14 @@ when the logo changes.
 
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / 'resources' / 'icon-source.jpg'
+SOURCE = ROOT / 'resources' / 'icon-source.png'
 WEB = ROOT / 'public' / 'icons'
 ANDROID = ROOT / 'resources' / 'android' / 'res'
 
-# The logo's own navy, used wherever the icon needs a solid background.
+# The emblem's navy, used wherever the icon needs a solid background.
 NAVY = (0, 33, 91)
 NAVY_HEX = '#00215B'
 MASTER = 1024
@@ -28,17 +28,8 @@ SUPERSAMPLE = 4
 
 
 def round_logo():
-    """The logo as a crisp disc on transparency, MASTER pixels across."""
-    logo = Image.open(SOURCE).convert('RGB').resize((MASTER, MASTER), Image.LANCZOS)
-    # A supersampled mask gives an anti-aliased edge; the slight inset drops the
-    # white JPEG fringe around the circle.
-    big = MASTER * SUPERSAMPLE
-    inset = int(big * 0.006)
-    mask = Image.new('L', (big, big), 0)
-    ImageDraw.Draw(mask).ellipse((inset, inset, big - inset, big - inset), fill=255)
-    disc = logo.convert('RGBA')
-    disc.putalpha(mask.resize((MASTER, MASTER), Image.LANCZOS))
-    return disc
+    """The emblem, a disc on transparency, MASTER pixels across."""
+    return Image.open(SOURCE).convert('RGBA').resize((MASTER, MASTER), Image.LANCZOS)
 
 
 def place(logo, size, scale, background=None):

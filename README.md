@@ -85,9 +85,11 @@ more reliable. Adjust the channels or the match threshold in
 
 Every icon - favicon, PWA icons (including a maskable one), Apple touch icon
 and the Android launcher icons - is generated from
-[`resources/icon-source.jpg`](resources/icon-source.jpg):
+[`resources/icon-source.png`](resources/icon-source.png), the project's own
+emblem (not the show's logo):
 
 ```bash
+python3 scripts/draw-emblem.py  # redraws the emblem; needs Pillow and a serif font
 python3 scripts/make-icons.py   # needs Pillow
 ```
 
