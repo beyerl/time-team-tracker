@@ -1,5 +1,6 @@
 import './styles.css';
 import { createStore } from './store.js';
+import { isNativeApp, saveBackup } from './backup.js';
 import {
   allEpisodes, episodeCode, filterEpisodes, formatAirDate, formatDuration,
   loadCatalogue, randomUnwatched,
@@ -422,16 +423,17 @@ el.data.addEventListener('click', (event) => {
   if (event.target === el.data) el.data.close();
 });
 
-$('#export-btn').addEventListener('click', () => {
-  const blob = new Blob([store.export()], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `time-team-tracker-${new Date().toISOString().slice(0, 10)}.json`;
-  link.click();
-  URL.revokeObjectURL(url);
-  setStatus('Backup downloaded.', true);
+$('#export-btn').addEventListener('click', async () => {
+  try {
+    setStatus(await saveBackup(store.export()), true);
+  } catch (error) {
+    setStatus(`The backup could not be saved: ${error.message ?? error}`, false);
+  }
 });
+
+// Android's file picker greys out .json files that arrive typed as plain
+// octet-streams (Drive, mail attachments), so let it offer everything.
+if (isNativeApp()) $('#import-input').removeAttribute('accept');
 
 $('#import-input').addEventListener('change', async (event) => {
   const file = event.target.files?.[0];
