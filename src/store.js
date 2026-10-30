@@ -6,12 +6,16 @@
  * orphans a watch history.
  */
 
+import { canonicalVideoUrl } from './video-links.js';
+
 const STORAGE_KEY = 'time-team-tracker:v1';
 const SCHEMA_VERSION = 1;
 
 const emptyState = () => ({
   version: SCHEMA_VERSION,
   entries: {},
+  /** Episode id -> YouTube watch URL the user set by hand. */
+  videos: {},
   prefs: { theme: 'system', view: 'grid', filter: 'all', collapsed: [] },
 });
 
@@ -46,9 +50,15 @@ export function migrate(raw) {
       note: typeof entry.note === 'string' ? entry.note.slice(0, 2000) : '',
     };
   }
+  const videos = {};
+  for (const [id, link] of Object.entries(raw.videos ?? {})) {
+    const url = canonicalVideoUrl(link);
+    if (url) videos[id] = url;
+  }
   return {
     version: SCHEMA_VERSION,
     entries,
+    videos,
     prefs: { ...base.prefs, ...(raw.prefs && typeof raw.prefs === 'object' ? raw.prefs : {}) },
   };
 }
@@ -128,6 +138,20 @@ export function createStore() {
       }
       commit();
     },
+    videoLinkFor: (id) => state.videos[id] ?? null,
+    /** Set a hand-picked YouTube link; an empty value removes it. False if unusable. */
+    setVideoLink(id, link) {
+      if (!String(link ?? '').trim()) {
+        delete state.videos[id];
+        commit();
+        return true;
+      }
+      const url = canonicalVideoUrl(link);
+      if (!url) return false;
+      state.videos = { ...state.videos, [id]: url };
+      commit();
+      return true;
+    },
     setPref(key, value) {
       state.prefs = { ...state.prefs, [key]: value };
       commit();
@@ -155,12 +179,15 @@ export function createStore() {
               }
             : entry;
         }
+        // A link already set on this device wins, as for notes and ratings.
+        state.videos = { ...parsed.videos, ...state.videos };
       } else {
         state.entries = parsed.entries;
+        state.videos = parsed.videos;
       }
       state.prefs = { ...state.prefs, ...parsed.prefs };
       commit();
-      return Object.keys(parsed.entries).length;
+      return { episodes: Object.keys(parsed.entries).length, videos: Object.keys(parsed.videos).length };
     },
     reset() {
       state = emptyState();

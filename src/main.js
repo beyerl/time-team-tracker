@@ -1,6 +1,7 @@
 import './styles.css';
 import { createStore } from './store.js';
 import { isNativeApp, saveBackup } from './backup.js';
+import { applyVideoLinks } from './video-links.js';
 import {
   allEpisodes, episodeCode, filterEpisodes, formatAirDate, formatDuration,
   loadCatalogue, randomUnwatched,
@@ -40,6 +41,11 @@ const escapeHtml = (value) =>
   );
 
 const isWatched = (id) => store.isWatched(id);
+
+/** Re-derive the episode list, with the user's own video links applied. */
+function deriveEpisodes() {
+  episodes = applyVideoLinks(allEpisodes(catalogue), store.state.videos);
+}
 
 /* ------------------------------------------------------------------- theme */
 
@@ -96,6 +102,7 @@ function episodeCard(episode) {
         <span class="episode__code">${escapeHtml(episodeCode(episode))}</span>
         <h3 class="episode__title">${escapeHtml(episode.title)}</h3>
         <p class="episode__meta">${escapeHtml(meta)}</p>
+        ${video?.manual ? '<p class="episode__link-text">Your own video link</p>' : ''}
         ${entry.note ? `<p class="episode__note-text">${escapeHtml(entry.note)}</p>` : ''}
         <div class="episode__row">
           <label class="episode__watch">
@@ -104,12 +111,27 @@ function episodeCard(episode) {
           </label>
           <button type="button" class="episode__note-btn" data-action="note-toggle" data-id="${episode.id}"
                   title="Add a note">📝</button>
+          <button type="button" class="episode__note-btn" data-action="link-toggle" data-id="${episode.id}"
+                  title="${video ? 'Change the YouTube video' : 'Add a YouTube video'}">🔗</button>
           <span class="stars">${stars}</span>
         </div>
         <div class="episode__note-editor">
           <textarea data-action="note" data-id="${episode.id}" rows="2"
                     placeholder="Notes about this dig…">${escapeHtml(entry.note)}</textarea>
         </div>
+        <form class="episode__link-editor" data-action="link-save" data-id="${episode.id}">
+          <input type="url" inputmode="url" autocomplete="off" spellcheck="false"
+                 placeholder="Paste a YouTube link…" aria-label="YouTube link for ${escapeHtml(episode.title)}"
+                 value="${escapeHtml(store.videoLinkFor(episode.id) ?? '')}" />
+          <div class="episode__link-actions">
+            <button type="submit" class="btn btn--primary">Save</button>
+            ${video?.manual
+              ? `<button type="button" class="btn btn--ghost" data-action="link-reset" data-id="${episode.id}">
+                   ${episode.catalogueVideo ? 'Use found video' : 'Remove link'}</button>`
+              : ''}
+          </div>
+          <p class="episode__link-error" role="status"></p>
+        </form>
       </div>
     </article>`;
 }
@@ -298,6 +320,18 @@ el.list.addEventListener('click', (event) => {
     if (card.classList.contains('is-noting')) card.querySelector('textarea')?.focus();
   }
 
+  if (action === 'link-toggle') {
+    const card = target.closest('.episode');
+    card.classList.toggle('is-linking');
+    if (card.classList.contains('is-linking')) card.querySelector('.episode__link-editor input')?.focus();
+  }
+
+  if (action === 'link-reset') {
+    store.setVideoLink(id, '');
+    deriveEpisodes();
+    render();
+  }
+
   if (action === 'toggle-series') {
     const collapsed = new Set(store.state.prefs.collapsed ?? []);
     if (collapsed.has(group)) collapsed.delete(group);
@@ -314,6 +348,20 @@ el.list.addEventListener('click', (event) => {
     store.setManyWatched(entry.episodes.map((episode) => episode.id), target.dataset.watched === 'true');
     render();
   }
+});
+
+el.list.addEventListener('submit', (event) => {
+  const form = event.target.closest('[data-action="link-save"]');
+  if (!form) return;
+  event.preventDefault();
+  const input = form.querySelector('input');
+  if (!store.setVideoLink(form.dataset.id, input.value)) {
+    form.querySelector('.episode__link-error').textContent =
+      'That is not a YouTube video link. Paste the address of the video page or a share link.';
+    return;
+  }
+  deriveEpisodes();
+  render();
 });
 
 el.list.addEventListener('change', (event) => {
@@ -440,8 +488,13 @@ $('#import-input').addEventListener('change', async (event) => {
   if (!file) return;
   try {
     const count = store.import(await file.text());
+    deriveEpisodes();
     render();
-    setStatus(`Imported ${count} episode${count === 1 ? '' : 's'}.`, true);
+    const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+    setStatus(
+      `Imported ${plural(count.episodes, 'episode')}${count.videos ? ` and ${plural(count.videos, 'video link')}` : ''}.`,
+      true,
+    );
   } catch (error) {
     setStatus(`That file could not be read: ${error.message}`, false);
   } finally {
@@ -450,8 +503,9 @@ $('#import-input').addEventListener('change', async (event) => {
 });
 
 $('#reset-btn').addEventListener('click', () => {
-  if (!window.confirm('Clear every watched mark, rating and note on this device?')) return;
+  if (!window.confirm('Clear every watched mark, rating, note and video link on this device?')) return;
   store.reset();
+  deriveEpisodes();
   applyTheme();
   syncToolbar();
   render();
@@ -522,7 +576,7 @@ async function boot() {
   syncToolbar();
   try {
     catalogue = await loadCatalogue();
-    episodes = allEpisodes(catalogue);
+    deriveEpisodes();
   } catch (error) {
     el.list.innerHTML = `<p class="empty">The catalogue could not be loaded.<br />${escapeHtml(error.message)}</p>`;
     return;

@@ -255,6 +255,17 @@ body {
   border-radius: 8px; border: 1px solid var(--edge); background: var(--soil-800); color: var(--text);
 }
 
+.episode__link-text { margin: 0; font-size: 12px; color: var(--gold-soft); }
+.episode__link-editor { display: none; flex-direction: column; gap: 6px; }
+.episode.is-linking .episode__link-editor { display: flex; }
+.episode__link-editor input {
+  width: 100%; padding: 8px; font: inherit; font-size: 13px;
+  border-radius: 8px; border: 1px solid var(--edge); background: var(--soil-800); color: var(--text);
+}
+.episode__link-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.episode__link-error { margin: 0; font-size: 12px; color: var(--danger, #c0533a); }
+.episode__link-error:empty { display: none; }
+
 .episode__search { font-size: 12px; color: var(--text-dim); }
 .episode__search:hover { color: var(--gold); }
 
