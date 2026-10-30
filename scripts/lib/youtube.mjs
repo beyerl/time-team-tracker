@@ -245,6 +245,14 @@ export function harvestVideos(payload) {
   return { videos: [...videos.values()], continuations: [...new Set(continuations)] };
 }
 
+/** ISO 8601 "PT1H2M33S" -> 3753 seconds. */
+export function parseIsoDuration(value) {
+  const match = /^P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(String(value ?? ''));
+  if (!match) return null;
+  const [, days, hours, minutes, seconds] = match.map((part) => Number(part ?? 0));
+  return ((days * 24 + hours) * 60 + minutes) * 60 + seconds;
+}
+
 /* ------------------------------------------------------------------ fetching */
 
 /** Resolve a channel handle (`@TimeTeamOfficial`) to its page HTML. */
@@ -346,6 +354,17 @@ export async function fetchChannelVideosViaApi(handle, apiKey, { log = () => {} 
     pageToken = page.nextPageToken ?? '';
     log(`  ${handle}: ${videos.length} videos`);
   } while (pageToken);
+
+  // playlistItems carries no duration, and duration is what tells a full
+  // episode from a commentary or a clip.
+  for (let i = 0; i < videos.length; i += 50) {
+    const batch = videos.slice(i, i + 50);
+    const details = await getJson(
+      `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${batch.map((v) => v.id).join(',')}&key=${apiKey}`,
+    );
+    const byId = new Map((details.items ?? []).map((item) => [item.id, parseIsoDuration(item.contentDetails?.duration)]));
+    for (const video of batch) video.durationSeconds = byId.get(video.id) ?? null;
+  }
 
   return videos;
 }

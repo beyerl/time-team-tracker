@@ -6,5 +6,9 @@
   "matchThreshold": 0.62,
   "minimumEpisodesExpected": 120,
   "minimumFullEpisodeSeconds": 1200,
-  "minimumSeriesExpected": 10
+  "minimumSeriesExpected": 10,
+  "classicChannel": "@TimeTeamClassics",
+  "classicCutoffYear": 2020,
+  "classicMinimumSeconds": 2400,
+  "classicMaximumSeconds": 4200
 }

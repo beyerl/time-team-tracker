@@ -9,7 +9,7 @@ import {
   extractInitialData, harvestVideos, parseDuration, readText, thumbnailFor,
 } from '../scripts/lib/youtube.mjs';
 import {
-  matchEpisodesToVideos, normaliseTitle, tokenise, extractSeriesEpisode, levenshtein,
+  matchEpisodesToVideos, normaliseTitle, tokenise, extractSeriesEpisode, levenshtein, videoRejection,
 } from '../scripts/lib/text.mjs';
 
 const wikitext = readFileSync(new URL('./fixtures/sample.wiki', import.meta.url), 'utf8');
@@ -176,6 +176,65 @@ test('extractSeriesEpisode reads S/E markers', () => {
   assert.deepEqual(extractSeriesEpisode('Time Team S02E03 - Beauport Park'), { series: 2, episode: 3 });
   assert.deepEqual(extractSeriesEpisode('Series 12 Episode 5 | Papcastle'), { series: 12, episode: 5 });
   assert.equal(extractSeriesEpisode('No markers here'), null);
+  // The shapes the Classics channel actually uses.
+  assert.deepEqual(extractSeriesEpisode('Search for Richmond Palace (Full Episode) | S5 EP1 | Time Team'), { series: 5, episode: 1 });
+  assert.deepEqual(extractSeriesEpisode('Lost Roman Villa | Time Team - S2 E3'), { series: 2, episode: 3 });
+  assert.deepEqual(extractSeriesEpisode('Bawsey St James, Norfolk | S06E11 | Time Team'), { series: 6, episode: 11 });
+});
+
+const RULES = {
+  classicChannel: '@TimeTeamClassics',
+  classicCutoffYear: 2020,
+  minimumFullEpisodeSeconds: 1200,
+  classicMinimumSeconds: 2400,
+  classicMaximumSeconds: 4200,
+};
+const classic = (extra = {}) => ({ id: 's12e1', kind: 'episode', series: 12, episode: 1, title: "The Manor That's Back to Front", seriesYear: 2005, ...extra });
+const upload = (extra = {}) => ({ id: 'v1', title: "The Manor That's Back to Front (Full Episode) | S12 EP1 | Time Team", channel: '@TimeTeamClassics', durationSeconds: 2923, ...extra });
+
+test('videoRejection accepts a full classic episode from the Classics channel', () => {
+  assert.equal(videoRejection(classic(), upload(), RULES), null);
+});
+
+test('videoRejection turns away commentaries, clips and wrong channels', () => {
+  assert.match(videoRejection(classic(), upload({ title: "Time Team Commentary: 'The Manor That's Back to Front' | S12E01", durationSeconds: 316 }), RULES), /not a full episode/);
+  assert.match(videoRejection(classic(), upload({ title: "Teatime 4 | The Manor That's Back to Front" }), RULES), /not a full episode/);
+  assert.match(videoRejection(classic(), upload({ durationSeconds: 1500 }), RULES), /too short/);
+  assert.match(videoRejection(classic(), upload({ durationSeconds: 17000 }), RULES), /too long/);
+  assert.match(videoRejection(classic(), upload({ channel: '@TimeTeamOfficial' }), RULES), /must come from @TimeTeamClassics/);
+});
+
+test('videoRejection holds a classic upload to its series/episode marker', () => {
+  assert.match(videoRejection(classic(), upload({ title: 'Norman Neighbours (Full Episode) | S12 EP11 | Time Team' }), RULES), /S12E11/);
+});
+
+test('videoRejection keeps revival episodes off the Classics channel', () => {
+  const revival = { id: 's21e1', kind: 'episode', series: 21, episode: 1, title: 'Lizard Peninsula', seriesYear: 2022 };
+  assert.equal(videoRejection(revival, upload({ channel: '@TimeTeamOfficial', title: 'Lizard Peninsula | TIME TEAM' }), RULES), null);
+  assert.match(videoRejection(revival, upload({ title: 'Lizard Peninsula | FULL EPISODE' }), RULES), /only has pre-2020/);
+});
+
+test('matcher prefers the upload with the right marker over a commentary with the same title', () => {
+  const episodes = [classic()];
+  const videos = [
+    upload({ id: 'commentary', title: "Time Team Commentary: 'The Manor That's Back to Front' | S12E01", channel: '@TimeTeamOfficial', durationSeconds: 316 }),
+    upload({ id: 'renamed', title: 'Uncovering a Tudor Mystery | Time Team - S12 E1' }),
+  ];
+  assert.equal(matchEpisodesToVideos(episodes, videos, { rules: RULES }).get('s12e1').video.id, 'renamed');
+});
+
+test('matcher sees through uploads numbered differently from the broadcast order', () => {
+  const episodes = [
+    { id: 's2e2', kind: 'episode', series: 2, episode: 2, title: 'The Saxon Graves', site: 'Winterbourne Gunner', seriesYear: 1995 },
+    { id: 's2e5', kind: 'episode', series: 2, episode: 5, title: 'Medieval Dining Hall', site: 'Hylton Castle', seriesYear: 1995 },
+  ];
+  const videos = [
+    upload({ id: 'hylton', title: 'Uncovering the Lost Medieval Secrets of Hilton Castle - Sunderland Archaeology | Time Team - S2 E2' }),
+    upload({ id: 'graves', title: 'Secrets of the Saxon Graveyard - Unearthing 3,000 Years of History | Time Team - S2 E5' }),
+  ];
+  const matched = matchEpisodesToVideos(episodes, videos, { rules: RULES });
+  assert.equal(matched.get('s2e5')?.video.id, 'hylton');
+  assert.notEqual(matched.get('s2e2')?.video.id, 'hylton');
 });
 
 test('levenshtein', () => {
@@ -230,6 +289,21 @@ test('findTransclusions tags each transcluded article with its series', () => {
     found.map((item) => [item.page, item.series, item.year]),
     [['Time Team (series 1)', 1, 1994], ['Time Team (series 2)', 2, 1995]],
   );
+});
+
+test('parseEpisodeList takes the site from an Aux location column', () => {
+  const sub = [
+    '{{Episode list/sublist|Time Team series 2',
+    '|EpisodeNumber2=5',
+    '|Title=Medieval Dining Hall',
+    '|Aux1=<span class="location">[[Hylton Castle]], [[City of Sunderland|Sunderland]]</span>',
+    '|OriginalAirDate={{Start date|1995|2|5|df=y}}',
+    '}}',
+  ].join('\n');
+  const [episode] = parseEpisodeList(sub, { defaultSeries: 2, defaultYear: 1995 });
+  assert.equal(episode.title, 'Medieval Dining Hall');
+  assert.equal(episode.site, 'Hylton Castle');
+  assert.equal(episode.county, 'Sunderland');
 });
 
 test('parseEpisodeList can be given a forced series for a sub-article', () => {

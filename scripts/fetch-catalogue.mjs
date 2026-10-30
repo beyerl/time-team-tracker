@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url';
 
 import { fetchEpisodeList } from './lib/wikipedia.mjs';
 import { collectChannelVideos, thumbnailFor, watchUrlFor } from './lib/youtube.mjs';
-import { matchEpisodesToVideos } from './lib/text.mjs';
+import { matchEpisodesToVideos, videoRejection } from './lib/text.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUTPUT = path.join(ROOT, 'public', 'catalogue.json');
@@ -163,13 +163,24 @@ async function main() {
     problems.push(`dropped ${duplicates.length} duplicate episode ids: ${duplicates.slice(0, 8).join(', ')}`);
   }
 
+  const rules = {
+    classicChannel: config.classicChannel ?? null,
+    classicCutoffYear: config.classicCutoffYear ?? 2020,
+    minimumFullEpisodeSeconds: config.minimumFullEpisodeSeconds ?? 1200,
+    classicMinimumSeconds: config.classicMinimumSeconds ?? null,
+    classicMaximumSeconds: config.classicMaximumSeconds ?? null,
+  };
+
   log('Matching episodes to uploads...');
   const matches = videos.length
-    ? matchEpisodesToVideos(withIds, videos, { threshold: config.matchThreshold })
+    ? matchEpisodesToVideos(withIds, videos, { threshold: config.matchThreshold, rules })
     : new Map();
 
   let matchedCount = 0;
   let carriedCount = 0;
+  const rejectedCarry = [];
+  const fetchedIds = new Set(videos.map((video) => video.id));
+  const freshlyMatched = new Set([...matches.values()].map((match) => match.video.id));
   const usedVideoIds = new Set();
 
   const decorated = withIds.map((episode) => {
@@ -186,10 +197,20 @@ async function main() {
         thumbnail: thumbnailFor(match.video.id),
       };
       matchedCount += 1;
-    } else if (carriedOver.has(episode.id)) {
-      // A previous run found this one; a thin fetch should not lose it.
-      video = carriedOver.get(episode.id);
-      carriedCount += 1;
+    } else if (carriedOver.has(episode.id) && !fetchedIds.has(carriedOver.get(episode.id).id)) {
+      // A previous run found this one and this fetch came back without it; a
+      // thin fetch should not lose it. (A video the fetch did return was weighed
+      // by the matcher and lost, so it is not resurrected.)
+      const previous = carriedOver.get(episode.id);
+      const reason = freshlyMatched.has(previous.id) || usedVideoIds.has(previous.id)
+        ? 'now matched to another episode'
+        : videoRejection(episode, previous, rules);
+      if (reason) {
+        rejectedCarry.push(`${episode.id} "${previous.title}": ${reason}`);
+      } else {
+        video = previous;
+        carriedCount += 1;
+      }
     }
     if (video) usedVideoIds.add(video.id);
 
@@ -208,6 +229,10 @@ async function main() {
       seriesYear: episode.seriesYear ?? null,
     };
   });
+
+  if (rejectedCarry.length) {
+    problems.push(`dropped ${rejectedCarry.length} previously matched videos that are not the episode: ${rejectedCarry.slice(0, 8).join('; ')}`);
+  }
 
   const minimumSeconds = config.minimumFullEpisodeSeconds ?? 1200;
   const unmatched = videos

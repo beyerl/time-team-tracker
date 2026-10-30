@@ -110,51 +110,178 @@ export function levenshtein(a, b) {
   return previous[b.length];
 }
 
-/** Pull an explicit "S03E07" / "Series 3 Episode 7" marker out of a video title. */
+/**
+ * Pull an explicit series/episode marker out of a video title. Covers the
+ * shapes the channels use: "S03E07", "S3 E7", "S5 EP1", "S06E11",
+ * "Series 3 Episode 7" and "(Full Episode S15E06)".
+ */
 export function extractSeriesEpisode(value) {
   const text = deaccent(value).toLowerCase();
-  const compact = text.match(/\bs(?:eries)?\s*(\d{1,2})\s*(?:[ex]|episode)\s*(\d{1,3})\b/);
+  const compact = text.match(/\bs(?:eries)?\s*(\d{1,2})\s*(?:ep(?:isode)?|e|x)\s*(\d{1,3})\b/);
   if (compact) return { series: Number(compact[1]), episode: Number(compact[2]) };
   const series = text.match(/\bseries\s*(\d{1,2})\b/);
   const episode = text.match(/\bepisode\s*(\d{1,3})\b/);
-  if (series && episode) return { series: Number(series[1]), episode: Number(episode[2]) };
+  if (series && episode) return { series: Number(series[1]), episode: Number(episode[1]) };
   if (series) return { series: Number(series[1]), episode: null };
   return null;
 }
 
 /**
- * Score a single episode/video pair. Combines title coverage with a bonus when
- * the video title states a series/episode number that agrees with the episode.
+ * Uploads that mention an episode but are not the episode: commentaries,
+ * Teatime Q&As, previews, marathons and the like.
  */
-export function scorePair(episode, video, idf) {
-  let score = coverageScore(episode.title, video.title, idf);
-  if (episode.site) {
-    score = Math.max(score, coverageScore(episode.site, video.title, idf) * 0.95);
+const NOT_AN_EPISODE =
+  /\b(commentary|teatime|tea time|preview|trailer|masterclass|q\s*&\s*a|marathon|compilation|best of|dig diar(?:y|ies)|editor'?s choice|top \d+|reaction|shorts?)\b/i;
+
+/** The year an episode first aired: its own air date, else its series' year. */
+export function episodeYear(episode) {
+  const fromDate = /^(\d{4})/.exec(episode.airDate ?? '')?.[1];
+  if (fromDate) return Number(fromDate);
+  return episode.seriesYear ?? null;
+}
+
+/**
+ * Episodes from the original Channel 4 run (before the 2020s revival) live on
+ * the Time Team Classics channel; later digs live on the main channel.
+ */
+export function isClassicEra(episode, cutoffYear = 2020) {
+  const year = episodeYear(episode);
+  if (year != null) return year < cutoffYear;
+  return episode.series != null && episode.series <= 20;
+}
+
+/**
+ * Why a video cannot be the given episode, or null when it may be.
+ *
+ * `rules` comes from catalogue.config.json:
+ *   classicChannel, classicCutoffYear       - pre-cutoff episodes only match this channel
+ *   minimumFullEpisodeSeconds               - anything shorter is a clip
+ *   classicMinimumSeconds/MaximumSeconds    - a classic episode runs ~50 minutes
+ */
+export function videoRejection(episode, video, rules = {}, marker = extractSeriesEpisode(video.title)) {
+  const title = video.title ?? '';
+  if (NOT_AN_EPISODE.test(title)) return 'not a full episode (commentary, preview, compilation...)';
+
+  const seconds = video.durationSeconds ?? null;
+  const minimum = rules.minimumFullEpisodeSeconds ?? 0;
+  if (seconds != null && seconds < minimum) return `too short (${Math.round(seconds / 60)} min)`;
+
+  if (!rules.classicChannel) return null;
+  if (!isClassicEra(episode, rules.classicCutoffYear)) {
+    // The Classics channel only carries the original run.
+    return video.channel === rules.classicChannel ? `${rules.classicChannel} only has pre-${rules.classicCutoffYear ?? 2020} episodes` : null;
   }
-  const marker = extractSeriesEpisode(video.title);
-  if (marker && episode.series != null) {
-    if (marker.series === episode.series) {
-      score += marker.episode === episode.episode ? 0.25 : 0.08;
-    } else {
-      score -= 0.2;
+
+  if (video.channel && video.channel !== rules.classicChannel) {
+    return `pre-${rules.classicCutoffYear ?? 2020} episodes must come from ${rules.classicChannel}`;
+  }
+  if (seconds != null && rules.classicMinimumSeconds && seconds < rules.classicMinimumSeconds) {
+    return `too short for a full episode (${Math.round(seconds / 60)} min)`;
+  }
+  if (seconds != null && rules.classicMaximumSeconds && seconds > rules.classicMaximumSeconds) {
+    return `too long for a single episode (${Math.round(seconds / 60)} min)`;
+  }
+
+  if (marker?.episode != null) {
+    if (episode.kind === 'special') return `special cannot match an S${marker.series}E${marker.episode} upload`;
+    if (marker.series !== episode.series || marker.episode !== episode.episode) {
+      return `title says S${marker.series}E${marker.episode}`;
     }
   }
-  return Math.max(0, Math.min(1, score));
+  return null;
+}
+
+/** Coverage of the episode's title, or of its dig location, by the video title. */
+export function titleCoverage(episode, video, idf) {
+  let coverage = coverageScore(episode.title, video.title, idf);
+  // The site alone: a county ("Yorkshire") is shared by far too many digs.
+  if (episode.site) {
+    coverage = Math.max(coverage, coverageScore(episode.site, video.title, idf) * 0.95);
+  }
+  return coverage;
+}
+
+/**
+ * Series/episode markers to trust, keyed by video id.
+ *
+ * The channels have numbered some uploads differently from the broadcast
+ * order: Hylton Castle (aired as series 2 episode 5) is uploaded as "S2 E2",
+ * and the Saxon graves of episode 2 as "S2 E5". So a marker is dropped to
+ * series-only - leaving the upload to compete on its title within that series -
+ * when its title plainly describes a different dig from the same series, and
+ * then also on any weakly matching upload that claims the dig thus displaced.
+ */
+export function trustedMarkers(videos, episodes, idf) {
+  const find = (series, episode) => episodes.find((e) => e.series === series && e.episode === episode);
+  const markers = new Map();
+  const weak = new Map();
+  const displaced = new Set();
+
+  for (const video of videos) {
+    const marker = extractSeriesEpisode(video.title);
+    markers.set(video.id, marker);
+    if (marker?.episode == null) continue;
+    const labelled = find(marker.series, marker.episode);
+    if (!labelled) continue;
+    const own = titleCoverage(labelled, video, idf);
+    if (own >= 0.35) continue;
+    weak.set(video.id, labelled);
+    const rival = episodes.find(
+      (e) => e !== labelled && e.series === marker.series && titleCoverage(e, video, idf) >= Math.max(0.5, own + 0.3),
+    );
+    if (rival) {
+      markers.set(video.id, { series: marker.series, episode: null });
+      displaced.add(rival);
+    }
+  }
+  for (const [videoId, labelled] of weak) {
+    if (displaced.has(labelled)) markers.set(videoId, { series: labelled.series, episode: null });
+  }
+  return markers;
+}
+
+/**
+ * Score a single episode/video pair. Title coverage decides, except that an
+ * explicit series/episode marker agreeing with the episode is decisive (the
+ * Classics channel renames uploads, but keeps the marker) and one that
+ * disagrees rules the pair out.
+ */
+export function scorePair(episode, video, idf, marker = extractSeriesEpisode(video.title)) {
+  const coverage = titleCoverage(episode, video, idf);
+  if (marker && episode.series != null) {
+    if (marker.series !== episode.series) return 0;
+    // Above 1 on purpose, so an upload that only resembles the title never
+    // beats one that states the right series and episode.
+    if (marker.episode === episode.episode) return 1 + coverage;
+    if (marker.episode != null) return 0;
+    return coverage + 0.08;
+  }
+  return coverage;
 }
 
 /**
  * Assign at most one video per episode and one episode per video, best pairs
  * first. Greedy over a globally sorted candidate list: good enough here and far
- * easier to reason about than an optimal assignment.
+ * easier to reason about than an optimal assignment. Pairs that `rules` rule
+ * out (see videoRejection) are never considered.
  *
  * @returns {Map<string, {video: object, confidence: number}>} keyed by episode id
  */
-export function matchEpisodesToVideos(episodes, videos, { threshold = 0.62 } = {}) {
-  const idf = buildIdf([...episodes.map((e) => e.title), ...videos.map((v) => v.title)]);
+export function matchEpisodesToVideos(episodes, videos, { threshold = 0.62, rules = null } = {}) {
+  // Sites belong in the corpus too: otherwise a rare place name ("Oakham")
+  // falls back to the default weight and is outweighed by "castle".
+  const idf = buildIdf([
+    ...episodes.map((e) => e.title),
+    ...episodes.filter((e) => e.site && e.site !== e.title).map((e) => e.site),
+    ...videos.map((v) => v.title),
+  ]);
+  const markers = trustedMarkers(videos, episodes, idf);
   const candidates = [];
   for (const episode of episodes) {
     for (const video of videos) {
-      const confidence = scorePair(episode, video, idf);
+      const marker = markers.get(video.id);
+      if (rules && videoRejection(episode, video, rules, marker)) continue;
+      const confidence = scorePair(episode, video, idf, marker);
       if (confidence >= threshold) candidates.push({ episode, video, confidence });
     }
   }
@@ -164,7 +291,7 @@ export function matchEpisodesToVideos(episodes, videos, { threshold = 0.62 } = {
   const usedVideos = new Set();
   for (const { episode, video, confidence } of candidates) {
     if (byEpisode.has(episode.id) || usedVideos.has(video.id)) continue;
-    byEpisode.set(episode.id, { video, confidence: Number(confidence.toFixed(3)) });
+    byEpisode.set(episode.id, { video, confidence: Number(Math.min(1, confidence).toFixed(3)) });
     usedVideos.add(video.id);
   }
   return byEpisode;

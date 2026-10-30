@@ -54,10 +54,20 @@ Other scripts:
    pages through the channel with the same public endpoint the website itself
    uses, so no key is required.
 3. **Matching** scores each episode against each upload on how much of the
-   episode title the video title covers, weighting distinctive words (a place
-   name like *Athelney*) far above common ones (*castle*). An explicit
-   `S04E07` marker in a video title boosts the score. Best pairs are taken
-   first, and no video is ever assigned to two episodes.
+   episode title (or its dig location) the video title covers, weighting
+   distinctive words (a place name like *Athelney*) far above common ones
+   (*castle*). Best pairs are taken first, and no video is ever assigned to
+   two episodes. Some uploads are ruled out before scoring:
+   - commentaries, Teatime Q&As, previews, compilations and anything shorter
+     than `minimumFullEpisodeSeconds`;
+   - for episodes from before `classicCutoffYear`, anything not on
+     `classicChannel` (Time Team Classics) or outside
+     `classicMinimumSeconds`–`classicMaximumSeconds` (a classic episode runs
+     about 50 minutes), and any upload whose `S04E07` / `S4 EP7` marker names
+     a different episode. A matching marker is decisive, because the channel
+     renames uploads but keeps the marker - unless the title plainly describes
+     another dig from the same series, as the channel has numbered a few
+     uploads differently from the broadcast order.
 
 The build is deliberately hard to break:
 

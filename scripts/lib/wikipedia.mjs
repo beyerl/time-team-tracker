@@ -159,7 +159,7 @@ export function parseEpisodeList(wikitext, options = {}) {
   /** @type {{headers: string[], isEpisodes: boolean | null} | null} */
   let table = null;
 
-  const push = ({ title, numberInSeries, airDate, note }) => {
+  const push = ({ title, numberInSeries, airDate, note, location }) => {
     const cleanTitle = cleanWikitext(title);
     if (!cleanTitle || cleanTitle.length < 2) return;
     if (/^(title|episode|site|no\.?|#|series)$/i.test(cleanTitle)) return; // header row
@@ -171,7 +171,10 @@ export function parseEpisodeList(wikitext, options = {}) {
     if (context.kind !== 'specials' && context.number == null) return;
     withinSeriesCounter += 1;
     const episodeNumber = Number.isFinite(numberInSeries) && numberInSeries > 0 ? numberInSeries : withinSeriesCounter;
-    const { site, county } = splitSite(cleanTitle);
+    // The dig's location, when the table gives one, says far more about which
+    // upload is which than an episode title the channel may have rewritten.
+    const cleanLocation = location ? cleanWikitext(location) : '';
+    const { site, county } = splitSite(cleanLocation.length > 1 ? cleanLocation : cleanTitle);
     episodes.push({
       kind: context.kind === 'specials' ? 'special' : 'episode',
       series: context.kind === 'specials' ? null : context.number,
@@ -237,6 +240,7 @@ export function parseEpisodeList(wikitext, options = {}) {
         numberInSeries: Number(fields.episodenumber2 ?? fields.episodenumber),
         airDate: parseAirDate(fields.originalairdate ?? ''),
         note: fields.shortsummary,
+        location: locationField(fields),
       });
       continue;
     }
@@ -268,16 +272,29 @@ export function parseEpisodeList(wikitext, options = {}) {
       const titleCell = cells.find((cell, index) => index > 0 && cleanWikitext(cell).length > 2);
       const dateCell = cells.map((cell) => parseAirDate(cell)).find(Boolean);
       if (!titleCell) continue;
+      const locationIndex = table?.headers.findIndex((header) => /^(location|site)$/i.test(header)) ?? -1;
       push({
         title: titleCell,
         numberInSeries: leadingNumber,
         airDate: dateCell,
         note: null,
+        location: locationIndex > 0 && cells.length === table.headers.length ? cells[locationIndex] : null,
       });
     }
   }
 
   return episodes;
+}
+
+/**
+ * {{Episode list}} has no location parameter, so the series articles put it in
+ * an Aux column and name it in the table header (`Aux1T=Location`). Plain
+ * `location`/`site` parameters are honoured too.
+ */
+function locationField(fields) {
+  if (fields.location) return fields.location;
+  if (fields.site) return fields.site;
+  return fields.aux1 ?? null;
 }
 
 const countBraces = (line) =>
