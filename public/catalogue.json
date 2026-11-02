@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T08:09:35.481Z",
+  "generatedAt": "2026-11-02T12:30:57.186Z",
   "source": {
     "episodes": "en.wikipedia.org",
     "videos": "@TimeTeamOfficial, @TimeTeamClassics"
@@ -7,8 +7,8 @@
   "stats": {
     "episodes": 233,
     "seriesCount": 23,
-    "withVideo": 178,
-    "newlyMatched": 178,
+    "withVideo": 179,
+    "newlyMatched": 179,
     "carriedOver": 0,
     "unmatchedUploads": 474
   },
@@ -434,7 +434,15 @@
           "county": "Birmingham",
           "airDate": "1997-01-19",
           "note": "Recorded between 5 and 7 April 1996, this episode sees the team try to discover what remains of Matthew Boulton's Soho Manufactory, an important factory and home to the world's first steam-powered mint, during the Industrial Revolution. They are joined by industrial archaeologist George Demidowicz.",
-          "video": null,
+          "video": {
+            "id": "57W9ANL6BB8",
+            "title": "Lost Industrial Revolution Factory Unearthed Beneath Birmingham Back Gardens | Time Team - S4 E3",
+            "channel": "@TimeTeamClassics",
+            "durationSeconds": 2983,
+            "confidence": 1,
+            "url": "https://www.youtube.com/watch?v=57W9ANL6BB8",
+            "thumbnail": "https://i.ytimg.com/vi/57W9ANL6BB8/hqdefault.jpg"
+          },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Steam-Powered%20Mint",
           "seriesYear": 1997
         },
@@ -5625,20 +5633,20 @@
       "thumbnail": "https://i.ytimg.com/vi/ARCsl5kVWz0/hqdefault.jpg"
     },
     {
-      "id": "oxGL9ArqJgY",
-      "title": "Castles, Cavaliers & Cowboys | Time Team | Feature Length | Modbury Days 1-3 (Devon) 2024",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 6725,
-      "url": "https://www.youtube.com/watch?v=oxGL9ArqJgY",
-      "thumbnail": "https://i.ytimg.com/vi/oxGL9ArqJgY/hqdefault.jpg"
-    },
-    {
       "id": "G5oMrZbgyN4",
       "title": "FULL LENGTH | TIME TEAM Roman Sarcophagus (Broughton, Oxfordshire) EXPEDITION CREW",
       "channel": "@TimeTeamOfficial",
       "durationSeconds": 2149,
       "url": "https://www.youtube.com/watch?v=G5oMrZbgyN4",
       "thumbnail": "https://i.ytimg.com/vi/G5oMrZbgyN4/hqdefault.jpg"
+    },
+    {
+      "id": "oxGL9ArqJgY",
+      "title": "Castles, Cavaliers & Cowboys | Time Team | Feature Length | Modbury Days 1-3 (Devon) 2024",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 6725,
+      "url": "https://www.youtube.com/watch?v=oxGL9ArqJgY",
+      "thumbnail": "https://i.ytimg.com/vi/oxGL9ArqJgY/hqdefault.jpg"
     },
     {
       "id": "84klyJGHKi4",
@@ -5649,20 +5657,20 @@
       "thumbnail": "https://i.ytimg.com/vi/84klyJGHKi4/hqdefault.jpg"
     },
     {
-      "id": "m5TcWLPgW3U",
-      "title": "NEW EPISODE | Day 3: Knights Hospitaller Preceptory | TIME TEAM",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 2224,
-      "url": "https://www.youtube.com/watch?v=m5TcWLPgW3U",
-      "thumbnail": "https://i.ytimg.com/vi/m5TcWLPgW3U/hqdefault.jpg"
-    },
-    {
       "id": "Z2V496kzVRg",
       "title": "Time Team Special: House In the Loch | Classic Special (Full Episode) - 2004 (Loch Tay, Perthshire)",
       "channel": "@TimeTeamOfficial",
       "durationSeconds": 3050,
       "url": "https://www.youtube.com/watch?v=Z2V496kzVRg",
       "thumbnail": "https://i.ytimg.com/vi/Z2V496kzVRg/hqdefault.jpg"
+    },
+    {
+      "id": "m5TcWLPgW3U",
+      "title": "NEW EPISODE | Day 3: Knights Hospitaller Preceptory | TIME TEAM",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 2224,
+      "url": "https://www.youtube.com/watch?v=m5TcWLPgW3U",
+      "thumbnail": "https://i.ytimg.com/vi/m5TcWLPgW3U/hqdefault.jpg"
     },
     {
       "id": "wBdHUoVui2I",
@@ -7009,14 +7017,6 @@
       "thumbnail": "https://i.ytimg.com/vi/wCOFSRhFcAM/hqdefault.jpg"
     },
     {
-      "id": "beKQF02f9RQ",
-      "title": "Mystery Of The Ice Cream Villa (Full Episode) | S16 EP8 | Time Team (Colworth, Bedfordshire)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2937,
-      "url": "https://www.youtube.com/watch?v=beKQF02f9RQ",
-      "thumbnail": "https://i.ytimg.com/vi/beKQF02f9RQ/hqdefault.jpg"
-    },
-    {
       "id": "hiNbeihp7qE",
       "title": "Northborough, Peterborough | FULL EPISODE | Time Team",
       "channel": "@TimeTeamClassics",
@@ -7185,6 +7185,14 @@
       "thumbnail": "https://i.ytimg.com/vi/6D8yreKToYQ/hqdefault.jpg"
     },
     {
+      "id": "beKQF02f9RQ",
+      "title": "Mystery Of The Ice Cream Villa (Full Episode) | S16 EP8 | Time Team (Colworth, Bedfordshire)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2937,
+      "url": "https://www.youtube.com/watch?v=beKQF02f9RQ",
+      "thumbnail": "https://i.ytimg.com/vi/beKQF02f9RQ/hqdefault.jpg"
+    },
+    {
       "id": "1SH8gmE9JDM",
       "title": "Picts And Hermits (Full Episode) | S12 EP8 | Time Team (Wemyss, Fife)",
       "channel": "@TimeTeamClassics",
@@ -7345,14 +7353,6 @@
       "thumbnail": "https://i.ytimg.com/vi/sFNYntf0f1Q/hqdefault.jpg"
     },
     {
-      "id": "KVzAeLFfwUQ",
-      "title": "5,000 Tonnes of Stone (Full Episode) | S15 EP11 | Time Team (Hamsterley, County Durham)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2924,
-      "url": "https://www.youtube.com/watch?v=KVzAeLFfwUQ",
-      "thumbnail": "https://i.ytimg.com/vi/KVzAeLFfwUQ/hqdefault.jpg"
-    },
-    {
       "id": "49L1mgJKBAg",
       "title": "➤ Time Team's Top 3 BACKYARD FINDS",
       "channel": "@TimeTeamClassics",
@@ -7439,6 +7439,14 @@
       "durationSeconds": 2939,
       "url": "https://www.youtube.com/watch?v=eScx284tr3o",
       "thumbnail": "https://i.ytimg.com/vi/eScx284tr3o/hqdefault.jpg"
+    },
+    {
+      "id": "KVzAeLFfwUQ",
+      "title": "5,000 Tonnes of Stone (Full Episode) | S15 EP11 | Time Team (Hamsterley, County Durham)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2924,
+      "url": "https://www.youtube.com/watch?v=KVzAeLFfwUQ",
+      "thumbnail": "https://i.ytimg.com/vi/KVzAeLFfwUQ/hqdefault.jpg"
     },
     {
       "id": "myzJiQiulsI",
@@ -7585,14 +7593,6 @@
       "thumbnail": "https://i.ytimg.com/vi/B5_BPGGiBbY/hqdefault.jpg"
     },
     {
-      "id": "QlCkdSz9Ozc",
-      "title": "There’s A Villa Here Somewhere (Full Episode) | S17 EP11 | Time Team (Litlington, Cambridgeshire)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2963,
-      "url": "https://www.youtube.com/watch?v=QlCkdSz9Ozc",
-      "thumbnail": "https://i.ytimg.com/vi/QlCkdSz9Ozc/hqdefault.jpg"
-    },
-    {
       "id": "I_b5H4TaM7Q",
       "title": "Furnace in the Forest (Full Episode) | S18 EP5 | Time Team (Derwentcote, County Durham)",
       "channel": "@TimeTeamClassics",
@@ -7601,20 +7601,20 @@
       "thumbnail": "https://i.ytimg.com/vi/I_b5H4TaM7Q/hqdefault.jpg"
     },
     {
-      "id": "bJl3p2Zoi70",
-      "title": "Search for the Domesday Mill (Full Episode) | S18 EP10 | Time Team (Buck Mill, Somerset)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2854,
-      "url": "https://www.youtube.com/watch?v=bJl3p2Zoi70",
-      "thumbnail": "https://i.ytimg.com/vi/bJl3p2Zoi70/hqdefault.jpg"
-    },
-    {
       "id": "KiJTtSwp-JI",
       "title": "The Hollow Way (Full Episode) | S16 EP12 | Time Team (Ulnaby, County Durham)",
       "channel": "@TimeTeamClassics",
       "durationSeconds": 2938,
       "url": "https://www.youtube.com/watch?v=KiJTtSwp-JI",
       "thumbnail": "https://i.ytimg.com/vi/KiJTtSwp-JI/hqdefault.jpg"
+    },
+    {
+      "id": "bJl3p2Zoi70",
+      "title": "Search for the Domesday Mill (Full Episode) | S18 EP10 | Time Team (Buck Mill, Somerset)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2854,
+      "url": "https://www.youtube.com/watch?v=bJl3p2Zoi70",
+      "thumbnail": "https://i.ytimg.com/vi/bJl3p2Zoi70/hqdefault.jpg"
     },
     {
       "id": "-p4gM3JaEoQ",
@@ -7687,6 +7687,14 @@
       "durationSeconds": 3118,
       "url": "https://www.youtube.com/watch?v=9YL4yyrxgqQ",
       "thumbnail": "https://i.ytimg.com/vi/9YL4yyrxgqQ/hqdefault.jpg"
+    },
+    {
+      "id": "QlCkdSz9Ozc",
+      "title": "There’s A Villa Here Somewhere (Full Episode) | S17 EP11 | Time Team (Litlington, Cambridgeshire)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2963,
+      "url": "https://www.youtube.com/watch?v=QlCkdSz9Ozc",
+      "thumbnail": "https://i.ytimg.com/vi/QlCkdSz9Ozc/hqdefault.jpg"
     },
     {
       "id": "yVSjxxTZl0M",
@@ -7849,14 +7857,6 @@
       "thumbnail": "https://i.ytimg.com/vi/_nnTuBXOrGI/hqdefault.jpg"
     },
     {
-      "id": "BVXNXtIkFls",
-      "title": "The Monk’s Manor (Full Episode) | S13 EP7 | Time Team (Brigham, Yorkshire)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2993,
-      "url": "https://www.youtube.com/watch?v=BVXNXtIkFls",
-      "thumbnail": "https://i.ytimg.com/vi/BVXNXtIkFls/hqdefault.jpg"
-    },
-    {
       "id": "pTEPWb-vfLQ",
       "title": "Time Team's Top 3 NEOLITHIC Finds",
       "channel": "@TimeTeamClassics",
@@ -7905,14 +7905,6 @@
       "thumbnail": "https://i.ytimg.com/vi/uvbGYIidfsE/hqdefault.jpg"
     },
     {
-      "id": "bDYn-E9qwNU",
-      "title": "➤ Time Team's Top 3 BURIAL GROUNDS",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 3233,
-      "url": "https://www.youtube.com/watch?v=bDYn-E9qwNU",
-      "thumbnail": "https://i.ytimg.com/vi/bDYn-E9qwNU/hqdefault.jpg"
-    },
-    {
       "id": "eboOPS1Isno",
       "title": "Court Of The Kentish King (Full Episode) | S13 EP6 | Time Team (Eastry, Kent)",
       "channel": "@TimeTeamClassics",
@@ -7927,6 +7919,14 @@
       "durationSeconds": 2941,
       "url": "https://www.youtube.com/watch?v=CNjS52NBgbQ",
       "thumbnail": "https://i.ytimg.com/vi/CNjS52NBgbQ/hqdefault.jpg"
+    },
+    {
+      "id": "bDYn-E9qwNU",
+      "title": "➤ Time Team's Top 3 BURIAL GROUNDS",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 3233,
+      "url": "https://www.youtube.com/watch?v=bDYn-E9qwNU",
+      "thumbnail": "https://i.ytimg.com/vi/bDYn-E9qwNU/hqdefault.jpg"
     },
     {
       "id": "n9GBcdU0xhA",
@@ -7951,6 +7951,14 @@
       "durationSeconds": 2835,
       "url": "https://www.youtube.com/watch?v=CfzgsXBn5Cw",
       "thumbnail": "https://i.ytimg.com/vi/CfzgsXBn5Cw/hqdefault.jpg"
+    },
+    {
+      "id": "BVXNXtIkFls",
+      "title": "The Monk’s Manor (Full Episode) | S13 EP7 | Time Team (Brigham, Yorkshire)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2993,
+      "url": "https://www.youtube.com/watch?v=BVXNXtIkFls",
+      "thumbnail": "https://i.ytimg.com/vi/BVXNXtIkFls/hqdefault.jpg"
     },
     {
       "id": "n7KulcsWqkg",
@@ -8209,14 +8217,6 @@
       "thumbnail": "https://i.ytimg.com/vi/4YRqohlYUCI/hqdefault.jpg"
     },
     {
-      "id": "1sn-wzhD8Z0",
-      "title": "➤ Time Team Best of Niche Specialists ⛏️ | Time Team",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2135,
-      "url": "https://www.youtube.com/watch?v=1sn-wzhD8Z0",
-      "thumbnail": "https://i.ytimg.com/vi/1sn-wzhD8Z0/hqdefault.jpg"
-    },
-    {
       "id": "UPtOVAT5ulc",
       "title": "➤ Time Team's Top 3 GEO-PHYS Victories",
       "channel": "@TimeTeamClassics",
@@ -8329,6 +8329,14 @@
       "thumbnail": "https://i.ytimg.com/vi/uPMM-UK-rBU/hqdefault.jpg"
     },
     {
+      "id": "1sn-wzhD8Z0",
+      "title": "➤ Time Team Best of Niche Specialists ⛏️ | Time Team",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2135,
+      "url": "https://www.youtube.com/watch?v=1sn-wzhD8Z0",
+      "thumbnail": "https://i.ytimg.com/vi/1sn-wzhD8Z0/hqdefault.jpg"
+    },
+    {
       "id": "9UKBY8_tYC8",
       "title": "➤ Time Team's BEST OF 2024 🏆🥇",
       "channel": "@TimeTeamClassics",
@@ -8417,14 +8425,6 @@
       "thumbnail": "https://i.ytimg.com/vi/NxnrQNVlkSk/hqdefault.jpg"
     },
     {
-      "id": "xFbILq-rp3I",
-      "title": "Time Team's Roaming Investigator (The Best of Stewart Ainsworth)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 1835,
-      "url": "https://www.youtube.com/watch?v=xFbILq-rp3I",
-      "thumbnail": "https://i.ytimg.com/vi/xFbILq-rp3I/hqdefault.jpg"
-    },
-    {
       "id": "HrDQftDwZ_4",
       "title": "Time Team's 3 Most Ancient Digs...",
       "channel": "@TimeTeamClassics",
@@ -8471,6 +8471,14 @@
       "durationSeconds": 3126,
       "url": "https://www.youtube.com/watch?v=zTzz_wHnb3I",
       "thumbnail": "https://i.ytimg.com/vi/zTzz_wHnb3I/hqdefault.jpg"
+    },
+    {
+      "id": "xFbILq-rp3I",
+      "title": "Time Team's Roaming Investigator (The Best of Stewart Ainsworth)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 1835,
+      "url": "https://www.youtube.com/watch?v=xFbILq-rp3I",
+      "thumbnail": "https://i.ytimg.com/vi/xFbILq-rp3I/hqdefault.jpg"
     },
     {
       "id": "BdjljzNROYg",
@@ -8673,14 +8681,6 @@
       "thumbnail": "https://i.ytimg.com/vi/R_-nnjL4Gc0/hqdefault.jpg"
     },
     {
-      "id": "GNVy1elzrSg",
-      "title": "➤ Time Team's Top 3 KING HENRY Digs",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 3335,
-      "url": "https://www.youtube.com/watch?v=GNVy1elzrSg",
-      "thumbnail": "https://i.ytimg.com/vi/GNVy1elzrSg/hqdefault.jpg"
-    },
-    {
       "id": "Y8ywWT0K03c",
       "title": "➤ Time Team's Top 3 NORTHERN Digs",
       "channel": "@TimeTeamClassics",
@@ -8695,6 +8695,14 @@
       "durationSeconds": 3130,
       "url": "https://www.youtube.com/watch?v=vtAO62pl4wo",
       "thumbnail": "https://i.ytimg.com/vi/vtAO62pl4wo/hqdefault.jpg"
+    },
+    {
+      "id": "GNVy1elzrSg",
+      "title": "➤ Time Team's Top 3 KING HENRY Digs",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 3335,
+      "url": "https://www.youtube.com/watch?v=GNVy1elzrSg",
+      "thumbnail": "https://i.ytimg.com/vi/GNVy1elzrSg/hqdefault.jpg"
     },
     {
       "id": "bCXoMW2G09E",
