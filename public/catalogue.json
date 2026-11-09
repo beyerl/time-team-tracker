@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T12:30:57.186Z",
+  "generatedAt": "2026-11-09T12:57:02.793Z",
   "source": {
     "episodes": "en.wikipedia.org",
     "videos": "@TimeTeamOfficial, @TimeTeamClassics"
@@ -7,10 +7,10 @@
   "stats": {
     "episodes": 233,
     "seriesCount": 23,
-    "withVideo": 179,
-    "newlyMatched": 179,
+    "withVideo": 180,
+    "newlyMatched": 180,
     "carriedOver": 0,
-    "unmatchedUploads": 474
+    "unmatchedUploads": 475
   },
   "problems": [
     "dropped 6 duplicate episode ids: s1e1 (kept \"The Guerrilla Base of the King\", dropped \"Tony Robinson\"), s1e2 (kept \"On the Edge of an Empire\", dropped \"Phil Harding\"), s1e3 (kept \"The New Town of a Norman Prince\", dropped \"Victor Ambrus\"), s2e1 (kept \"Lord of the Isles\", dropped \"Tony Robinson\"), s2e2 (kept \"The Saxon Graves\", dropped \"Phil Harding\"), s2e3 (kept \"The Lost Villa\", dropped \"Victor Ambrus\")"
@@ -500,7 +500,15 @@
           "county": "Wiltshire",
           "airDate": "1997-02-09",
           "note": "Filmed from 2 to 4 August 1996, this episode looks for a Roman villa that was first partially discovered 90 years before by William Hawley. Part of the site—a former army barracks—is covered in concrete, which at least protects what is underneath. But as they don't know exactly where the villa is, it could be a problem for both the diggers and the geophysics team. The team are joined by Duncan Coe (county archaeologist), Mark Corney (Roman buildings expert) and Lindsay Allason Jones (Roman finds). At the end of day two Lindsay supervises an al fresco Roman-style meal. By day three they have the bare outline of a very substantial, high-status building complete with mosaic floors and central heating. But then the time runs out.",
-          "video": null,
+          "video": {
+            "id": "_6NpyF6WL20",
+            "title": "Lost Roman Villa Discovered Beneath Army Barracks in Wiltshire | Time Team - S4 E6",
+            "channel": "@TimeTeamClassics",
+            "durationSeconds": 2987,
+            "confidence": 1,
+            "url": "https://www.youtube.com/watch?v=_6NpyF6WL20",
+            "thumbnail": "https://i.ytimg.com/vi/_6NpyF6WL20/hqdefault.jpg"
+          },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Roman%20Villa",
           "seriesYear": 1997
         }
@@ -524,13 +532,13 @@
           "airDate": "1998-01-04",
           "note": "Filmed between 25 and 27 July 1997. The team are camped on an immaculate suburban lawn next to the Thames. They are searching for the now vanished Richmond Palace, site of the death of Elizabeth I. But amazingly nobody is exactly sure of its whereabouts. The first task is to dig up the lawn under the supervision of landscape gardener Martin Whitaker. Immediately they find evidence of a substantial high status Tudor building. They are joined by palaces expert Simon Thurley and local historian John Cloake. Tudor expert Hazel Forsyth shows Carenza how to make a pomander. Plants from the garden are used by Maria Lis-Balchin to brew up some Elizabethan perfume. The property owner was The Baron van Dedem.",
           "video": {
-            "id": "HOnJH-3IAwE",
-            "title": "Search for Richmond Palace (Full Episode) | S5 EP1 | Time Team (Richmond, Surrey)",
+            "id": "owEXwseOH1s",
+            "title": "Lost Tudor Palace Discovered - Unearthing Queen Elizabeth’s Richmond Palace | Time Team - S5 E1",
             "channel": "@TimeTeamClassics",
-            "durationSeconds": 3044,
+            "durationSeconds": 3030,
             "confidence": 1,
-            "url": "https://www.youtube.com/watch?v=HOnJH-3IAwE",
-            "thumbnail": "https://i.ytimg.com/vi/HOnJH-3IAwE/hqdefault.jpg"
+            "url": "https://www.youtube.com/watch?v=owEXwseOH1s",
+            "thumbnail": "https://i.ytimg.com/vi/owEXwseOH1s/hqdefault.jpg"
           },
           "searchUrl": "https://www.youtube.com/results?search_query=Time%20Team%20Episode%20One%20(Search%20for%20Richmond%20Palace)",
           "seriesYear": 1998
@@ -5146,7 +5154,7 @@
     },
     {
       "id": "ovPuXeqNGhA",
-      "title": "The Sutton Hoo Dig Series 1| Time Team | Feature Length",
+      "title": "The Sutton Hoo Dig Season 1| Time Team | Feature Length",
       "channel": "@TimeTeamOfficial",
       "durationSeconds": 10262,
       "url": "https://www.youtube.com/watch?v=ovPuXeqNGhA",
@@ -5330,7 +5338,7 @@
     },
     {
       "id": "risyQhRjwnw",
-      "title": "Searching for the Origins of Sutton Hoo | The Sutton Hoo Dig S1 Part 1 |Time Team",
+      "title": "Searching for the Origins of Sutton Hoo | The Sutton Hoo Dig S1 Part 1 | Time Team",
       "channel": "@TimeTeamOfficial",
       "durationSeconds": 3031,
       "url": "https://www.youtube.com/watch?v=risyQhRjwnw",
@@ -5370,7 +5378,7 @@
     },
     {
       "id": "w7o3fVYTafs",
-      "title": "NEW! | Bringing Home Little Boy Blue | TIME TEAM SPECIAL",
+      "title": "Bringing Home Little Boy Blue | TIME TEAM SPECIAL",
       "channel": "@TimeTeamOfficial",
       "durationSeconds": 4758,
       "url": "https://www.youtube.com/watch?v=w7o3fVYTafs",
@@ -5809,14 +5817,6 @@
       "thumbnail": "https://i.ytimg.com/vi/LYOxik8xMYo/hqdefault.jpg"
     },
     {
-      "id": "xrtqZWC5m20",
-      "title": "New Episode: The Archaeology of Operation Cobra | Time Team (Normandy) 2024",
-      "channel": "@TimeTeamOfficial",
-      "durationSeconds": 1829,
-      "url": "https://www.youtube.com/watch?v=xrtqZWC5m20",
-      "thumbnail": "https://i.ytimg.com/vi/xrtqZWC5m20/hqdefault.jpg"
-    },
-    {
       "id": "yi_d6q5TOTI",
       "title": "Time Team Special: Nelson's Hospital | Classic Special (Full Episode) - 2010 Haslar, Gosport",
       "channel": "@TimeTeamOfficial",
@@ -5855,6 +5855,14 @@
       "durationSeconds": 2997,
       "url": "https://www.youtube.com/watch?v=6J1ueYs8_bE",
       "thumbnail": "https://i.ytimg.com/vi/6J1ueYs8_bE/hqdefault.jpg"
+    },
+    {
+      "id": "xrtqZWC5m20",
+      "title": "New Episode: The Archaeology of Operation Cobra | Time Team (Normandy) 2024",
+      "channel": "@TimeTeamOfficial",
+      "durationSeconds": 1829,
+      "url": "https://www.youtube.com/watch?v=xrtqZWC5m20",
+      "thumbnail": "https://i.ytimg.com/vi/xrtqZWC5m20/hqdefault.jpg"
     },
     {
       "id": "CfQrtT5s9PY",
@@ -7009,14 +7017,6 @@
       "thumbnail": "https://i.ytimg.com/vi/VfQUneC-occ/hqdefault.jpg"
     },
     {
-      "id": "wCOFSRhFcAM",
-      "title": "Lost Centuries of St Osyth (Full Episode) | S12 EP9 | Time Team (St Osyth, Essex)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2991,
-      "url": "https://www.youtube.com/watch?v=wCOFSRhFcAM",
-      "thumbnail": "https://i.ytimg.com/vi/wCOFSRhFcAM/hqdefault.jpg"
-    },
-    {
       "id": "hiNbeihp7qE",
       "title": "Northborough, Peterborough | FULL EPISODE | Time Team",
       "channel": "@TimeTeamClassics",
@@ -7183,6 +7183,14 @@
       "durationSeconds": 2810,
       "url": "https://www.youtube.com/watch?v=6D8yreKToYQ",
       "thumbnail": "https://i.ytimg.com/vi/6D8yreKToYQ/hqdefault.jpg"
+    },
+    {
+      "id": "wCOFSRhFcAM",
+      "title": "Lost Centuries of St Osyth (Full Episode) | S12 EP9 | Time Team (St Osyth, Essex)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2991,
+      "url": "https://www.youtube.com/watch?v=wCOFSRhFcAM",
+      "thumbnail": "https://i.ytimg.com/vi/wCOFSRhFcAM/hqdefault.jpg"
     },
     {
       "id": "beKQF02f9RQ",
@@ -7425,20 +7433,20 @@
       "thumbnail": "https://i.ytimg.com/vi/ZJ7MzmZ3MGA/hqdefault.jpg"
     },
     {
-      "id": "ujNpkyMdKtI",
-      "title": "The Bombers in the Marsh (Full Episode) | S12 EP3 | Time Team (Warton, Lancashire)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2991,
-      "url": "https://www.youtube.com/watch?v=ujNpkyMdKtI",
-      "thumbnail": "https://i.ytimg.com/vi/ujNpkyMdKtI/hqdefault.jpg"
-    },
-    {
       "id": "eScx284tr3o",
       "title": "Beacon On The Fens (Full Episode) | S16 EP11 | Time Team (Chapel Head, Cambridgeshire)",
       "channel": "@TimeTeamClassics",
       "durationSeconds": 2939,
       "url": "https://www.youtube.com/watch?v=eScx284tr3o",
       "thumbnail": "https://i.ytimg.com/vi/eScx284tr3o/hqdefault.jpg"
+    },
+    {
+      "id": "ujNpkyMdKtI",
+      "title": "The Bombers in the Marsh (Full Episode) | S12 EP3 | Time Team (Warton, Lancashire)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2991,
+      "url": "https://www.youtube.com/watch?v=ujNpkyMdKtI",
+      "thumbnail": "https://i.ytimg.com/vi/ujNpkyMdKtI/hqdefault.jpg"
     },
     {
       "id": "KVzAeLFfwUQ",
@@ -7585,14 +7593,6 @@
       "thumbnail": "https://i.ytimg.com/vi/MoWV3Nx1f1w/hqdefault.jpg"
     },
     {
-      "id": "B5_BPGGiBbY",
-      "title": "In The Shadow Of The Tor (Full Episode) | S14 EP13 | Time Team (Bodmin Moor, Cornwall)",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2929,
-      "url": "https://www.youtube.com/watch?v=B5_BPGGiBbY",
-      "thumbnail": "https://i.ytimg.com/vi/B5_BPGGiBbY/hqdefault.jpg"
-    },
-    {
       "id": "I_b5H4TaM7Q",
       "title": "Furnace in the Forest (Full Episode) | S18 EP5 | Time Team (Derwentcote, County Durham)",
       "channel": "@TimeTeamClassics",
@@ -7687,6 +7687,22 @@
       "durationSeconds": 3118,
       "url": "https://www.youtube.com/watch?v=9YL4yyrxgqQ",
       "thumbnail": "https://i.ytimg.com/vi/9YL4yyrxgqQ/hqdefault.jpg"
+    },
+    {
+      "id": "B5_BPGGiBbY",
+      "title": "In The Shadow Of The Tor (Full Episode) | S14 EP13 | Time Team (Bodmin Moor, Cornwall)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2929,
+      "url": "https://www.youtube.com/watch?v=B5_BPGGiBbY",
+      "thumbnail": "https://i.ytimg.com/vi/B5_BPGGiBbY/hqdefault.jpg"
+    },
+    {
+      "id": "HOnJH-3IAwE",
+      "title": "Search for Richmond Palace (Full Episode) | S5 EP1 | Time Team (Richmond, Surrey)",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 3044,
+      "url": "https://www.youtube.com/watch?v=HOnJH-3IAwE",
+      "thumbnail": "https://i.ytimg.com/vi/HOnJH-3IAwE/hqdefault.jpg"
     },
     {
       "id": "QlCkdSz9Ozc",
@@ -8209,14 +8225,6 @@
       "thumbnail": "https://i.ytimg.com/vi/gAI8PXaezKU/hqdefault.jpg"
     },
     {
-      "id": "4YRqohlYUCI",
-      "title": "➤ Best of Tony Robinson I Time Team Classics",
-      "channel": "@TimeTeamClassics",
-      "durationSeconds": 2821,
-      "url": "https://www.youtube.com/watch?v=4YRqohlYUCI",
-      "thumbnail": "https://i.ytimg.com/vi/4YRqohlYUCI/hqdefault.jpg"
-    },
-    {
       "id": "UPtOVAT5ulc",
       "title": "➤ Time Team's Top 3 GEO-PHYS Victories",
       "channel": "@TimeTeamClassics",
@@ -8327,6 +8335,14 @@
       "durationSeconds": 2928,
       "url": "https://www.youtube.com/watch?v=uPMM-UK-rBU",
       "thumbnail": "https://i.ytimg.com/vi/uPMM-UK-rBU/hqdefault.jpg"
+    },
+    {
+      "id": "4YRqohlYUCI",
+      "title": "➤ Best of Tony Robinson I Time Team Classics",
+      "channel": "@TimeTeamClassics",
+      "durationSeconds": 2821,
+      "url": "https://www.youtube.com/watch?v=4YRqohlYUCI",
+      "thumbnail": "https://i.ytimg.com/vi/4YRqohlYUCI/hqdefault.jpg"
     },
     {
       "id": "1sn-wzhD8Z0",
